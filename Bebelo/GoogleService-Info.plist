@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1024461213477-v7f1godpcmort243nbts9dn02u6kedeg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1024461213477-v7f1godpcmort243nbts9dn02u6kedeg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBeMw2L9Kzz3_MHwUrQmqTAzqjQbKz5Eak</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1024461213477</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.BuzzwareTech.Bebelo</string>
+	<key>PROJECT_ID</key>
+	<string>bebelo-318911</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bebelo-318911.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1024461213477:ios:f4cbadbf22806bc04694cc</string>
+</dict>
+</plist>
