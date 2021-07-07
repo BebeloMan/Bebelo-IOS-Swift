@@ -10,8 +10,10 @@ import CoreLocation
 import GoogleMaps
 
 class MapViewController: UIViewController {
+    
     //MARK: IBOUTLET'S
     @IBOutlet weak var MapView: GMSMapView!
+    
     //MARK: VARIABLE'S
     var locationManager = CLLocationManager()
     var zoomLevel: Float = 12.0
@@ -22,7 +24,7 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.userLocationSetup()
     }
-
+    
 }
 
 //MARK:- Helping Method's
@@ -36,8 +38,8 @@ extension MapViewController{
         locationManager.delegate = self
         
         let camera = GMSCameraPosition.camera(withLatitude: 0.0,
-                               longitude: 0.0,
-                               zoom: zoomLevel)
+                                              longitude: 0.0,
+                                              zoom: zoomLevel)
         self.MapView.camera = camera
         self.MapView.settings.myLocationButton = false
         self.MapView.isMyLocationEnabled = true
@@ -51,7 +53,6 @@ extension MapViewController{
         marker.icon = UIImage(named: "Bar")
     }
     
-    
 }
 
 
@@ -63,10 +64,10 @@ extension MapViewController: CLLocationManagerDelegate {
         let location: CLLocation = locations.last!
         print("Location: \(location)")
         
-//        self.curentPosition = location.coordinate
-//        if self.curentPosition != nil{
-//            manager.stopUpdatingLocation()
-//        }
+        //        self.curentPosition = location.coordinate
+        //        if self.curentPosition != nil{
+        //            manager.stopUpdatingLocation()
+        //        }
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                               longitude: location.coordinate.longitude,
                                               zoom: zoomLevel)
@@ -108,74 +109,74 @@ extension MapViewController: CLLocationManagerDelegate {
 
 
 extension MapViewController:GMSMapViewDelegate{
-  func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-    mapView.clear()
-    //updatePlace()
-    print("Lat: \(coordinate.latitude) & Long: \(coordinate.longitude)")
-    let position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-    //self.curentPosition = position
-    let geocoder = GMSGeocoder()
-    geocoder.reverseGeocodeCoordinate(coordinate){response , error in
-      guard let address: GMSAddress = response?.firstResult()
-        else
-      {
-        return
-      }
-//    let v = address.lines!.joined(separator: "\n")
-//    let marker = GMSMarker(position: position)
-//    marker.title = v
-//      self.lblAddress.text = v
-//    marker.map = mapView
-//    marker.icon = imageLiteral(resourceName: "Group 7")
-//      print(v)
-//      for i in address.lines!{
-//        print("\(i)----------------")
-//      }
-//      print("\(address.locality)..Locatliy \n \(address.description).. Description \n \(address.subLocality)..subLocality \n\(address.country).. Country \n\(address.administrativeArea)..administrativeArea \n \(address.thoroughfare)..thoroughfare \n \(address.postalCode)..Zip \n \(address) Address")
-//      self.location.address_name = address.locality
-//      self.location.address = v
-//      self.location.street_address_1 = address.subLocality
-//      self.location.street_address_2 = address.locality
-//      self.location.city = address.administrativeArea
-//      self.location.zipcode = address.postalCode
-//      self.location.address_lat = coordinate.latitude
-//      self.location.address_lng = coordinate.longitude
-//      self.location.throughFair = address.thoroughfare
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        mapView.clear()
+        //updatePlace()
+        print("Lat: \(coordinate.latitude) & Long: \(coordinate.longitude)")
+        let position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        //self.curentPosition = position
+        let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(coordinate){response , error in
+            guard let address: GMSAddress = response?.firstResult()
+            else
+            {
+                return
+            }
+            //    let v = address.lines!.joined(separator: "\n")
+            //    let marker = GMSMarker(position: position)
+            //    marker.title = v
+            //      self.lblAddress.text = v
+            //    marker.map = mapView
+            //    marker.icon = imageLiteral(resourceName: "Group 7")
+            //      print(v)
+            //      for i in address.lines!{
+            //        print("\(i)----------------")
+            //      }
+            //      print("\(address.locality)..Locatliy \n \(address.description).. Description \n \(address.subLocality)..subLocality \n\(address.country).. Country \n\(address.administrativeArea)..administrativeArea \n \(address.thoroughfare)..thoroughfare \n \(address.postalCode)..Zip \n \(address) Address")
+            //      self.location.address_name = address.locality
+            //      self.location.address = v
+            //      self.location.street_address_1 = address.subLocality
+            //      self.location.street_address_2 = address.locality
+            //      self.location.city = address.administrativeArea
+            //      self.location.zipcode = address.postalCode
+            //      self.location.address_lat = coordinate.latitude
+            //      self.location.address_lng = coordinate.longitude
+            //      self.location.throughFair = address.thoroughfare
+        }
     }
-  }
-  func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-    mapView.selectedMarker = marker
-    let camera = GMSCameraPosition.camera(withTarget: marker.position, zoom: zoomLevel)
-    let update = GMSCameraUpdate.setCamera(camera)
-    mapView.animate(with: update)
-    return true
-  }
-  func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-//    self.lblAddress.text = marker.title
-//    self.curentPosition = marker.position
-//    self.gotoBack()
-  }
-  func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-   //reverseGeocodeCoordinate(position.target)
-  }
-  func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-  }
-  private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
-   // 1
-   let geocoder = GMSGeocoder()
-   // 2
-   geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
-    guard let address = response?.firstResult(), let lines = address.lines else {
-     return
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        mapView.selectedMarker = marker
+        let camera = GMSCameraPosition.camera(withTarget: marker.position, zoom: zoomLevel)
+        let update = GMSCameraUpdate.setCamera(camera)
+        mapView.animate(with: update)
+        return true
     }
-    // 3
-//    self.lblAddress.text = lines.joined(separator: "\n")
-//    self.curentPosition = address.coordinate
-    // 4
-    UIView.animate(withDuration: 0.25) {
-     self.view.layoutIfNeeded()
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        //    self.lblAddress.text = marker.title
+        //    self.curentPosition = marker.position
+        //    self.gotoBack()
     }
-    self.MapView.animate(toLocation: address.coordinate)
-   }
-  }
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        //reverseGeocodeCoordinate(position.target)
+    }
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+    }
+    private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
+        // 1
+        let geocoder = GMSGeocoder()
+        // 2
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            guard let address = response?.firstResult(), let lines = address.lines else {
+                return
+            }
+            // 3
+            //    self.lblAddress.text = lines.joined(separator: "\n")
+            //    self.curentPosition = address.coordinate
+            // 4
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+            }
+            self.MapView.animate(toLocation: address.coordinate)
+        }
+    }
 }
