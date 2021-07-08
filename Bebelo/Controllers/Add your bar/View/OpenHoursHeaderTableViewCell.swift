@@ -1,5 +1,5 @@
 //
-//  OnlyShowTableViewCell.swift
+//  OpenHoursHeaderTableViewCell.swift
 //  Bebelo
 //
 //  Created by Buzzware Tech on 07/07/2021.
@@ -7,12 +7,8 @@
 
 import UIKit
 
-class OnlyShowTableViewCell: UITableViewCell {
+class OpenHoursHeaderTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var TitleLabel: UILabel!
-    @IBOutlet weak var ImageLabel: UIImageView!
-    @IBOutlet weak var BackImage: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,6 +16,7 @@ class OnlyShowTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
 

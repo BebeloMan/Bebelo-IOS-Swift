@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow app to access camera for capture image.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Need to access your location to show bar near you</string>
 	<key>UIAppFonts</key>

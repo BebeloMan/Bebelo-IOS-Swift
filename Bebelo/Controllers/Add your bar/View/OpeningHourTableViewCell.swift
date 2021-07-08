@@ -1,5 +1,5 @@
 //
-//  OnlyShowTableViewCell.swift
+//  OpeningHourTableViewCell.swift
 //  Bebelo
 //
 //  Created by Buzzware Tech on 07/07/2021.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class OnlyShowTableViewCell: UITableViewCell {
+class OpeningHourTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var TitleLabel: UILabel!
-    @IBOutlet weak var ImageLabel: UIImageView!
-    @IBOutlet weak var BackImage: UIImageView!
+    @IBOutlet weak var WeekNameLabel: UILabel!
+    @IBOutlet weak var AddBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +19,7 @@ class OnlyShowTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
 

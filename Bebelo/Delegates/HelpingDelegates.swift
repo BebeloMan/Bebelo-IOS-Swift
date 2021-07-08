@@ -7,10 +7,10 @@
 
 import Foundation
 
-//protocol PassDataDelegate {
-//    func passCurrentLocation(data:LocationModel)
-//}
-//
+protocol PassDataDelegate {
+    func doneBtnDelegate()
+}
+
 //protocol FriendRequestsDelegate {
 //    func updateFriendRequestData(data:[FriendRequestModel])
 //}

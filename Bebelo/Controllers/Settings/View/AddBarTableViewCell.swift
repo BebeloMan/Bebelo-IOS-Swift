@@ -10,6 +10,12 @@ import UIKit
 class AddBarTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ForwordImage: UIImageView!
+    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var SideImage: UIImageView!
+    @IBOutlet weak var AddYourBarBtn: UIButton!
+    @IBOutlet weak var LoginBtn: UIButton!
+    @IBOutlet weak var AlreadyEnterdLabel: UILabel!
+    @IBOutlet weak var ForwordArrow: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -65,7 +65,9 @@ extension AppDelegate{
 //            let controller = storyboard.instantiateViewController(identifier: "LGSideMenuController") as! UIViewController
 //            self.window?.rootViewController = controller
 //        }else{
-            let controller = storyboard.instantiateViewController(identifier: "WellcomeViewController")
+            let controller = storyboard.instantiateViewController(identifier: "TabbarController")
+        //TabbarController
+        //WellcomeViewController
             self.window?.rootViewController = controller
         //}
         self.window?.makeKeyAndVisible()

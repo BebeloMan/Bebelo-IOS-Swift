@@ -1,5 +1,5 @@
 //
-//  OnlyShowTableViewCell.swift
+//  BarInfoImageTableViewCell.swift
 //  Bebelo
 //
 //  Created by Buzzware Tech on 07/07/2021.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class OnlyShowTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var TitleLabel: UILabel!
-    @IBOutlet weak var ImageLabel: UIImageView!
-    @IBOutlet weak var BackImage: UIImageView!
+class BarInfoImageTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var CaptureImage: UIImageView!
+    @IBOutlet weak var EditImageBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
