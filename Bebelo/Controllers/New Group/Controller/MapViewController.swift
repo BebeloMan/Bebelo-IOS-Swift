@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
     var locationManager = CLLocationManager()
     var zoomLevel: Float = 12.0
     let geocoder = GMSGeocoder()
-    
+    var userLocationMarker = GMSMarker()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,6 +35,7 @@ extension MapViewController{
         locationManager.requestAlwaysAuthorization()
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
+        locationManager.startUpdatingHeading()
         locationManager.delegate = self
         
         let camera = GMSCameraPosition.camera(withLatitude: 0.0,
@@ -42,7 +43,7 @@ extension MapViewController{
                                               zoom: zoomLevel)
         self.MapView.camera = camera
         self.MapView.settings.myLocationButton = false
-        self.MapView.isMyLocationEnabled = true
+        self.MapView.isMyLocationEnabled = false
         self.MapView.delegate = self
     }
     
@@ -51,6 +52,14 @@ extension MapViewController{
         marker.title = address
         marker.map = self.MapView
         marker.icon = UIImage(named: "Bar")
+    }
+    
+    func RadiansToDegrees(radians: Double) -> Double {
+        return radians * 190.0/M_PI
+    }
+    
+    func DegreesToRadians(degrees: Double) -> Double {
+        return degrees * M_PI / 180.0
     }
     
 }
@@ -62,23 +71,16 @@ extension MapViewController: CLLocationManagerDelegate {
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
-        print("Location: \(location)")
-        
-        //        self.curentPosition = location.coordinate
-        //        if self.curentPosition != nil{
-        //            manager.stopUpdatingLocation()
-        //        }
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
-                                              longitude: location.coordinate.longitude,
-                                              zoom: zoomLevel)
+
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,longitude: location.coordinate.longitude,zoom: zoomLevel)
         self.MapView.camera = camera
         self.MapView.animate(to: camera)
         
-        geocoder.reverseGeocodeCoordinate(location.coordinate){response , error in
-            guard let address: GMSAddress = response?.firstResult()else{return}
-            let  v = address.lines!.joined(separator: "\n")
-            
-        }
+        //Change current/my location icon
+        userLocationMarker = GMSMarker(position: location.coordinate)
+        userLocationMarker.icon = UIImage(named: "Me")
+//        userLocationMarker.rotation = CLLocationDegrees(m)
+        userLocationMarker.map = self.MapView
     }
     
     // Handle authorization for the location manager.
@@ -105,44 +107,55 @@ extension MapViewController: CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
     }
+    
+    //MARK: CHANGE CURRENT LOCATION ICON DEGREE FOR ROUTATION
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        let direction = -newHeading.trueHeading as Double
+        userLocationMarker.icon = self.imageRotatedByDegrees(degrees: CGFloat(direction), image: UIImage(named: "Me")!)
+    }
+ 
+    func imageRotatedByDegrees(degrees: CGFloat, image: UIImage) -> UIImage{
+        let size = image.size
+        
+        UIGraphicsBeginImageContext(size)
+        let context = UIGraphicsGetCurrentContext()
+        
+        context!.translateBy(x: 0.5*size.width, y: 0.5*size.height)
+        context!.rotate(by: CGFloat(DegreesToRadians(degrees: Double(degrees))))
+        
+        image.draw(in: CGRect(origin: CGPoint(x: -size.width*0.5, y: -size.height*0.5), size: size))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    func setLatLonForDistanceAndAngle(userLocation: CLLocation) -> Double {
+        let lat1 = DegreesToRadians(degrees: userLocation.coordinate.latitude)
+        let lon1 = DegreesToRadians(degrees: userLocation.coordinate.longitude)
+        
+        let lat2 = DegreesToRadians(degrees: 37.7833);
+        let lon2 = DegreesToRadians(degrees: -122.4167);
+        
+        let dLon = lon2 - lon1;
+        
+        let y = sin(dLon) * cos(lat2);
+        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
+        var radiansBearing = atan2(y, x);
+        if(radiansBearing < 0.0)
+        {
+            radiansBearing += 2*M_PI;
+        }
+        
+        return radiansBearing;
+    }
 }
 
 
 extension MapViewController:GMSMapViewDelegate{
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        mapView.clear()
-        //updatePlace()
-        print("Lat: \(coordinate.latitude) & Long: \(coordinate.longitude)")
-        let position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        //self.curentPosition = position
-        let geocoder = GMSGeocoder()
-        geocoder.reverseGeocodeCoordinate(coordinate){response , error in
-            guard let address: GMSAddress = response?.firstResult()
-            else
-            {
-                return
-            }
-            //    let v = address.lines!.joined(separator: "\n")
-            //    let marker = GMSMarker(position: position)
-            //    marker.title = v
-            //      self.lblAddress.text = v
-            //    marker.map = mapView
-            //    marker.icon = imageLiteral(resourceName: "Group 7")
-            //      print(v)
-            //      for i in address.lines!{
-            //        print("\(i)----------------")
-            //      }
-            //      print("\(address.locality)..Locatliy \n \(address.description).. Description \n \(address.subLocality)..subLocality \n\(address.country).. Country \n\(address.administrativeArea)..administrativeArea \n \(address.thoroughfare)..thoroughfare \n \(address.postalCode)..Zip \n \(address) Address")
-            //      self.location.address_name = address.locality
-            //      self.location.address = v
-            //      self.location.street_address_1 = address.subLocality
-            //      self.location.street_address_2 = address.locality
-            //      self.location.city = address.administrativeArea
-            //      self.location.zipcode = address.postalCode
-            //      self.location.address_lat = coordinate.latitude
-            //      self.location.address_lng = coordinate.longitude
-            //      self.location.throughFair = address.thoroughfare
-        }
+        //mapView.clear()
+
     }
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         mapView.selectedMarker = marker

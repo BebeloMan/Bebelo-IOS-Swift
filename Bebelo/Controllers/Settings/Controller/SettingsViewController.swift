@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController,PassDataDelegate {
     let onlyShowArray = ["Terraces", "Rooftops"]
     let theBorringStuffArray = ["Terms of use", "Data policy"]
     var isProfileEntered = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -103,9 +104,14 @@ extension SettingsViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     @objc func addYourBarButtonAction( _ sender:UIButton){
-        let vc = self.getViewController(identifier: "AddYourBarViewController") as! AddYourBarViewController
-        vc.delegate = self
-        self.navigationController?.pushViewController(vc, animated: true)
+        if isProfileEntered{
+            let vc = self.getViewController(identifier: "BarDetailViewController") as! BarDetailViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = self.getViewController(identifier: "AddYourBarViewController") as! AddYourBarViewController
+            vc.delegate = self
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc func loginButtonAction( _ sender:UIButton){

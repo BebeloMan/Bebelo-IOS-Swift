@@ -13,6 +13,11 @@
 		76171F5E2695E87E007610C3 /* OpeningHourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F5D2695E87E007610C3 /* OpeningHourTableViewCell.swift */; };
 		76171F612695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F602695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift */; };
 		76171F642695EFBE007610C3 /* TermsAndConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F632695EFBE007610C3 /* TermsAndConditionTableViewCell.swift */; };
+		762B08AA2697233800358DB4 /* BarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08A92697233800358DB4 /* BarDetailViewController.swift */; };
+		762B08AE2697286C00358DB4 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08AD2697286C00358DB4 /* AnnouncementTableViewCell.swift */; };
+		762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */; };
+		762B08B52697295F00358DB4 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */; };
+		762B08B8269729C900358DB4 /* OtherCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */; };
 		768FDA1C2697084600C817CB /* DataPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FDA1B2697084600C817CB /* DataPolicyViewController.swift */; };
 		768FDA242697122700C817CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FDA232697122700C817CB /* LoginViewController.swift */; };
 		76B096AE269304BA003B37E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B096AD269304BA003B37E8 /* AppDelegate.swift */; };
@@ -87,6 +92,11 @@
 		76171F5D2695E87E007610C3 /* OpeningHourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningHourTableViewCell.swift; sourceTree = "<group>"; };
 		76171F602695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHoursHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		76171F632695EFBE007610C3 /* TermsAndConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionTableViewCell.swift; sourceTree = "<group>"; };
+		762B08A92697233800358DB4 /* BarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailViewController.swift; sourceTree = "<group>"; };
+		762B08AD2697286C00358DB4 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
+		762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGalleryTableViewCell.swift; sourceTree = "<group>"; };
+		762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		768FDA1B2697084600C817CB /* DataPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPolicyViewController.swift; sourceTree = "<group>"; };
 		768FDA232697122700C817CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76B096AA269304BA003B37E8 /* Bebelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bebelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +229,42 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		762B08A52697231300358DB4 /* Bar Detail */ = {
+			isa = PBXGroup;
+			children = (
+				762B08A82697232700358DB4 /* Model */,
+				762B08A72697232200358DB4 /* View */,
+				762B08A62697231B00358DB4 /* Controller */,
+			);
+			path = "Bar Detail";
+			sourceTree = "<group>";
+		};
+		762B08A62697231B00358DB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				762B08A92697233800358DB4 /* BarDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		762B08A72697232200358DB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				762B08AD2697286C00358DB4 /* AnnouncementTableViewCell.swift */,
+				762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */,
+				762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */,
+				762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		762B08A82697232700358DB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		768FDA172697080E00C817CB /* DataPolicy */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +337,7 @@
 		76B096C5269305E7003B37E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				762B08A52697231300358DB4 /* Bar Detail */,
 				768FDA172697080E00C817CB /* DataPolicy */,
 				76171F502695E2D9007610C3 /* Add your bar */,
 				76DF092126934E250001F78E /* Settings */,
@@ -728,6 +775,7 @@
 				76171F582695E6DD007610C3 /* ContactInfoTableViewCell.swift in Sources */,
 				76B097052693063E003B37E8 /* UIButton+Additions.swift in Sources */,
 				76B097192693063E003B37E8 /* ViewControllerHelper.swift in Sources */,
+				762B08B8269729C900358DB4 /* OtherCategoryTableViewCell.swift in Sources */,
 				76B097112693063E003B37E8 /* CommonHelper.swift in Sources */,
 				76171F642695EFBE007610C3 /* TermsAndConditionTableViewCell.swift in Sources */,
 				76B097022693063E003B37E8 /* UIView+Additions.swift in Sources */,
@@ -741,9 +789,12 @@
 				76E992582695B023003E6505 /* OnlyShowTableViewCell.swift in Sources */,
 				76B0970E2693063E003B37E8 /* UITextView+Additions.swift in Sources */,
 				76B097032693063E003B37E8 /* UIViewController+Additions.swift in Sources */,
+				762B08AE2697286C00358DB4 /* AnnouncementTableViewCell.swift in Sources */,
 				76B097082693063E003B37E8 /* UITexfield+Additions.swift in Sources */,
+				762B08B52697295F00358DB4 /* MainCategoryTableViewCell.swift in Sources */,
 				76B096F92693063E003B37E8 /* WebServiceDataParsingDelegate.swift in Sources */,
 				76E9925B2695B0AC003E6505 /* CommunityTableViewCell.swift in Sources */,
+				762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */,
 				76B096FE2693063E003B37E8 /* DatabaseRepresentation.swift in Sources */,
 				76B097172693063E003B37E8 /* ValidationHelper.swift in Sources */,
 				76B097102693063E003B37E8 /* NVActivityIndicatorPresenter.swift in Sources */,
@@ -752,6 +803,7 @@
 				76E992522695AE8C003E6505 /* LocationTableViewCell.swift in Sources */,
 				76B0974126930905003B37E8 /* LoginModel.swift in Sources */,
 				76B097002693063E003B37E8 /* BadgedBarButtonItem.swift in Sources */,
+				762B08AA2697233800358DB4 /* BarDetailViewController.swift in Sources */,
 				76B097182693063E003B37E8 /* AsyncUtil.swift in Sources */,
 				76B0971B2693063E003B37E8 /* DataBaseHelper.swift in Sources */,
 				76B0970B2693063E003B37E8 /* Utility.swift in Sources */,
