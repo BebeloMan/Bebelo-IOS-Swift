@@ -21,6 +21,7 @@
 		762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */; };
 		762B08B52697295F00358DB4 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */; };
 		762B08B8269729C900358DB4 /* OtherCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */; };
+		76838AD32698794A009D8276 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76838AD22698794A009D8276 /* ForgotPasswordViewController.swift */; };
 		768FDA1C2697084600C817CB /* DataPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FDA1B2697084600C817CB /* DataPolicyViewController.swift */; };
 		768FDA242697122700C817CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FDA232697122700C817CB /* LoginViewController.swift */; };
 		76B096AE269304BA003B37E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B096AD269304BA003B37E8 /* AppDelegate.swift */; };
@@ -103,6 +104,7 @@
 		762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGalleryTableViewCell.swift; sourceTree = "<group>"; };
 		762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		76838AD22698794A009D8276 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		768FDA1B2697084600C817CB /* DataPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPolicyViewController.swift; sourceTree = "<group>"; };
 		768FDA232697122700C817CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76B096AA269304BA003B37E8 /* Bebelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bebelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +338,38 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		76838ACD2698788D009D8276 /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				76838AD126987934009D8276 /* Model */,
+				76838AD02698792F009D8276 /* View */,
+				76838ACF26987929009D8276 /* Controller */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		76838ACF26987929009D8276 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76838AD22698794A009D8276 /* ForgotPasswordViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76838AD02698792F009D8276 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76838AD126987934009D8276 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		768FDA172697080E00C817CB /* DataPolicy */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +442,7 @@
 		76B096C5269305E7003B37E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				76838ACD2698788D009D8276 /* Forgot Password */,
 				7601053826985C3D000F0937 /* Edit Bar profile */,
 				7601051E26984BB5000F0937 /* Add Announcement Popup */,
 				762B08A52697231300358DB4 /* Bar Detail */,
@@ -871,6 +906,7 @@
 				76E9925B2695B0AC003E6505 /* CommunityTableViewCell.swift in Sources */,
 				762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */,
 				7601053D26985C67000F0937 /* EditBarProfileViewController.swift in Sources */,
+				76838AD32698794A009D8276 /* ForgotPasswordViewController.swift in Sources */,
 				76B096FE2693063E003B37E8 /* DatabaseRepresentation.swift in Sources */,
 				76B097172693063E003B37E8 /* ValidationHelper.swift in Sources */,
 				76B097102693063E003B37E8 /* NVActivityIndicatorPresenter.swift in Sources */,
