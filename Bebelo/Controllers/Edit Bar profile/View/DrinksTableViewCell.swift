@@ -1,18 +1,17 @@
 //
-//  BarInfoImageTableViewCell.swift
+//  DrinksTableViewCell.swift
 //  Bebelo
 //
-//  Created by Buzzware Tech on 07/07/2021.
+//  Created by Buzzware Tech on 09/07/2021.
 //
 
 import UIKit
 
-class BarInfoImageTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var CaptureImage: UIImageView!
-    @IBOutlet weak var EditImageBtn: UIButton!
-    @IBOutlet weak var BlurViewButton: UIButton!
-    @IBOutlet weak var BlurView: UIView!
+class DrinksTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var DrinkImage: UIImageView!
+    @IBOutlet weak var DrinkTitle: UILabel!
+    @IBOutlet weak var DrinkPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +20,7 @@ class BarInfoImageTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
 

@@ -18,8 +18,11 @@ class SettingsViewController: UIViewController,PassDataDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        let yourBackImage = UIImage(named: "exit")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.backItem?.title = "Custom"
     }
     
     //DELEGATES

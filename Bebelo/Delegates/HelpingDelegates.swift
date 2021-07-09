@@ -11,6 +11,6 @@ protocol PassDataDelegate {
     func doneBtnDelegate()
 }
 
-//protocol FriendRequestsDelegate {
-//    func updateFriendRequestData(data:[FriendRequestModel])
-//}
+protocol AnnouncementProtocol {
+    func AnnouncementDeletegate(announce:String)
+}

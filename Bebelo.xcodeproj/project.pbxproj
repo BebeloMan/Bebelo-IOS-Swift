@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7601052326984C01000F0937 /* AnnouncementPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601052226984C01000F0937 /* AnnouncementPopupViewController.swift */; };
+		7601053D26985C67000F0937 /* EditBarProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601053C26985C67000F0937 /* EditBarProfileViewController.swift */; };
+		760105412698672A000F0937 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760105402698672A000F0937 /* DrinksTableViewCell.swift */; };
 		76171F552695E306007610C3 /* AddYourBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F542695E306007610C3 /* AddYourBarViewController.swift */; };
 		76171F582695E6DD007610C3 /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F572695E6DD007610C3 /* ContactInfoTableViewCell.swift */; };
 		76171F5B2695E746007610C3 /* BarInfoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F5A2695E746007610C3 /* BarInfoImageTableViewCell.swift */; };
@@ -86,6 +89,9 @@
 /* Begin PBXFileReference section */
 		02DAA9D64C3CF4FB2AB63565 /* Pods_Bebelo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bebelo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		571310482A45FDAA0AFE3F9D /* Pods-Bebelo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bebelo.release.xcconfig"; path = "Target Support Files/Pods-Bebelo/Pods-Bebelo.release.xcconfig"; sourceTree = "<group>"; };
+		7601052226984C01000F0937 /* AnnouncementPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementPopupViewController.swift; sourceTree = "<group>"; };
+		7601053C26985C67000F0937 /* EditBarProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBarProfileViewController.swift; sourceTree = "<group>"; };
+		760105402698672A000F0937 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
 		76171F542695E306007610C3 /* AddYourBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYourBarViewController.swift; sourceTree = "<group>"; };
 		76171F572695E6DD007610C3 /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		76171F5A2695E746007610C3 /* BarInfoImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarInfoImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +196,71 @@
 				02DAA9D64C3CF4FB2AB63565 /* Pods_Bebelo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7601051E26984BB5000F0937 /* Add Announcement Popup */ = {
+			isa = PBXGroup;
+			children = (
+				7601052126984BCE000F0937 /* Model */,
+				7601052026984BC9000F0937 /* View */,
+				7601051F26984BC1000F0937 /* Controller */,
+			);
+			path = "Add Announcement Popup";
+			sourceTree = "<group>";
+		};
+		7601051F26984BC1000F0937 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7601052226984C01000F0937 /* AnnouncementPopupViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7601052026984BC9000F0937 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7601052126984BCE000F0937 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7601053826985C3D000F0937 /* Edit Bar profile */ = {
+			isa = PBXGroup;
+			children = (
+				7601053B26985C55000F0937 /* Model */,
+				7601053A26985C4F000F0937 /* View */,
+				7601053926985C4A000F0937 /* Controller */,
+			);
+			path = "Edit Bar profile";
+			sourceTree = "<group>";
+		};
+		7601053926985C4A000F0937 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7601053C26985C67000F0937 /* EditBarProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7601053A26985C4F000F0937 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				760105402698672A000F0937 /* DrinksTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7601053B26985C55000F0937 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		76171F502695E2D9007610C3 /* Add your bar */ = {
@@ -337,6 +408,8 @@
 		76B096C5269305E7003B37E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7601053826985C3D000F0937 /* Edit Bar profile */,
+				7601051E26984BB5000F0937 /* Add Announcement Popup */,
 				762B08A52697231300358DB4 /* Bar Detail */,
 				768FDA172697080E00C817CB /* DataPolicy */,
 				76171F502695E2D9007610C3 /* Add your bar */,
@@ -754,6 +827,7 @@
 				76171F5B2695E746007610C3 /* BarInfoImageTableViewCell.swift in Sources */,
 				76B0971C2693063E003B37E8 /* NetworkConnection.swift in Sources */,
 				76E992552695AF3A003E6505 /* AddBarTableViewCell.swift in Sources */,
+				760105412698672A000F0937 /* DrinksTableViewCell.swift in Sources */,
 				76B097092693063E003B37E8 /* UIPopUp+Additions.swift in Sources */,
 				76B096FF2693063E003B37E8 /* HelpingDelegates.swift in Sources */,
 				76B097122693063E003B37E8 /* WebServicesHelper.swift in Sources */,
@@ -782,6 +856,7 @@
 				76B0970A2693063E003B37E8 /* UISearchBar+Additions.swift in Sources */,
 				768FDA1C2697084600C817CB /* DataPolicyViewController.swift in Sources */,
 				76D4B51426932DAA0078945E /* MapViewController.swift in Sources */,
+				7601052326984C01000F0937 /* AnnouncementPopupViewController.swift in Sources */,
 				76B0970F2693063E003B37E8 /* urlHelper.swift in Sources */,
 				76171F552695E306007610C3 /* AddYourBarViewController.swift in Sources */,
 				76B097072693063E003B37E8 /* Extensions.swift in Sources */,
@@ -795,6 +870,7 @@
 				76B096F92693063E003B37E8 /* WebServiceDataParsingDelegate.swift in Sources */,
 				76E9925B2695B0AC003E6505 /* CommunityTableViewCell.swift in Sources */,
 				762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */,
+				7601053D26985C67000F0937 /* EditBarProfileViewController.swift in Sources */,
 				76B096FE2693063E003B37E8 /* DatabaseRepresentation.swift in Sources */,
 				76B097172693063E003B37E8 /* ValidationHelper.swift in Sources */,
 				76B097102693063E003B37E8 /* NVActivityIndicatorPresenter.swift in Sources */,
