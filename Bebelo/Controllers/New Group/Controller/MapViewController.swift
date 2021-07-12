@@ -16,15 +16,19 @@ class MapViewController: UIViewController {
     
     //MARK: VARIABLE'S
     var locationManager = CLLocationManager()
-    var zoomLevel: Float = 12.0
+    var zoomLevel: Float = 14.0
     let geocoder = GMSGeocoder()
     var userLocationMarker = GMSMarker()
+    var lat = 33.678865546455455
+    var lng = 73.00183612438818
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.userLocationSetup()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 }
 
 //MARK:- Helping Method's
@@ -43,23 +47,35 @@ extension MapViewController{
                                               zoom: zoomLevel)
         self.MapView.camera = camera
         self.MapView.settings.myLocationButton = false
-        self.MapView.isMyLocationEnabled = false
+        self.MapView.isMyLocationEnabled = true
         self.MapView.delegate = self
     }
     
-    func placeMarkOnGoogleMap(address:String,location:CLLocation) {
-        let marker = GMSMarker(position: location.coordinate)
-        marker.title = address
-        marker.map = self.MapView
-        marker.icon = UIImage(named: "Bar")
+    func placeMarkOnGoogleMap() {
+        
+        for i in 0..<2{
+            self.lat = self.lat + 0.000000000000001
+            self.lng = self.lng + 0.000000000000001
+            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: self.lat, longitude: self.lng))
+            //marker.title = address
+            marker.map = self.MapView
+            marker.icon = UIImage(named: "Group 21")
+            
+        }
+        
     }
     
-    func RadiansToDegrees(radians: Double) -> Double {
-        return radians * 190.0/M_PI
-    }
-    
-    func DegreesToRadians(degrees: Double) -> Double {
-        return degrees * M_PI / 180.0
+    //    func RadiansToDegrees(radians: Double) -> Double {
+    //        return radians * 190.0/M_PI
+    //    }
+    //
+    //    func DegreesToRadians(degrees: Double) -> Double {
+    //        return degrees * M_PI / 180.0
+    //    }
+    //
+    func getViewController(identifier:String)-> UIViewController {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: identifier)
+        return vc
     }
     
 }
@@ -71,7 +87,9 @@ extension MapViewController: CLLocationManagerDelegate {
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
-
+        print(location.coordinate)
+        
+        
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,longitude: location.coordinate.longitude,zoom: zoomLevel)
         self.MapView.camera = camera
         self.MapView.animate(to: camera)
@@ -79,8 +97,9 @@ extension MapViewController: CLLocationManagerDelegate {
         //Change current/my location icon
         userLocationMarker = GMSMarker(position: location.coordinate)
         userLocationMarker.icon = UIImage(named: "Me")
-//        userLocationMarker.rotation = CLLocationDegrees(m)
+        //        userLocationMarker.rotation = CLLocationDegrees(m)
         userLocationMarker.map = self.MapView
+        self.placeMarkOnGoogleMap()
     }
     
     // Handle authorization for the location manager.
@@ -108,54 +127,55 @@ extension MapViewController: CLLocationManagerDelegate {
         print("Error: \(error)")
     }
     
-    //MARK: CHANGE CURRENT LOCATION ICON DEGREE FOR ROUTATION
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        let direction = -newHeading.trueHeading as Double
-        userLocationMarker.icon = self.imageRotatedByDegrees(degrees: CGFloat(direction), image: UIImage(named: "Me")!)
-    }
- 
-    func imageRotatedByDegrees(degrees: CGFloat, image: UIImage) -> UIImage{
-        let size = image.size
-        
-        UIGraphicsBeginImageContext(size)
-        let context = UIGraphicsGetCurrentContext()
-        
-        context!.translateBy(x: 0.5*size.width, y: 0.5*size.height)
-        context!.rotate(by: CGFloat(DegreesToRadians(degrees: Double(degrees))))
-        
-        image.draw(in: CGRect(origin: CGPoint(x: -size.width*0.5, y: -size.height*0.5), size: size))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
-    }
-    
-    func setLatLonForDistanceAndAngle(userLocation: CLLocation) -> Double {
-        let lat1 = DegreesToRadians(degrees: userLocation.coordinate.latitude)
-        let lon1 = DegreesToRadians(degrees: userLocation.coordinate.longitude)
-        
-        let lat2 = DegreesToRadians(degrees: 37.7833);
-        let lon2 = DegreesToRadians(degrees: -122.4167);
-        
-        let dLon = lon2 - lon1;
-        
-        let y = sin(dLon) * cos(lat2);
-        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
-        var radiansBearing = atan2(y, x);
-        if(radiansBearing < 0.0)
-        {
-            radiansBearing += 2*M_PI;
-        }
-        
-        return radiansBearing;
-    }
+    //    //MARK: CHANGE CURRENT LOCATION ICON DEGREE FOR ROUTATION
+    //    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+    //        let direction = -newHeading.trueHeading as Double
+    //        userLocationMarker.icon = self.imageRotatedByDegrees(degrees: CGFloat(direction), image: UIImage(named: "Me")!)
+    //    }
+    //
+    //    func imageRotatedByDegrees(degrees: CGFloat, image: UIImage) -> UIImage{
+    //        let size = image.size
+    //
+    //        UIGraphicsBeginImageContext(size)
+    //        let context = UIGraphicsGetCurrentContext()
+    //
+    //        context!.translateBy(x: 0.5*size.width, y: 0.5*size.height)
+    //        context!.rotate(by: CGFloat(DegreesToRadians(degrees: Double(degrees))))
+    //
+    //        image.draw(in: CGRect(origin: CGPoint(x: -size.width*0.5, y: -size.height*0.5), size: size))
+    //        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    //        UIGraphicsEndImageContext()
+    //
+    //        return newImage!
+    //    }
+    //
+    //    func setLatLonForDistanceAndAngle(userLocation: CLLocation) -> Double {
+    //        let lat1 = DegreesToRadians(degrees: userLocation.coordinate.latitude)
+    //        let lon1 = DegreesToRadians(degrees: userLocation.coordinate.longitude)
+    //
+    //        let lat2 = DegreesToRadians(degrees: 37.7833);
+    //        let lon2 = DegreesToRadians(degrees: -122.4167);
+    //
+    //        let dLon = lon2 - lon1;
+    //
+    //        let y = sin(dLon) * cos(lat2);
+    //        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
+    //        var radiansBearing = atan2(y, x);
+    //        if(radiansBearing < 0.0)
+    //        {
+    //            radiansBearing += 2*M_PI;
+    //        }
+    //
+    //        return radiansBearing;
+    //    }
 }
 
 
 extension MapViewController:GMSMapViewDelegate{
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         //mapView.clear()
-
+        let vc = self.getViewController(identifier: "SelectedBarDetailViewController") as! SelectedBarDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         mapView.selectedMarker = marker

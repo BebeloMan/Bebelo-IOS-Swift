@@ -16,12 +16,16 @@
 		76171F5E2695E87E007610C3 /* OpeningHourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F5D2695E87E007610C3 /* OpeningHourTableViewCell.swift */; };
 		76171F612695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F602695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift */; };
 		76171F642695EFBE007610C3 /* TermsAndConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76171F632695EFBE007610C3 /* TermsAndConditionTableViewCell.swift */; };
+		762402C4269C3FD800954754 /* MenuOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762402C3269C3FD800954754 /* MenuOptionViewController.swift */; };
+		762402CB269C49E800954754 /* SelectedBarProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762402CA269C49E800954754 /* SelectedBarProfileViewController.swift */; };
 		762B08AA2697233800358DB4 /* BarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08A92697233800358DB4 /* BarDetailViewController.swift */; };
 		762B08AE2697286C00358DB4 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08AD2697286C00358DB4 /* AnnouncementTableViewCell.swift */; };
 		762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */; };
 		762B08B52697295F00358DB4 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */; };
 		762B08B8269729C900358DB4 /* OtherCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */; };
 		76838AD32698794A009D8276 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76838AD22698794A009D8276 /* ForgotPasswordViewController.swift */; };
+		76838ADB26988B93009D8276 /* SelectedBarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76838ADA26988B93009D8276 /* SelectedBarDetailViewController.swift */; };
+		76838ADF26988E38009D8276 /* BarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76838ADE26988E38009D8276 /* BarDetailTableViewCell.swift */; };
 		768FDA1C2697084600C817CB /* DataPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FDA1B2697084600C817CB /* DataPolicyViewController.swift */; };
 		768FDA242697122700C817CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FDA232697122700C817CB /* LoginViewController.swift */; };
 		76B096AE269304BA003B37E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B096AD269304BA003B37E8 /* AppDelegate.swift */; };
@@ -99,12 +103,16 @@
 		76171F5D2695E87E007610C3 /* OpeningHourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningHourTableViewCell.swift; sourceTree = "<group>"; };
 		76171F602695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHoursHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		76171F632695EFBE007610C3 /* TermsAndConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionTableViewCell.swift; sourceTree = "<group>"; };
+		762402C3269C3FD800954754 /* MenuOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionViewController.swift; sourceTree = "<group>"; };
+		762402CA269C49E800954754 /* SelectedBarProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBarProfileViewController.swift; sourceTree = "<group>"; };
 		762B08A92697233800358DB4 /* BarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailViewController.swift; sourceTree = "<group>"; };
 		762B08AD2697286C00358DB4 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		762B08B02697291E00358DB4 /* BarGalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGalleryTableViewCell.swift; sourceTree = "<group>"; };
 		762B08B42697295F00358DB4 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		762B08B7269729C900358DB4 /* OtherCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		76838AD22698794A009D8276 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		76838ADA26988B93009D8276 /* SelectedBarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBarDetailViewController.swift; sourceTree = "<group>"; };
+		76838ADE26988E38009D8276 /* BarDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailTableViewCell.swift; sourceTree = "<group>"; };
 		768FDA1B2697084600C817CB /* DataPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPolicyViewController.swift; sourceTree = "<group>"; };
 		768FDA232697122700C817CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76B096AA269304BA003B37E8 /* Bebelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bebelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +310,70 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		762402BE269C3F9700954754 /* Menu Option */ = {
+			isa = PBXGroup;
+			children = (
+				762402C1269C3FBC00954754 /* Model */,
+				762402C0269C3FB500954754 /* View */,
+				762402BF269C3FAE00954754 /* Controller */,
+			);
+			path = "Menu Option";
+			sourceTree = "<group>";
+		};
+		762402BF269C3FAE00954754 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				762402C3269C3FD800954754 /* MenuOptionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		762402C0269C3FB500954754 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		762402C1269C3FBC00954754 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		762402C6269C49AB00954754 /* Selected Bar Profile */ = {
+			isa = PBXGroup;
+			children = (
+				762402C9269C49CD00954754 /* Model */,
+				762402C8269C49CA00954754 /* View */,
+				762402C7269C49C500954754 /* Controller */,
+			);
+			path = "Selected Bar Profile";
+			sourceTree = "<group>";
+		};
+		762402C7269C49C500954754 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				762402CA269C49E800954754 /* SelectedBarProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		762402C8269C49CA00954754 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		762402C9269C49CD00954754 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		762B08A52697231300358DB4 /* Bar Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +436,39 @@
 			sourceTree = "<group>";
 		};
 		76838AD126987934009D8276 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76838AD626988B65009D8276 /* Selected Bar Detail */ = {
+			isa = PBXGroup;
+			children = (
+				76838AD926988B7A009D8276 /* Model */,
+				76838AD826988B74009D8276 /* View */,
+				76838AD726988B6F009D8276 /* Controller */,
+			);
+			path = "Selected Bar Detail";
+			sourceTree = "<group>";
+		};
+		76838AD726988B6F009D8276 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76838ADA26988B93009D8276 /* SelectedBarDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76838AD826988B74009D8276 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76838ADE26988E38009D8276 /* BarDetailTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76838AD926988B7A009D8276 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -442,6 +547,9 @@
 		76B096C5269305E7003B37E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				762402C6269C49AB00954754 /* Selected Bar Profile */,
+				762402BE269C3F9700954754 /* Menu Option */,
+				76838AD626988B65009D8276 /* Selected Bar Detail */,
 				76838ACD2698788D009D8276 /* Forgot Password */,
 				7601053826985C3D000F0937 /* Edit Bar profile */,
 				7601051E26984BB5000F0937 /* Add Announcement Popup */,
@@ -869,9 +977,11 @@
 				76171F5E2695E87E007610C3 /* OpeningHourTableViewCell.swift in Sources */,
 				76B0970D2693063E003B37E8 /* AppStoryBoard.swift in Sources */,
 				76DF092626934E640001F78E /* SettingsViewController.swift in Sources */,
+				762402CB269C49E800954754 /* SelectedBarProfileViewController.swift in Sources */,
 				76B0971D2693063E003B37E8 /* Constant.swift in Sources */,
 				76D4B4CA269312EA0078945E /* WellcomeViewController.swift in Sources */,
 				76B0971E2693063E003B37E8 /* Globals.swift in Sources */,
+				76838ADB26988B93009D8276 /* SelectedBarDetailViewController.swift in Sources */,
 				76B096F82693063E003B37E8 /* WebServiceResponseDelegate.swift in Sources */,
 				76B096AE269304BA003B37E8 /* AppDelegate.swift in Sources */,
 				76171F612695EC86007610C3 /* OpenHoursHeaderTableViewCell.swift in Sources */,
@@ -901,9 +1011,11 @@
 				76B097032693063E003B37E8 /* UIViewController+Additions.swift in Sources */,
 				762B08AE2697286C00358DB4 /* AnnouncementTableViewCell.swift in Sources */,
 				76B097082693063E003B37E8 /* UITexfield+Additions.swift in Sources */,
+				762402C4269C3FD800954754 /* MenuOptionViewController.swift in Sources */,
 				762B08B52697295F00358DB4 /* MainCategoryTableViewCell.swift in Sources */,
 				76B096F92693063E003B37E8 /* WebServiceDataParsingDelegate.swift in Sources */,
 				76E9925B2695B0AC003E6505 /* CommunityTableViewCell.swift in Sources */,
+				76838ADF26988E38009D8276 /* BarDetailTableViewCell.swift in Sources */,
 				762B08B12697291E00358DB4 /* BarGalleryTableViewCell.swift in Sources */,
 				7601053D26985C67000F0937 /* EditBarProfileViewController.swift in Sources */,
 				76838AD32698794A009D8276 /* ForgotPasswordViewController.swift in Sources */,
