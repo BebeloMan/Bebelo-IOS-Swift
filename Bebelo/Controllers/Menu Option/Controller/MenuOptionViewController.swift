@@ -16,7 +16,7 @@ class MenuOptionViewController: UIViewController {
     
     //VARIABLE'S
     var isFlagSelected = false
-    
+    var delegate:SelectedBarDetailViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(IsThisYourBarAction(_:)))
@@ -34,7 +34,10 @@ class MenuOptionViewController: UIViewController {
     @objc func IsThisYourBarAction(_:UITapGestureRecognizer){
         // Move to next screen
         let BarProfile = self.getViewController(identifier: "SelectedBarProfileViewController") as! SelectedBarProfileViewController
-        self.present(BarProfile, animated: true, completion: nil)
+        
+        self.performSegue(withIdentifier: "ShowBar", sender: nil)
+        
+        //present(BarProfile, animated: true, completion: nil)
     }
     @objc func FlagAction(_:UITapGestureRecognizer){
         // Move to next screen

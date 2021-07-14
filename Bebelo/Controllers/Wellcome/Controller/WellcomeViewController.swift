@@ -9,11 +9,13 @@ import UIKit
 
 class WellcomeViewController: UIViewController {
     //IBOUTLET'S
+    @IBOutlet weak var FieldsBorder: UIView!
     @IBOutlet weak var MaleBtn: UIButton!
     @IBOutlet weak var FemaleBtn: UIButton!
     @IBOutlet weak var DayTF: UITextField!
     @IBOutlet weak var MonthTF: UITextField!
     @IBOutlet weak var YearTF: UITextField!
+    @IBOutlet weak var EnterBtn: UIButton!
     
     //VARIABLE'S
     var isGenderSelected = false
@@ -21,16 +23,16 @@ class WellcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUIInitialSetting()
         // Do any additional setup after loading the view.
     }
     
     //IBACTION'S
     @IBAction func MaleBtnAction(_ sender: Any) {
-        self.changeGenderBtnBorder(type: true)
+        changeGenderBtnBorder(type: true)
     }
     @IBAction func FemaleBtnAction(_ sender: Any) {
-        self.changeGenderBtnBorder(type: false)
+        changeGenderBtnBorder(type: false)
     }
     @IBAction func EnterBtnAction(_ sender: Any) {
         
@@ -46,19 +48,32 @@ class WellcomeViewController: UIViewController {
 extension WellcomeViewController{
     /*THIS METHOS WILL SETUP USER INTERFACE INITIAL SETTINGS*/
     func setupUIInitialSetting() {
-        
+        DayTF.delegate = self
     }
     
     func changeGenderBtnBorder(type:Bool) {
+        EnterBtn.backgroundColor = UIColor(named: "Button Background")
         self.isGenderSelected = true
         if type{ //MALE
-            self.MaleBtn.borderColor = UIColor(named: "Button Border")
-            self.FemaleBtn.borderColor = UIColor(named: "Textfield Placeholder")
+            MaleBtn.borderColor = UIColor(named: "Button Border")
+            FemaleBtn.borderColor = UIColor(named: "Textfield Placeholder")
         }else{// FEMALE
-            self.MaleBtn.borderColor = UIColor(named: "Textfield Placeholder")
-            self.FemaleBtn.borderColor = UIColor(named: "Button Border")
-
+            MaleBtn.borderColor = UIColor(named: "Textfield Placeholder")
+            FemaleBtn.borderColor = UIColor(named: "Button Border")
+            
         }
+    }
+}
+
+//MARK:- UITEXTFIELD DELEGATE METHOD'S
+extension WellcomeViewController:UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text!.count > 0{
+            FieldsBorder.borderColor = UIColor(named: "Label Text 2")
+        }else{
+            FieldsBorder.borderColor = UIColor(named: "Textfield Placeholder")
+        }
+        return true
     }
 }
 
@@ -66,7 +81,7 @@ extension WellcomeViewController{
 extension WellcomeViewController{
     /*THIS METHOS WILL SETUP USER INTERFACE INITIAL SETTINGS*/
     func ValidateDate() -> Bool{
-        if self.DayTF.text != " " || self.DayTF.text != "", self.MonthTF.text != " " || self.MonthTF.text != "",self.YearTF.text != " " || self.YearTF.text != ""{
+        if DayTF.text != " " || DayTF.text != "", MonthTF.text != " " || MonthTF.text != "",YearTF.text != " " || YearTF.text != ""{
             if isGenderSelected{
                 return true
             }else{
