@@ -68,6 +68,7 @@
 		76B0971D2693063E003B37E8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B096F62693063E003B37E8 /* Constant.swift */; };
 		76B0971E2693063E003B37E8 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B096F72693063E003B37E8 /* Globals.swift */; };
 		76B0974126930905003B37E8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B0974026930905003B37E8 /* LoginModel.swift */; };
+		76B9303426A07FEF00DF9357 /* WeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9303326A07FEF00DF9357 /* WeekModel.swift */; };
 		76D4B4CA269312EA0078945E /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D4B4C9269312EA0078945E /* WellcomeViewController.swift */; };
 		76D4B4D7269314B40078945E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76D4B4CD269314B20078945E /* OpenSans-Regular.ttf */; };
 		76D4B4D8269314B40078945E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76D4B4CE269314B30078945E /* OpenSans-SemiBold.ttf */; };
@@ -171,6 +172,7 @@
 		76B096F62693063E003B37E8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		76B096F72693063E003B37E8 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		76B0974026930905003B37E8 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		76B9303326A07FEF00DF9357 /* WeekModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekModel.swift; sourceTree = "<group>"; };
 		76D4B4C9269312EA0078945E /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		76D4B4CD269314B20078945E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		76D4B4CE269314B30078945E /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 		76171F532695E2EE007610C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76B9303326A07FEF00DF9357 /* WeekModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1031,6 +1034,7 @@
 				76B097042693063E003B37E8 /* NotificationExtension.swift in Sources */,
 				76B097012693063E003B37E8 /* UIImage+Additions.swift in Sources */,
 				76171F5B2695E746007610C3 /* BarInfoImageTableViewCell.swift in Sources */,
+				76B9303426A07FEF00DF9357 /* WeekModel.swift in Sources */,
 				76B0971C2693063E003B37E8 /* NetworkConnection.swift in Sources */,
 				76E992552695AF3A003E6505 /* AddBarTableViewCell.swift in Sources */,
 				760105412698672A000F0937 /* DrinksTableViewCell.swift in Sources */,

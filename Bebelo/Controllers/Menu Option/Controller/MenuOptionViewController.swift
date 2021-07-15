@@ -15,8 +15,11 @@ class MenuOptionViewController: UIViewController {
     @IBOutlet weak var FlagBackView: UIView!
     
     //VARIABLE'S
+    let unFlag = "image 56"
+    let flag = "image 70"
     var isFlagSelected = false
     var delegate:SelectedBarDetailViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(IsThisYourBarAction(_:)))
@@ -27,35 +30,37 @@ class MenuOptionViewController: UIViewController {
         FlagBackView.addGestureRecognizer(flagTap)
     }
     
+    //IBOUTLET'S
     @IBAction func CloseBtnAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @objc func IsThisYourBarAction(_:UITapGestureRecognizer){
-        // Move to next screen
-        let BarProfile = self.getViewController(identifier: "SelectedBarProfileViewController") as! SelectedBarProfileViewController
-        
-        self.performSegue(withIdentifier: "ShowBar", sender: nil)
-        
-        //present(BarProfile, animated: true, completion: nil)
-    }
-    @objc func FlagAction(_:UITapGestureRecognizer){
-        // Move to next screen
-        if isFlagSelected{
-            isFlagSelected = false
-            self.FlagImage.image = UIImage(named: "image 56")
-        }else{
-            isFlagSelected = true
-            self.FlagImage.image = UIImage(named: "image 70")
+        self.dismiss(animated: true){
+            
         }
     }
-    
+ 
 }
 
 //MARK:- HELPING METHOD'S
 extension MenuOptionViewController{
+    
     func getViewController(identifier:String)-> UIViewController {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: identifier)
+        let vc = UIStoryboard.init(name: Constant.mainStoryboard, bundle: Bundle.main).instantiateViewController(identifier: identifier)
         return vc
+    }
+    
+    @objc func IsThisYourBarAction(_:UITapGestureRecognizer){
+        self.dismiss(animated: true){
+            self.delegate.bardeatail()
+        }
+    }
+    
+    @objc func FlagAction(_:UITapGestureRecognizer){
+        // Move to next screen
+        if isFlagSelected{
+            isFlagSelected = false
+            self.FlagImage.image = UIImage(named: unFlag)
+        }else{
+            isFlagSelected = true
+            self.FlagImage.image = UIImage(named: flag)
+        }
     }
 }

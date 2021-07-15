@@ -506,8 +506,8 @@ extension String {
     func isValidPhone() -> Bool {
         let phonekit = PhoneNumberKit()
         do{
-            let val = try phonekit.parse(self)
-            let all = phonekit.allCountries()
+            _ = try phonekit.parse(self)
+            _ = phonekit.allCountries()
             return true
         }
         catch{
@@ -617,8 +617,7 @@ extension String {
 
 extension URL {
     
-    func isEmpty(_ text:String?) -> Bool
-    {
+    func isEmpty(_ text:String?) -> Bool {
         if text == nil {return true}
         
         if text!.isEmpty == true {return true}
@@ -629,8 +628,7 @@ extension URL {
         
     }
     
-    func isURLValid(_ urlString:String?) -> Bool
-    {
+    func isURLValid(_ urlString:String?) -> Bool {
         if isEmpty(urlString) {return false}
         
         let url =  URL(string: urlString!)

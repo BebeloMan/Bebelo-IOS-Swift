@@ -53,4 +53,34 @@ struct Constant {
     static let videoLocation = "videoLocation"
     static let videoLongitude = "videoLongitude"
     static let videoURL = "videoURL"
+    
+    //MARK: OTHERS CONSTANTS
+    static let mainStoryboard = "Main"
+    static let selectedBarDetailIdentifier = "SelectedBarDetailViewController"
+    static let navigationBackImage = "image 13"
+    static let barDetailTableViewCell = "BarDetailTableViewCell"
+    static let mainCategoryTableViewCell = "MainCategoryTableViewCell"
+    static let otherCategoryTableViewCell = "OtherCategoryTableViewCell"
+    static let announcementTableViewCell = "AnnouncementTableViewCell"
+    static let barGalleryTableViewCell = "BarGalleryTableViewCell"
+    static let drinksTableViewCell = "DrinksTableViewCell"
+    static let barInfoImageTableViewCell = "BarInfoImageTableViewCell"
+    static let onlyShowTableViewCell = "OnlyShowTableViewCell"
+    static let openHoursHeaderTableViewCell = "OpenHoursHeaderTableViewCell"
+    static let openingHourTableViewCell = "OpeningHourTableViewCell"
+    static let contactInfoTableViewCell = "ContactInfoTableViewCell"
+    static let termsAndConditionTableViewCell = "TermsAndConditionTableViewCell"
+    static let labelColor = "Label Text"
+    static let openSansFont = "OpenSans-Bold"
+    static let fontSize: CGFloat = 15.0
+    static let tableviewHeaderHeight: CGFloat = 50
+    static let tableviewHeaderXY: CGFloat = 0.0
+    static let exitIcon = "exitIcon"
+    static let assetsTypeImage = "public.image"
+    static let assetsTypeMovie = "public.movie"
+    static let chooseImageTilte = "Choose Image"
+    static let camera = "Camera"
+    static let gallery = "Gallery"
+    static let cancel = "Cancel"
+    
 }

@@ -9,17 +9,55 @@ import UIKit
 import SDWebImage
 
 class AddYourBarViewController: UIViewController {
+    
     //IBOUTLET'S
     @IBOutlet weak var AddBarTableView: UITableView!
     
+    //ARRAY'S
+    let headers_Array = [
+        "Contact info",
+        "Bar info",
+        "",
+        "My bar has",
+        "",
+        "Account",
+        ""
+    ]
+    
+    let contactInfoArray = [
+        "Your name",
+        "Phone no."
+    ]
+    
+    let barInfoArray = [
+        "Bar name",
+        "Address"
+    ]
+    
+    var weekArray = [
+        "",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thusday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    ]
+    
+    let myBarHasArray = [
+        "Terrace",
+        "Rooftop"
+    ]
+    
+    let accountArray = [
+        "Email",
+        "Password"
+    ]
+    
     //VARIABLE'S
-    let headers_Array = ["Contact info","Bar info","","My bar has","","Account",""]
-    let contactInfoArray = ["Your name","Phone no."]
-    let barInfoArray = ["Bar name","Address"]
-    let weekArray = ["","Monday","Tuesday","Wednesday","Thusday","Friday","Saturday","Sunday"]
-    let myBarHasArray = ["Terraces", "Rooftops"]
-    let accountArray = ["Email","Password"]
     let image = UIImagePickerController()
+    let dataPolicyIdentifier = "DataPolicyViewController"
     var barImage = #imageLiteral(resourceName: "Group 97")
     var isImageEdited = false
     var delegate:PassDataDelegate?
@@ -28,6 +66,8 @@ class AddYourBarViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    //IBACTION'S
     @IBAction func DoneBtnAction(_ sender: Any) {
         delegate?.doneBtnDelegate()
         self.navigationController?.popViewController(animated: true)
@@ -36,7 +76,7 @@ class AddYourBarViewController: UIViewController {
 }
 
 //MARK:- HELPING METHOD'S
-extension AddYourBarViewController{
+extension AddYourBarViewController {
     func getViewController(identifier:String)-> UIViewController {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: identifier)
         return vc
@@ -44,7 +84,7 @@ extension AddYourBarViewController{
 }
 
 //MARK:- UITABLEVIEW DELEGATE AND DATASOURCE
-extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
+extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.headers_Array.count
@@ -53,6 +93,7 @@ extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.headers_Array[section]
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 2{
             return 10
@@ -86,19 +127,19 @@ extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0{//MARK: CONTACT INFO
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ContactInfoTableViewCell") as! ContactInfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.contactInfoTableViewCell) as! ContactInfoTableViewCell
             cell.TitleLabel.text = self.contactInfoArray[indexPath.row]
             cell.FieldTF.placeholder = self.contactInfoArray[indexPath.row]
             return cell
         }else if indexPath.section == 1{//MARK: BAR INFO
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ContactInfoTableViewCell") as! ContactInfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.contactInfoTableViewCell) as! ContactInfoTableViewCell
             cell.TitleLabel.text = self.barInfoArray[indexPath.row]
             cell.TitleLabel.tag = indexPath.row
             cell.FieldTF.placeholder = self.barInfoArray[indexPath.row]
             cell.FieldTF.tag = indexPath.row
             return cell
         }else if indexPath.section == 2{ //MARK: BAR INFO IMAGE
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BarInfoImageTableViewCell") as! BarInfoImageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.barInfoImageTableViewCell) as! BarInfoImageTableViewCell
             cell.CaptureImage.image = self.barImage
             if self.isImageEdited{
                 cell.EditImageBtn.isHidden = false
@@ -108,7 +149,7 @@ extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
             }
             return cell
         }else if indexPath.section == 3{ //MARK: ONLY SHOW
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OnlyShowTableViewCell") as! OnlyShowTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.onlyShowTableViewCell) as! OnlyShowTableViewCell
             cell.TitleLabel.text = self.myBarHasArray[indexPath.row]
             if indexPath.row == 0{
                 cell.BackImage.image = UIImage(named: "Filter row selected")
@@ -120,22 +161,27 @@ extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
             return cell
         }else if indexPath.section == 4{ //MARK: OPENING HOURS
             if indexPath.row == 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "OpenHoursHeaderTableViewCell") as! OpenHoursHeaderTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: Constant.openHoursHeaderTableViewCell) as! OpenHoursHeaderTableViewCell
                 return cell
             }else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "OpeningHourTableViewCell") as! OpeningHourTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: Constant.openingHourTableViewCell) as! OpeningHourTableViewCell
+                if self.weekArray[indexPath.row].isEmpty{
+                    cell.WeekNameLabel.text = self.weekArray[indexPath.row]
+                    cell.AddBtn.setImage(UIImage(named: ""), for: .normal)
+                    cell.backgroundColor = UIColor(named: "SegmentOn")
+                }
                 cell.WeekNameLabel.text = self.weekArray[indexPath.row]
                 return cell
             }
         }else if indexPath.section == 5{ //MARK: ACCOUNT
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ContactInfoTableViewCell") as! ContactInfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.contactInfoTableViewCell) as! ContactInfoTableViewCell
             cell.TitleLabel.text = self.accountArray[indexPath.row]
             cell.TitleLabel.tag = indexPath.row
             cell.FieldTF.placeholder = self.accountArray[indexPath.row]
             cell.FieldTF.tag = indexPath.row
             return cell
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TermsAndConditionTableViewCell") as! TermsAndConditionTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.termsAndConditionTableViewCell) as! TermsAndConditionTableViewCell
             let termsGusture = UITapGestureRecognizer(target: self, action: #selector(self.termsOfUserAction(sender:)))
             cell.TermsOfUseLabel.addGestureRecognizer(termsGusture)
             cell.TermsOfUseLabel.isUserInteractionEnabled = true
@@ -147,9 +193,12 @@ extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 2{ //MARK: BAR INFO IMAGE
+        if indexPath.section == 2 { //MARK: BAR INFO IMAGE
             //Open Camera
             self.CameraBottomSheet()
+        } else if indexPath.section == 4 {
+            self.weekArray.insert("", at: indexPath.row + 1)
+            tableView.reloadSections([indexPath.section], with: .none)
         }
     }
     
@@ -158,7 +207,7 @@ extension AddYourBarViewController:UITableViewDelegate,UITableViewDataSource{
         self.CameraBottomSheet()
     }
     @objc func termsOfUserAction(sender:UITapGestureRecognizer){
-        let vc = self.getViewController(identifier: "DataPolicyViewController") as! DataPolicyViewController
+        let vc = self.getViewController(identifier: dataPolicyIdentifier) as! DataPolicyViewController
         vc.vcTitle = "Terms Of Use"
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -206,13 +255,15 @@ extension AddYourBarViewController {
     // THIS METHOD WILL OPEN CAMERA FOR CAPTURING IMAGE
     func openCamera()
     {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+        if UIImagePickerController.isSourceTypeAvailable (
+            UIImagePickerController.SourceType.camera
+        ) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
-        }else {
+        } else {
             PopupHelper.showAlertControllerWithError(forErrorMessage: "Your device not supporting camera", forViewController: self)
         }
     }

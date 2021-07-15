@@ -12,13 +12,18 @@ import SemiModalViewController
 
 class MapViewController: UIViewController {
     
-    //MARK: IBOUTLET'S
+    //IBOUTLET'S
     @IBOutlet weak var MapView: GMSMapView!
     
-    //MARK: VARIABLE'S
+    //VARIABLE'S
+    let markImage = "Group 21"
+    let locationIncrement = 0.00000000000000002
+    let distanceFilter: CLLocationDistance = 50
+    let geocoder = GMSGeocoder()
+    let initialLatLng = 0.0
+    let controllerXYPosition: CGFloat = 0.0
     var locationManager = CLLocationManager()
     var zoomLevel: Float = 14.0
-    let geocoder = GMSGeocoder()
     var userLocationMarker = GMSMarker()
     var lat = 33.678865546455455
     var lng = 73.00183612438818
@@ -26,57 +31,62 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userLocationSetup()
-        
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    //This will show full view controller
-    func showFullView() {
-        self.performSegue(withIdentifier: "ShowDetail", sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? SelectedBarDetailViewController{
+            controller.delegate = self
+            controller.isPreviousClose = true
+        }
     }
+}
+
+//MARK:- DELEGATES METHODS
+extension MapViewController{
     
-    func changeTabbar() {
-        //ChangeTabbar
+    func showFullView() {
+        //This will show Bar detail view controller in full screen.
+        self.performSegue(withIdentifier: "ShowDetail", sender: nil)
     }
     
 }
 
 //MARK:- Helping Method's
 extension MapViewController{
+    
     func userLocationSetup() {
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
-        locationManager.distanceFilter = 50
+        locationManager.distanceFilter = distanceFilter
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
         locationManager.delegate = self
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 0.0,
-                                              longitude: 0.0,
-                                              zoom: zoomLevel)
-        self.MapView.camera = camera
-        self.MapView.settings.myLocationButton = false
-        self.MapView.isMyLocationEnabled = true
-        self.MapView.delegate = self
+        let camera = GMSCameraPosition.camera(
+            withLatitude: initialLatLng,
+            longitude: initialLatLng,
+            zoom: zoomLevel
+        )
+        MapView.camera = camera
+        MapView.settings.myLocationButton = false
+        MapView.isMyLocationEnabled = true
+        MapView.delegate = self
     }
     
     func placeMarkOnGoogleMap(location:CLLocation) {
         lat = location.coordinate.latitude
         lng = location.coordinate.longitude
         
-        for i in 0..<2{
-            lng = lng + 0.00000000000000002
+        for _ in 0..<2{
+            lng = lng + locationIncrement
             let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: self.lat, longitude: self.lng))
-            //marker.title = address
             marker.map = self.MapView
-            marker.icon = UIImage(named: "Group 21")
-            
+            marker.icon = UIImage(named: markImage)
         }
-        
     }
     
     //    func RadiansToDegrees(radians: Double) -> Double {
@@ -87,19 +97,44 @@ extension MapViewController{
     //        return degrees * M_PI / 180.0
     //    }
     //
+    
     func getViewController(identifier:String)-> UIViewController {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: identifier)
+        let vc = UIStoryboard.init(name: Constant.mainStoryboard, bundle: Bundle.main).instantiateViewController(identifier: identifier)
         return vc
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? SelectedBarDetailViewController{
-            controller.delegate = self
-            controller.isPreviousClose = true
-        }
+    func showBarDetailInSemiModel() {
+        let options: [SemiModalOption : Any] = [
+            SemiModalOption.pushParentBack: false
+        ]
+        let storyboard = UIStoryboard (
+            name: Constant.mainStoryboard,
+            bundle: nil
+        )
+        let identifier = String (
+            describing: Constant.selectedBarDetailIdentifier
+        )
+        let controller = storyboard.instantiateViewController (
+            withIdentifier: identifier
+        ) as! SelectedBarDetailViewController
+        
+        controller.view.frame = CGRect (
+            x: controllerXYPosition, y: controllerXYPosition,
+            width: UIScreen.main.bounds.width,
+            height: self.view.frame.height / 2
+        )
+        controller.isBarItemHide = true
+        presentSemiViewController(
+            controller,
+            options: options,
+            completion: {
+                //Completed
+                
+                controller.delegate = self
+            }, dismissBlock: {
+                //Dismissed!
+            })
     }
-    
 }
 
 
@@ -110,13 +145,17 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
         
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,longitude: location.coordinate.longitude,zoom: zoomLevel)
+        let camera = GMSCameraPosition.camera(
+            withLatitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude,
+            zoom: zoomLevel
+        )
         self.MapView.camera = camera
         self.MapView.animate(to: camera)
         
         //Change current/my location icon
-//        userLocationMarker = GMSMarker(position: location.coordinate)
-//        userLocationMarker.icon = UIImage(named: "Me")
+        //        userLocationMarker = GMSMarker(position: location.coordinate)
+        //        userLocationMarker.icon = UIImage(named: "Me")
         //        userLocationMarker.rotation = CLLocationDegrees(m)
         userLocationMarker.map = self.MapView
         self.placeMarkOnGoogleMap(location: location)
@@ -192,50 +231,39 @@ extension MapViewController: CLLocationManagerDelegate {
 
 
 extension MapViewController:GMSMapViewDelegate{
+    
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         //mapView.clear()
         
     }
+    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-//        mapView.selectedMarker = marker
-//        let camera = GMSCameraPosition.camera(withTarget: marker.position, zoom: zoomLevel)
-//        let update = GMSCameraUpdate.setCamera(camera)
-//        mapView.animate(with: update)
+        //        mapView.selectedMarker = marker
+        //        let camera = GMSCameraPosition.camera(withTarget: marker.position, zoom: zoomLevel)
+        //        let update = GMSCameraUpdate.setCamera(camera)
+        //        mapView.animate(with: update)
         
-//        let vc = self.getViewController(identifier: "SelectedBarDetailViewController") as! SelectedBarDetailViewController
-//        self.performSegue(withIdentifier: "ShowDetail", sender: nil)
-
+        //        let vc = self.getViewController(identifier: "SelectedBarDetailViewController") as! SelectedBarDetailViewController
+        //        self.performSegue(withIdentifier: "ShowDetail", sender: nil)
         
-        
-        let options: [SemiModalOption : Any] = [
-            SemiModalOption.pushParentBack: false
-        ]
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let identifier = String(describing: "SelectedBarDetailViewController")
-        let controller = storyboard.instantiateViewController(withIdentifier: identifier) as! SelectedBarDetailViewController
-        
-        controller.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: self.view.frame.height / 2)
-
-        presentSemiViewController(controller, options: options, completion: {
-            print("Completed!")
-            controller.delegate = self
-        }, dismissBlock: {
-            print("Dismissed!")
-        })
+        self.showBarDetailInSemiModel()
         return true
     }
+    
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         //    self.lblAddress.text = marker.title
         //    self.curentPosition = marker.position
         //    self.gotoBack()
         
     }
+    
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         //reverseGeocodeCoordinate(position.target)
     }
+    
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
     }
+    
     private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
         // 1
         let geocoder = GMSGeocoder()

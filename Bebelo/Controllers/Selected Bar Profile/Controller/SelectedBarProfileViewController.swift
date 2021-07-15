@@ -8,20 +8,40 @@
 import UIKit
 
 class SelectedBarProfileViewController: UIViewController {
-
-    @IBOutlet weak var backView: UIView!
-    var delegate:MapViewController!
     
+    //IBOUTLET'S
+    @IBOutlet weak var backView: UIView!
+    
+    //VARIABLE'S
+    let selectedIndex = 1
+    var delegate:MapViewController!
+    var delegate1:SelectedBarDetailViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapGuestureOnView()
+    }
+}
+
+//MARK:- HELPING METHOD'S
+extension SelectedBarProfileViewController{
+    
+    func addTapGuestureOnView() {
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(viewTapGuesture(_:)))
         backView.addGestureRecognizer(viewTap)
-        // Do any additional setup after loading the view.
     }
+    
     @objc func viewTapGuesture(_ sender: UITapGestureRecognizer){
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-        
+        DispatchQueue.main.async {
+            self.dismiss(animated: true) {
+                DispatchQueue.main.async {
+                    self.delegate1.dismiss(animated: true) {
+                        if let control = self.delegate.tabBarController as? TabbarViewController{
+                            control.selectedIndex = self.selectedIndex
+                        }
+                    }
+                }
+            }
+        }
     }
-
 }
