@@ -8,7 +8,7 @@
 
 import UIKit
 import PhotosUI
-
+import LGSideMenuController
 import JGProgressHUD
 class UIViewController_Additions: NSObject {
 
@@ -316,6 +316,40 @@ extension UIViewController{
             
             return documentsDirectory
         }
+        
+    }
+}
+var viewController =  UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "NavMapViewController") as? UINavigationController
+extension UIViewController {
+    
+    @IBAction func tabExploreBtnPressed(_ sender:Any){
+        
+        
+//        if let controler =  self.sideMenuController?.rootViewController as? UINavigationController{
+//            self.sideMenuController?.rootViewController = controler
+//        }
+//        else{
+//            self.sideMenuController?.rootViewController = viewController
+//        }
+        self.sideMenuController?.rootViewController = viewController
+        
+        //self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        
+    }
+    @IBAction func tabSettingBtnPressed(_ sender:Any){
+        if let navcontroler = self.sideMenuController?.rootViewController as? UINavigationController,let controller = navcontroler.viewControllers.first as? MapViewController{
+            viewController = self.sideMenuController?.rootViewController as? UINavigationController
+        }
+        let viewController =  self.storyboard!.instantiateViewController(identifier: "NavSettingsViewController") as? UINavigationController
+        self.sideMenuController?.rootViewController = viewController
+        
+    }
+    @IBAction func tabProfileBtnPressed(_ sender:Any){
+        if let navcontroler = self.sideMenuController?.rootViewController as? UINavigationController,let controller = navcontroler.viewControllers.first as? MapViewController{
+            viewController = self.sideMenuController?.rootViewController as? UINavigationController
+        }
+        let viewController =  self.storyboard!.instantiateViewController(identifier: "NavBarDetailViewController") as? UINavigationController
+        self.sideMenuController?.rootViewController = viewController
         
     }
 }

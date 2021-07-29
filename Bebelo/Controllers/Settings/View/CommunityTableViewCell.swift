@@ -11,6 +11,7 @@ class CommunityTableViewCell: UITableViewCell {
 
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var ForwordImage: UIImageView!
+    @IBOutlet weak var ivImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

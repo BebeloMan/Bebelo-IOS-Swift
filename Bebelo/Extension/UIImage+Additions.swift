@@ -131,4 +131,215 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
+    func drawImagesAndText(_ string:String) -> UIImage{
+        // 1
+        let renderer = UIGraphicsImageRenderer(size: self.size)
+
+        let img = renderer.image { ctx in
+            // 2
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            
+
+            // 3
+            var attrs: [NSAttributedString.Key: Any]!
+            if string.count > 3{
+            attrs = [
+                .font: UIFont(name: Constant.robotoBFont, size: 10) ?? UIFont.systemFont(ofSize: 10),
+                .paragraphStyle: paragraphStyle,
+                .foregroundColor: UIColor.black
+            ]
+            }
+            else if string.count > 4{
+                attrs = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 8) ?? UIFont.systemFont(ofSize: 8),
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.black
+                ]
+            }
+            else if string.count > 5{
+                attrs = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 6) ?? UIFont.systemFont(ofSize: 6),
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.black
+                ]
+            }
+            else{
+                attrs = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 13) ?? UIFont.systemFont(ofSize: 13),
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.black
+                ]
+            }
+            let attributedString = NSAttributedString(string: string, attributes: attrs)
+
+            // 5
+            let mouse = self
+            mouse.draw(in: CGRect(origin: .zero, size: self.size))
+            attributedString.draw(in: CGRect(origin: .zero, size: self.size))
+            
+            // 5
+            
+        }
+        return img
+    }
+    func drawImagesAndText1(_ string: String,isEvent:Bool = false,isSelect:Bool = false) -> UIImage {
+        
+        var textFontAttributes: [NSAttributedString.Key: Any]!
+        var point:CGPoint!
+        if isSelect {
+            if string.count > 5{
+                textFontAttributes = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 10) ?? UIFont.systemFont(ofSize: 6),
+                    .foregroundColor: UIColor.white
+                ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/3, y: self.size.height/3)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/7.4, y: self.size.height/3.2)
+                }
+            }
+            else if string.count > 4{
+                textFontAttributes = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 11) ?? UIFont.systemFont(ofSize: 8),
+                    .foregroundColor: UIColor.white
+                ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.8, y: self.size.height/2.8)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/6.8, y: self.size.height/3.5)
+                }
+            }
+            else if string.count > 3{
+                textFontAttributes = [
+                .font: UIFont(name: Constant.robotoBFont, size: 12) ?? UIFont.systemFont(ofSize: 10),
+                .foregroundColor: UIColor.white
+            ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.4, y: self.size.height/2.4)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/6.5, y: self.size.height/4)
+                }
+            }
+            else if string.count > 2{
+                textFontAttributes = [
+                .font: UIFont(name: Constant.robotoBFont, size: 13) ?? UIFont.systemFont(ofSize: 13),
+                .foregroundColor: UIColor.white
+            ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.8, y: self.size.height/2.8)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/6.5, y: self.size.height/4.4)
+                }
+            }
+            else{
+                textFontAttributes = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 14) ?? UIFont.systemFont(ofSize: 13),
+                    .foregroundColor: UIColor.white
+                ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.8, y: self.size.height/2.8)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/3.8, y: self.size.height/5)
+
+                }
+                       
+            }
+        }
+        else{
+            if string.count > 5{
+                textFontAttributes = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 8) ?? UIFont.systemFont(ofSize: 6),
+                    .foregroundColor: UIColor.black
+                ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.4, y: self.size.height/2.3)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/4.5, y: self.size.height/3.2)
+                }
+            }
+            else if string.count > 4{
+                textFontAttributes = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 9) ?? UIFont.systemFont(ofSize: 8),
+                    .foregroundColor: UIColor.black
+                ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.4, y: self.size.height/2.35)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/4.8, y: self.size.height/3.5)
+                }
+            }
+            else if string.count > 3{
+                textFontAttributes = [
+                .font: UIFont(name: Constant.robotoBFont, size: 10) ?? UIFont.systemFont(ofSize: 10),
+                .foregroundColor: UIColor.black
+            ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.4, y: self.size.height/2.4)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/7, y: self.size.height/4)
+                }
+            }
+            else if string.count > 2{
+                textFontAttributes = [
+                .font: UIFont(name: Constant.robotoBFont, size: 11) ?? UIFont.systemFont(ofSize: 13),
+                .foregroundColor: UIColor.black
+            ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.4, y: self.size.height/2.4)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/7.2, y: self.size.height/4.4)
+                }
+            }
+            else{
+                textFontAttributes = [
+                    .font: UIFont(name: Constant.robotoBFont, size: 12) ?? UIFont.systemFont(ofSize: 13),
+                    .foregroundColor: UIColor.black
+                ]
+                if isEvent{
+                    point = CGPoint(x: self.size.width/2.3, y: self.size.height/2.4)
+                }
+                else{
+                    point = CGPoint(x: self.size.width/4.2, y: self.size.height/5)
+
+                }
+                       
+            }
+        }
+        
+
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        
+        self.draw(in: CGRect(origin: CGPoint.zero, size: self.size))
+
+        let rect = CGRect(origin: point, size: self.size)
+        string.draw(in: rect, withAttributes: textFontAttributes)
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
+    }
+    func drawImages() -> UIImage {
+
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        
+        self.draw(in: CGRect(origin: CGPoint.zero, size: self.size))
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
+    }
 }

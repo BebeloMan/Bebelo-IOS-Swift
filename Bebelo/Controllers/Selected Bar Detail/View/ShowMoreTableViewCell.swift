@@ -1,0 +1,27 @@
+//
+//  ShowMoreTableViewCell.swift
+//  Bebelo
+//
+//  Created by Buzzware Tech on 27/07/2021.
+//
+
+import UIKit
+
+class ShowMoreTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var ShowMoreBtn: UIButton!
+    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var ShowMoreBtnImage: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}

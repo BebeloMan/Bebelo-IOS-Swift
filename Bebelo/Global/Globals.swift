@@ -33,38 +33,47 @@ class Globals
     
     // MARK: - Typedefs
     typealias OperationCompletionBlock = (Bool, Error?) -> Void
-    
+    static let iphone_SE1_5_5s_5c_hieght1:CGFloat = 568
+    static let iphone_SE2_8_7_6s_6_hieght2:CGFloat = 667
+    static let iphone_8_Plus_hieght3:CGFloat = 736
+    static let iphone_13m_12m_11pro_XS_X_hieght4:CGFloat = 812
+    static let iphone_7_6s_6_Plus_hieght5:CGFloat = 847
+    static let iphone_13Pro_13_12Pro_12_hieght6:CGFloat = 844
+    static let iphone_11ProMax_11_XsMax_XR_hieght7:CGFloat = 896
+    static let iphone_13ProMax_12ProMax_hieght8:CGFloat = 926
     
     
     
     
     // MARK: - Date Formates
-    public let DateFormate__AM_Symbol:String                        = "AM";
-    public let DateFormate__PM_Symbol:String                        = "PM";
+    static let __AM_Symbol:String                        = "AM";
+    static let __PM_Symbol:String                        = "PM";
     
-    public let DateFormate__dd_MMMM_yyyy:String                     = "dd MMMM yyyy";
-    public let DateFormate__yyyy_MM_dd:String                       = "yyyy-MM-dd";
-    public let DateFormate__dd_MM_yyyy:String                       = "dd/MM/yyyy";
-    public let DateFormate__MMM_dd:String                          = "MMM dd";
+    static let __dd_MMMM_yyyy:String                     = "dd MMMM yyyy";
+    static let __MMM_dd_yyyy:String                     = "MMM dd, yyyy";
+    static let __MMM_dd_yyyy_hh_mm_a:String                     = "MMM dd, yyyy hh:mm a";
+    static let __yyyy_MM_dd:String                       = "yyyy-MM-dd";
+    static let __dd_MM_yyyy:String                       = "dd/MM/yyyy";
+    static let __MMM_dd:String                          = "MMM dd";
     
-    public let DateTimeFormate__dd_MMMM_yyyy_hh_mm_ss:String        = "dd MMMM yyyy hh:mm:ss";
-    public let DateTimeFormate__yyyy_MM_dd_hh_mm_ss:String          = "yyyy-MM-dd hh:mm:ss";
-    public let DateTimeFormate__yyyy_MM_dd_T_hh_mm_ss000Z:String          = "yyyy-MM-ddThh:mm:ss.000Z";
-    public let DateTimeFormate__yyyy_MM_dd_HH_mm_ss:String          = "yyyy-MM-dd HH:mm:ss";
-    public let DateTimeFormate__yyyy_MM_dd_HH_mm_a:String           = "yyyy-MM-dd HH:mm a";
-    public let DateTimeFormate__yyyy_MM_dd_HH_mm_ss_a:String        = "yyyy-MM-dd HH:mm:ss a";
-    public let DateTimeFormate__yyyy_MM_dd_hh_mm_ss_a:String        = "yyyy-MM-dd hh:mm:ss a";
-    public let DateTimeFormate__dd_MMM_yyyy_hh_mm_a:String          = "dd MMM yyyy hh:mm a";
-    public let DateTimeFormate__EEE_dd_MMM_yyyy_HH_mm_ss_ZZZ:String = "EEE, dd MMM yyyy HH:mm:ss ZZZ";
-    public let DateTimeFormate__dd_MMM_yyyy:String                  = "dd MMM yyyy";
-    public let DateTimeFormate__dd_MMM_at_yyyy_HH_mm_a:String       = "dd MMM yyyy @ HH:mm a";
-    public let DateTimeFormate__dd_MMM_at_yyyy_hh_mm_a:String       = "dd MMM yyyy @ hh:mm a";
-    public let DateTimeFormate__HH_mm_ZZZ:String                    = "HH:mm ZZZ";
-    public let DateTimeFormate__HH_mm_a:String                      = "HH:mm a";
-    public let DateTimeFormate__HH_mm_ss:String                     = "HH:mm:ss";
-    public let DateTimeFormate__hh_mm_ss:String                     = "hh:mm:ss";
-    public let DateTimeFormate__hh_mm_ss_a:String                   = "hh:mm:ss a";
-    public let DateTimeFormate__hh_mm_a:String                      = "hh:mm a";
+    static let __dd_MMMM_yyyy_hh_mm_ss:String        = "dd MMMM yyyy hh:mm:ss";
+    static let __yyyy_MM_dd_hh_mm_ss:String          = "yyyy-MM-dd hh:mm:ss";
+    static let __yyyy_MM_dd_HH_mm_ss:String          = "yyyy-MM-dd HH:mm:ss";
+    static let __yyyy_MM_dd_HH_mm_a:String           = "yyyy-MM-dd HH:mm a";
+    static let __yyyy_MM_dd_HH_mm_ss_a:String        = "yyyy-MM-dd HH:mm:ss a";
+    static let __yyyy_MM_dd_hh_mm_ss_a:String        = "yyyy-MM-dd hh:mm:ss a";
+    static let __dd_MMM_yyyy_hh_mm_a:String          = "dd MMM yyyy hh:mm a";
+    static let __EEE_dd_MMM_yyyy_HH_mm_ss_ZZZ:String = "EEE, dd MMM yyyy HH:mm:ss ZZZ";
+    static let __dd_MMM_yyyy:String                  = "dd MMM yyyy";
+    static let __dd_MMM_at_yyyy_HH_mm_a:String       = "dd MMM yyyy @ HH:mm a";
+    static let __dd_MMM_at_yyyy_hh_mm_a:String       = "dd MMM yyyy @ hh:mm a";
+    static let __HH_mm_ZZZ:String                    = "HH:mm ZZZ";
+    static let __HH_mm_a:String                      = "HH:mm a";
+    static let __HH_mm:String                      = "HH:mm";
+    static let __HH_mm_ss:String                     = "HH:mm:ss";
+    static let __hh_mm_ss:String                     = "hh:mm:ss";
+    static let __hh_mm_ss_a:String                   = "hh:mm:ss a";
+    static let __hh_mm_a:String                      = "hh:mm a";
     
     
     // MARK: - App Language

@@ -14,12 +14,17 @@ class SelectedBarProfileViewController: UIViewController {
     
     //VARIABLE'S
     let selectedIndex = 1
-    var delegate:MapViewController!
-    var delegate1:SelectedBarDetailViewController!
     
+    var delegate:MapViewController!
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapGuestureOnView()
+    }
+    @IBAction func BackBtnAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -33,15 +38,8 @@ extension SelectedBarProfileViewController{
     
     @objc func viewTapGuesture(_ sender: UITapGestureRecognizer){
         DispatchQueue.main.async {
-            self.dismiss(animated: true) {
-                DispatchQueue.main.async {
-                    self.delegate1.dismiss(animated: true) {
-                        if let control = self.delegate.tabBarController as? TabbarViewController{
-                            control.selectedIndex = self.selectedIndex
-                        }
-                    }
-                }
-            }
+            self.navigationController?.popViewController(animated: true)
+            self.tabSettingBtnPressed([])
         }
     }
 }

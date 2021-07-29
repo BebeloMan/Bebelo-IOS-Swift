@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1024461213477-v7f1godpcmort243nbts9dn02u6kedeg.apps.googleusercontent.com</string>
+	<string>519188567395-4i2ccakrlid57jdvikgrnapja9m2ffhh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1024461213477-v7f1godpcmort243nbts9dn02u6kedeg</string>
+	<string>com.googleusercontent.apps.519188567395-4i2ccakrlid57jdvikgrnapja9m2ffhh</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBeMw2L9Kzz3_MHwUrQmqTAzqjQbKz5Eak</string>
+	<string>AIzaSyDEFdFeHI1tlzj2vd6mTpuDz-vuTZ6U6zw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1024461213477</string>
+	<string>519188567395</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.BuzzwareTech.Bebelo</string>
+	<string>com.BuzzwareTech.Bebeloo</string>
 	<key>PROJECT_ID</key>
-	<string>bebelo-318911</string>
+	<string>bebelo-d62b2</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bebelo-318911.appspot.com</string>
+	<string>bebelo-d62b2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1024461213477:ios:f4cbadbf22806bc04694cc</string>
+	<string>1:519188567395:ios:933e20bc213b37e5c56f56</string>
 </dict>
 </plist>

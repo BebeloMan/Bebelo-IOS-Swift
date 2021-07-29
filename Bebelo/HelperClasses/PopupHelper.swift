@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import SwiftEntryKit
 import NVActivityIndicatorView
+import STPopup
 class PopupHelper
 {
     /// Show a popup using the STPopup framework [STPopup on Cocoapods](https://cocoapods.org/pods/STPopup)
@@ -69,7 +69,7 @@ class PopupHelper
         let saveAction = UIAlertAction.init(title: "Ok", style: .default) { (alertAction) in
             
         }
-        let settinfAction = UIAlertAction.init(title: "Setting", style: .destructive) { (alertAction) in
+        let settinfAction = UIAlertAction.init(title: "Setting".localized(), style: .destructive) { (alertAction) in
             if let url = URL(string:"App-Prefs:root=WIFI") {
                 if UIApplication.shared.canOpenURL(url) {
                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -92,9 +92,32 @@ class PopupHelper
         
         
     }
-    class func showAnimating(_ controler:UIViewController){
-
-        controler.startAnimating(CGSize(width: controler.view.frame.width/2, height: controler.view.frame.width/4), message: "Loading...", type: .lineScale , fadeInAnimation: nil)
+    class func showAnimating(_ isBeblo:Bool = true ,controler:UIViewController){
+        if isBeblo{
+            let view = Bundle.main.loadNibNamed("BebloView", owner: controler, options: nil)?.first as! BebloView
+            view.frame = controler.view.bounds
+            controler.view.addSubview(view)
+        }
+        else{
+            controler.startAnimating(CGSize(width: controler.view.frame.width/2, height: controler.view.frame.width/4), message: "Loading...", type: .lineScale , fadeInAnimation: nil)
+        }
+        
+        
+    }
+    class func stopAnimating(_ isBeblo:Bool = true,controler:UIViewController){
+        if isBeblo{
+            for view in controler.view.subviews{
+                if view.isKind(of: BebloView.self){
+                    view.removeFromSuperview()
+                    break
+                }
+            }
+            controler.stopAnimating()
+        }
+        else{
+            controler.stopAnimating()
+        }
+        
         
     }
     class func showAlertControllerWithError(forErrorMessage:String?, forViewController:UIViewController) -> () {
@@ -142,14 +165,10 @@ class PopupHelper
         let alertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         
         let okAction = UIAlertAction.init(title: "Ok", style: .default) { (alertAction) in
-            
+            self.gotoSetting()
         }
-        let settingAction = UIAlertAction.init(title: "Settings", style: .destructive) { (alertAction) in
-            if let appSettings = URL(string: UIApplication.openSettingsURLString + Bundle.main.bundleIdentifier!) {
-              if UIApplication.shared.canOpenURL(appSettings) {
-                UIApplication.shared.open(appSettings)
-              }
-            }
+        let settingAction = UIAlertAction.init(title: "Settings".localized(), style: .destructive) { (alertAction) in
+            
         }
         alertController.addAction(okAction)
         alertController.addAction(settingAction)
@@ -157,6 +176,13 @@ class PopupHelper
         
         
     
+    }
+    static func gotoSetting(){
+        if let appSettings = URL(string: UIApplication.openSettingsURLString + Bundle.main.bundleIdentifier!) {
+          if UIApplication.shared.canOpenURL(appSettings) {
+            UIApplication.shared.open(appSettings)
+          }
+        }
     }
     static func changeRootView(storyboardName:String,ViewControllerId:String){
         let mainStoryboard: UIStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
@@ -169,6 +195,90 @@ class PopupHelper
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerId)
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    static func alertTimingViewController(_ userServiceData:Bool? = nil,controler:UIViewController){
+
+        //let navcontroler = controler.storyboard?.instantiateViewController(identifier: "NavBookingViewController") as! UINavigationController
+        let control = controler.storyboard?.instantiateViewController(identifier: "ShowTimingViewController") as! ShowTimingViewController
+        control.delegate = controler
+        //control.userData = userServiceData
+        //navcontroler.addChild(control)
+        let popupController = STPopupController(rootViewController: control)
+
+        var size = CGSize(width: controler.view.frame.width/1.1, height: controler.view.frame.height/1.5)
+        if UIDevice.current.userInterfaceIdiom == .phone{
+            size.height = controler.view.frame.height/1.5
+            
+        }
+        else{
+            size.height = controler.view.frame.height/0.5
+        }
+        control.contentSizeInPopup = size
+        //popupController.topViewController?.contentSizeInPopup = CGSize(width: controler.view.frame.width/1.1, height: controler.view.frame.height/1.1)
+        popupController.navigationBarHidden = true
+        popupController.topViewController?.view.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: .dark)
+        popupController.backgroundView = UIVisualEffectView(effect: blurEffect)
+        popupController.containerView.backgroundColor = .clear
+        control.popup = popupController
+        popupController.present(in: controler)
+        
+    }
+    static func alertDeleteBarViewController(_ userServiceData:Bool? = nil,controler:UIViewController){
+
+        //let navcontroler = controler.storyboard?.instantiateViewController(identifier: "NavBookingViewController") as! UINavigationController
+        let control = controler.storyboard?.instantiateViewController(identifier: "DeleteBarViewController") as! DeleteBarViewController
+        control.delegate = controler
+        //control.userData = userServiceData
+        //navcontroler.addChild(control)
+        let popupController = STPopupController(rootViewController: control)
+
+        var size = CGSize(width: controler.view.frame.width/1.1, height: controler.view.frame.height/1.5)
+        if UIDevice.current.userInterfaceIdiom == .phone{
+            size.height = controler.view.frame.height/1.5
+            
+        }
+        else{
+            size.height = controler.view.frame.height/0.5
+        }
+        control.contentSizeInPopup = size
+        //popupController.topViewController?.contentSizeInPopup = CGSize(width: controler.view.frame.width/1.1, height: controler.view.frame.height/1.1)
+        popupController.navigationBarHidden = true
+        popupController.topViewController?.view.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: .dark)
+        popupController.backgroundView = UIVisualEffectView(effect: blurEffect)
+        popupController.containerView.backgroundColor = .clear
+        control.popup = popupController
+        popupController.present(in: controler)
+        
+    }
+    static func alertContactusViewController(_ userServiceData:Bool? = nil,controler:UIViewController){
+
+        //let navcontroler = controler.storyboard?.instantiateViewController(identifier: "NavBookingViewController") as! UINavigationController
+        let control = controler.storyboard?.instantiateViewController(identifier: "ContactUsViewController") as! ContactUsViewController
+        control.delegate = controler
+        //control.userData = userServiceData
+        //navcontroler.addChild(control)
+        let popupController = STPopupController(rootViewController: control)
+
+        var size = CGSize(width: controler.view.frame.width/1.1, height: controler.view.frame.height/1.5)
+        if UIDevice.current.userInterfaceIdiom == .phone{
+            size.height = controler.view.frame.height/1.5
+            
+        }
+        else{
+            size.height = controler.view.frame.height/0.5
+        }
+        control.contentSizeInPopup = size
+        //popupController.topViewController?.contentSizeInPopup = CGSize(width: controler.view.frame.width/1.1, height: controler.view.frame.height/1.1)
+        popupController.navigationBarHidden = true
+        popupController.topViewController?.view.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: .dark)
+        popupController.backgroundView = UIVisualEffectView(effect: blurEffect)
+        popupController.containerView.backgroundColor = .clear
+        control.popup = popupController
+        popupController.present(in: controler)
+        
     }
 }
 

@@ -8,6 +8,9 @@
 
 import UIKit
 import PhoneNumberKit
+import CoreLocation
+import MapboxCoreMaps
+import MapKit
 class Extensions: NSObject {
 
 }
@@ -49,7 +52,76 @@ enum ObjectSavableError: String, LocalizedError {
     }
 }
 extension String {
-    
+    func convertCurrencyStyle(places:Int)->String{
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = places
+        formatter.alwaysShowsDecimalSeparator = true
+        formatter.minimumFractionDigits = places
+        //formatter.currencyGroupingSeparator = ","
+        formatter.currencyDecimalSeparator = "."
+        if let val = formatter.string(from: NSNumber(value: Double(self) ?? 0)) {
+            return val
+        }
+        else{
+            return "0.0"
+        }
+    }
+    func roundtoplace() -> String{
+        let doubleval = self.split(separator: ".")
+        if doubleval.count > 0{
+            if let last = doubleval.last{
+                let str = String(last)
+                if let value = Double(str){
+                    if value <= 25{
+                        return String(doubleval.first!)
+                    }
+                    else if value > 25 && value <= 75{
+                        return String(doubleval.first! + ".5")
+                    }
+                    else if value > 75 && value <= 99{
+                        return String(Double(doubleval.first!)! + 1)
+                    }
+                }
+                
+            }
+            
+        }
+        return ""
+    }
+    func roundtoplace(_ bname:String? = nil) -> Double{
+        if bname != nil{
+            if bname!.contains("Los Arcos de Ponzano"){
+                print(bname)
+            }
+        }
+        let doubleval = self.split(separator: ".")
+        if doubleval.count > 1{
+            if let last = doubleval.last{
+                var str = String(last)
+                if str.count < 2{
+                    str = str + "0"
+                }
+                if let value = Double(str){
+                    if value <= 25{
+                        return Double(doubleval.first!)!
+                    }
+                    else if value > 25 && value <= 75{
+                        return Double(doubleval.first! + ".5")!
+                    }
+                    else if value > 75 && value <= 99{
+                        return Double(doubleval.first!)! + 1
+                    }
+                }
+                
+            }
+            
+        }
+        else{
+            return Double(self) ?? 0
+        }
+        return 0
+    }
     func getHoursFromString() -> String{
         
         let inFormatter = DateFormatter()
@@ -172,6 +244,56 @@ extension String {
         
         let inFormatter1 = DateFormatter()
         inFormatter1.dateFormat = "yyyy-MM-dd H:mm:ss"
+
+        if let date = inFormatter.date(from: self){
+            return date
+        }
+        else if let date = inFormatter.date(from: self){
+            return date
+        }
+        else{
+            return Date()
+        }
+        
+        
+    }
+    func getTimeFromStringToDate() -> Date{
+        
+        var calender = Calendar.current
+        let cdate = Date()
+        let enterDate = self.split(separator: ":")
+        let hors = Int(enterDate.first ?? "0") ?? 0
+        let mins = Int(enterDate.last ?? "0") ?? 0
+        calender.timeZone = TimeZone(abbreviation: "CEST") ?? NSTimeZone.local//TimeZone(identifier: "UTC")!
+        calender.locale = Locale(identifier: "es_ES")
+        let d = calender.date(bySettingHour: hors, minute: mins, second: 0, of: cdate)
+        return d ?? Date()
+//        let inFormatter = DateFormatter()
+//        inFormatter.dateFormat = "HH:mm"
+//        inFormatter.locale = Locale(identifier: "es_ES")
+//        inFormatter.timeZone = TimeZone(abbreviation: "CEST")
+//
+//        let inFormatter1 = DateFormatter()
+//        inFormatter1.dateFormat = "H:mm"
+//
+//        if let date = inFormatter.date(from: self){
+//            return date
+//        }
+//        else if let date = inFormatter.date(from: self){
+//            return date
+//        }
+//        else{
+//            return Date()
+//        }
+        
+        
+    }
+    func getDateFromStringToDate() -> Date{
+        let inFormatter = DateFormatter()
+        inFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let inFormatter1 = DateFormatter()
+        inFormatter1.dateFormat = "yyyy-MM-dd"
 
         if let date = inFormatter.date(from: self){
             return date
@@ -464,25 +586,25 @@ extension String {
 
         return false
     }
-    func localized() ->String
-    {
-        let currentSelectedLang:String? = LanguageHelper.sharedInstance.getCurrentSelectedLanguage()
-        guard let currentLang:String = currentSelectedLang else
-        {
-            fatalError("Current Language cannot be nil")
-        }
-        
-        var lang:String = Globals.shared.kApplicationLanguage_English
-        if(currentLang == Globals.shared.kAppCurrentLanguage__Urdu)
-        {
-            lang = Globals.shared.kApplicationLanguage_urdu
-        }
-        
-        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
-        let bundle = Bundle(path: path!)
-        
-        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
-    }
+//    func localized() ->String
+//    {
+//        let currentSelectedLang:String? = LanguageHelper.sharedInstance.getCurrentSelectedLanguage()
+//        guard let currentLang:String = currentSelectedLang else
+//        {
+//            fatalError("Current Language cannot be nil")
+//        }
+//        
+//        var lang:String = Globals.shared.kApplicationLanguage_English
+//        if(currentLang == Globals.shared.kAppCurrentLanguage__Urdu)
+//        {
+//            lang = Globals.shared.kApplicationLanguage_urdu
+//        }
+//        
+//        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+//        let bundle = Bundle(path: path!)
+//        
+//        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+//    }
     
     func suffixNumber() -> String {
         
@@ -640,8 +762,81 @@ extension URL {
         
     }
 }
-
+enum weekfullDay:String,Codable,Equatable,CodingKey {
+    case Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday
+}
 extension Date {
+    func timeAgoSinceDate(_ numericDates:Bool = true) -> String {
+        let calendar = Calendar.current
+        let now = Date()
+        let earliest = (now as NSDate).earlierDate(self)
+        let latest = (earliest == now) ? self : now
+        let components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.minute , NSCalendar.Unit.hour , NSCalendar.Unit.day , NSCalendar.Unit.weekOfYear , NSCalendar.Unit.month , NSCalendar.Unit.year , NSCalendar.Unit.second], from: earliest, to: latest, options: NSCalendar.Options())
+        
+        if (components.year! >= 2) {
+            return "\(components.year!) years"
+        } else if (components.year! >= 1){
+            if (numericDates){
+                return "1 year"
+            } else {
+                return "Last year"
+            }
+        } else if (components.month! >= 2) {
+            return "\(components.month!) months"
+        } else if (components.month! >= 1){
+            if (numericDates){
+                return "1 month"
+            } else {
+                return "Last month"
+            }
+        } else if (components.weekOfYear! >= 2) {
+            return "\(components.weekOfYear!) weeks"
+        } else if (components.weekOfYear! >= 1){
+            if (numericDates){
+                return "1 week"
+            } else {
+                return "Last week"
+            }
+        } else if (components.day! >= 2) {
+            return "\(components.day!) days"
+        } else if (components.day! >= 1){
+            if (numericDates){
+                return "1 day"
+            } else {
+                return "Yesterday"
+            }
+        } else if (components.hour! >= 2) {
+            return "\(components.hour!) hours"
+        } else if (components.hour! >= 1){
+            if (numericDates){
+                return "1 hour"
+            } else {
+                return "An hour"
+            }
+        } else if (components.minute! >= 2) {
+            return "\(components.minute!) minutes"
+        } else if (components.minute! >= 1){
+            if (numericDates){
+                return "1 minute"
+            } else {
+                return "A minute"
+            }
+        } else if (components.second! >= 3) {
+            return "\(components.second!) seconds"
+        } else {
+            return "Just now"
+        }
+        
+    }
+    func underAge()-> Bool {
+        let date = Calendar.current.date(byAdding: .year, value: -18, to: Date())
+        if self < date!{
+          return true
+        }
+        else{
+          return false
+        }
+      }
     
     var day:Int {
         get {
@@ -751,7 +946,7 @@ extension Date {
     
     var weekFullDay:String {
         get {
-            let weekFullDay = (Calendar.current as NSCalendar).components([.weekday], from: self).weekday
+            let weekFullDay = (Calendar.cet as NSCalendar).components([.weekday], from: self).weekday
             
             switch weekFullDay! {
             case 1:
@@ -868,8 +1063,14 @@ extension Date {
     func formattedWith(_ format:String)-> String {
         let formatter = DateFormatter()
         //formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)  // you can set GMT time
-        formatter.timeZone = NSTimeZone.local        // or as local time
+        formatter.timeZone = TimeZone(abbreviation: "CEST") ?? NSTimeZone.local//TimeZone(abbreviation: "UTC")        // or as local time
+        formatter.locale = Locale(identifier: "es_ES")
         formatter.dateFormat = format
+        //formatter.timeStyle = .full
+        //formatter.amSymbol = ""
+        //formatter.pmSymbol = ""
+        //formatter.timeStyle = .short
+        
         return formatter.string(from: self)
     }
     
@@ -877,7 +1078,8 @@ extension Date {
     func formattedWithString(_ format:String)-> String {
         let formatter = DateFormatter()
         //formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)  // you can set GMT time
-        formatter.timeZone = NSTimeZone.local        // or as local time
+        formatter.timeZone = TimeZone(abbreviation: "CEST") ?? NSTimeZone.local//TimeZone(abbreviation: "UTC")        // or as local time
+        formatter.locale = Locale(identifier: "es_ES")
         formatter.dateFormat = format
         
         return formatter.string(from: self)
@@ -1096,8 +1298,9 @@ extension Date {
     }
     
     /// Returns a Date with the specified days added to the one it is called with
-    func add(days: Int = 0) -> Date {
-        return Calendar.current.date(byAdding: .day, value: days, to: self)!
+    func add(days: Int = 0,_ tz:Calendar? = nil) -> Date {
+        let calendr = tz ?? Calendar.current
+        return calendr.date(byAdding: .day, value: days, to: self)!
     }
     
     /// Returns a Date with the specified days subtracted from the one it is called with
@@ -1106,10 +1309,10 @@ extension Date {
         return add(days: inverseDays)
     }
     
-    func hour() -> Int
+    func hour(_ tz:Calendar? = nil) -> Int
     {
         //Get Hour
-        let calendar = Calendar.current
+        let calendar = tz ?? Calendar.current
         let hour = calendar.component(.hour, from: self)
         
         //Return Hour
@@ -1117,10 +1320,10 @@ extension Date {
     }
     
     
-    func minute() -> Int
+    func minute(_ tz:Calendar? = nil) -> Int
     {
         //Get Minute
-        let calendar = Calendar.current
+        let calendar = tz ?? Calendar.current
         let minute = calendar.component(.minute, from: self)
         
         //Return Minute
@@ -1155,7 +1358,194 @@ extension Float {
         return String(format: "%.2f", self)
     }
 }
+extension Array{
+    func twosComplement() -> [UInt8] {
+        var numarr = [UInt8]()
+        if let arrays = self as? [Int8]{
+            for num in arrays{
+                var numm:UInt8 = 0
+                if num < 0 {
+                    let a = Int(UInt8.max) + Int(num) + 1
+                    numm = UInt8(a)
+                    numarr.append(numm)
+                }
+                else {
+                    numarr.append(numm)
+                    
+                }
+            }
+            return numarr
+        }
+        else{
+            return numarr
+        }
+        
+        
+    }
+}
+extension Int64{
+    func timestampToTimeString() -> String?{
+        let date = Date(timeIntervalSince1970: TimeInterval(self/1000))
+        return date.formattedWith(Globals.__HH_mm)
+    }
+    func timestampToDate() -> Date{
+        let date = Date(timeIntervalSince1970: TimeInterval(self/1000))
+        
+        return date
+    }
+    func check4Hours(_ tz:Calendar? = nil) -> Bool{
+        let calendar = tz ?? Calendar.current
+        
+        let now = Date()
+        let date = Date(timeIntervalSince1970: TimeInterval(self/1000))
+        
+        if calendar.isDate(now, inSameDayAs: date){
+            let finals = now.hour() - date.hour()
+            if finals >= 4{
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        else{
+            return true
+        }
+//        let earliest = (now as NSDate).earlierDate(date)
+//        let latest = (earliest == now) ? date : now
+//        let components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.minute , NSCalendar.Unit.hour , NSCalendar.Unit.day , NSCalendar.Unit.month , NSCalendar.Unit.year , NSCalendar.Unit.second], from: earliest, to: latest, options: NSCalendar.Options())
+//        if calendar.isDate(now, inSameDayAs: date){
+//            if components.hour! >= 4{
+//                return true
+//            }
+//            else{
+//                return false
+//            }
+//        }
+//        else{
+//            return true
+//        }
+        
+    }
+    func check5Mins(_ tz:Calendar? = nil) -> Bool{
+        let calendar = tz ?? Calendar.current
+        let now = Date()
+        let timestamp = self/1000
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+        if calendar.isDate(now, inSameDayAs: date){
+            let finals = now.hour() - date.hour()
+            if finals >= 1{
+                return true
+            }
+            else{
+                let mins = now.minute() - date.minute()
+                if mins >= 5{
+                    return true
+                }
+                else{
+                return false
+                }
+            }
+        }
+        else{
+            return true
+        }
+//        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+//        let earliest = (now as NSDate).earlierDate(date)
+//        let latest = (earliest == now) ? date : now
+//        let components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.minute , NSCalendar.Unit.hour , NSCalendar.Unit.day , NSCalendar.Unit.weekOfYear , NSCalendar.Unit.month , NSCalendar.Unit.year , NSCalendar.Unit.second], from: earliest, to: latest, options: NSCalendar.Options())
+//        if calendar.isDateInToday(date){
+//            if components.minute! >= 5{
+//                return true
+//            }
+//            else{
+//                return false
+//            }
+//        }
+//        else{
+//            return true
+//        }
+        
+    }
+    func timeRemainingSinceDate() -> String{
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour , .minute] , from: date)
+        let currentDate = calendar.date(from: components)
 
+        let competitionDay = Date(timeIntervalSince1970: TimeInterval(self/1000))
+        
+        //here we change the seconds to hours,minutes and days
+        let CompetitionDayDifference = calendar.dateComponents([.hour,.minute], from: currentDate!, to: competitionDay)
+        //finally, here we set the variable to our remaining time
+        var hoursLeft = CompetitionDayDifference.hour
+        var minutesLeft = CompetitionDayDifference.minute
+        return "\(hoursLeft!):\(minutesLeft!)"
+    }
+    func timeAgoSinceDate(_ numericDates:Bool = true) -> String {
+        let calendar = Calendar.current
+        let now = Date()
+        let date = Date(timeIntervalSince1970: TimeInterval(self/1000))
+        let earliest = (now as NSDate).earlierDate(date)
+        let latest = (earliest == now) ? date : now
+        let components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.minute , NSCalendar.Unit.hour , NSCalendar.Unit.day , NSCalendar.Unit.weekOfYear , NSCalendar.Unit.month , NSCalendar.Unit.year , NSCalendar.Unit.second], from: earliest, to: latest, options: NSCalendar.Options())
+        
+        if (components.year! >= 2) {
+            return "\(components.year!) years"
+        } else if (components.year! >= 1){
+            if (numericDates){
+                return "1 year"
+            } else {
+                return "Last year"
+            }
+        } else if (components.month! >= 2) {
+            return "\(components.month!) months"
+        } else if (components.month! >= 1){
+            if (numericDates){
+                return "1 month"
+            } else {
+                return "Last month"
+            }
+        } else if (components.weekOfYear! >= 2) {
+            return "\(components.weekOfYear!) weeks"
+        } else if (components.weekOfYear! >= 1){
+            if (numericDates){
+                return "1 week"
+            } else {
+                return "Last week"
+            }
+        } else if (components.day! >= 2) {
+            return "\(components.day!) days"
+        } else if (components.day! >= 1){
+            if (numericDates){
+                return "1 day"
+            } else {
+                return "Yesterday"
+            }
+        } else if (components.hour! >= 2) {
+            return "\(components.hour!) hours"
+        } else if (components.hour! >= 1){
+            if (numericDates){
+                return "1 hour"
+            } else {
+                return "An hour"
+            }
+        } else if (components.minute! >= 2) {
+            return "\(components.minute!) minutes"
+        } else if (components.minute! >= 1){
+            if (numericDates){
+                return "1 minute"
+            } else {
+                return "A minute"
+            }
+        } else if (components.second! >= 3) {
+            return "\(components.second!) seconds"
+        } else {
+            return "Just now"
+        }
+        
+    }
+}
 extension Double {
     
     /**
@@ -1178,6 +1568,63 @@ extension Double {
         val = val/100.0
         
         return val
+    }
+    func roundToPlace(places:Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = places
+        formatter.alwaysShowsDecimalSeparator = false
+        formatter.minimumFractionDigits = 0
+        //formatter.currencyGroupingSeparator = ","
+        formatter.currencyDecimalSeparator = "."
+        if let val = formatter.string(from: NSNumber(value: self))?.replacingOccurrences(of: ",", with: ".") {
+            if val.contains("."){
+                let array = val.split(separator: ".")
+                if array.last!.count > 1{
+                    return val
+                }
+                else{
+                    return val + "0"
+                }
+            }
+            
+            return val
+        }
+        else{
+            return "0"
+        }
+    }
+    func roundToPlacee(places:Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = places
+        formatter.alwaysShowsDecimalSeparator = false
+        formatter.minimumFractionDigits = 0
+        
+        //formatter.currencyGroupingSeparator = ","
+        formatter.currencyDecimalSeparator = "."
+        if let val = formatter.string(from: NSNumber(value: self)) {
+            
+            return val.replacingOccurrences(of: ",", with: ".")
+        }
+        else{
+            return "0"
+        }
+    }
+    func convertCurrencyStyle(places:Int)->String{
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = places
+        formatter.alwaysShowsDecimalSeparator = true
+        formatter.minimumFractionDigits = places
+        //formatter.currencyGroupingSeparator = ","
+        formatter.currencyDecimalSeparator = "."
+        if let val = formatter.string(from: NSNumber(value: self)) {
+            return val
+        }
+        else{
+            return "0.0"
+        }
     }
 }
 
@@ -1376,6 +1823,7 @@ extension UIColor {
         case login
         case tabbar
         case yellowColor
+        case tabBtnColor
         
     }
     /**
@@ -1401,7 +1849,7 @@ extension UIColor {
     }
     func colorsFromAsset(name: assetColors) -> UIColor{
         switch name {
-        case .themeColor:
+        case .tabBtnColor:
             return UIColor(named: name.rawValue)!
         case .lite:
             return UIColor(named: name.rawValue)!
@@ -1506,4 +1954,157 @@ extension Date {
   func toMillis() -> String {
     return "\(Double(self.timeIntervalSince1970 * 1000))"
   }
+    func toMillisInt64() -> Int64 {
+        
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
+}
+
+extension Calendar {
+    static let utc: Calendar  = {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(identifier: "UTC")!
+        return calendar
+    }()
+    static let cet: Calendar  = {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(identifier: "CET")!
+        return calendar
+    }()
+    static let localTime: Calendar  = {
+        var calendar = Calendar.current
+        calendar.timeZone = .current
+        return calendar
+    }()
+}
+extension CLLocationDistance{
+    func metersToMiles() -> Double{
+        var measer = Double(self)
+        measer *= 0.000621
+        return measer
+    }
+    func metersToKilometer() -> Double{
+        var measer = Double(self)
+        measer = measer / 1000
+        return measer
+    }
+}
+extension CoordinateBounds {
+    convenience init(location: CLLocationCoordinate2D, radiusMeters: CLLocationDistance) {
+        let region = MKCoordinateRegion(center: location, latitudinalMeters: radiusMeters, longitudinalMeters: radiusMeters)
+        self.init(southwest: region.northWest, northeast: region.southEast)
+    }
+}
+extension MKCoordinateRegion {
+    var northWest: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: center.latitude + span.latitudeDelta / 2, longitude: center.longitude - span.longitudeDelta / 2)
+    }
+
+    var southEast: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: center.latitude - span.latitudeDelta / 2, longitude: center.longitude + span.longitudeDelta / 2)
+    }
+}
+extension DispatchQueue {
+
+    static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
+        DispatchQueue.global(qos: .background).async {
+            background?()
+            if let completion = completion {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+                    completion()
+                })
+            }
+        }
+    }
+
+}
+struct randomLocations {
+
+    // create random locations (lat and long coordinates) around user's location
+    func getMockLocationsFor(location: CLLocationCoordinate2D, itemCount: Int) -> [CLLocationCoordinate2D] {
+        
+        func getBase(number: Double) -> Double {
+            return round(number * 1000)/1000
+        }
+        func randomCoordinate() -> Double {
+            return Double(arc4random_uniform(UInt32(itemCount))) * 0.0001
+        }
+        
+        let baseLatitude = getBase(number: location.latitude - 0.007)
+        // longitude is a little higher since I am not on equator, you can adjust or make dynamic
+        let baseLongitude = getBase(number: location.longitude - 0.008)
+        
+        var items = [CLLocationCoordinate2D]()
+        for i in 0..<itemCount {
+            
+            let randomLat = baseLatitude + randomCoordinate()
+            let randomLong = baseLongitude + randomCoordinate()
+            let location = CLLocationCoordinate2D(latitude: randomLat, longitude: randomLong)
+            
+            items.append(location)
+            
+        }
+        
+        return items
+    }
+        func generateRandomCoordinates(_ min: UInt32, max: UInt32,location:CLLocationCoordinate2D)-> CLLocationCoordinate2D {
+            //Get the Current Location's longitude and latitude
+            let currentLong = location.longitude
+            let currentLat = location.latitude
+    
+            //1 KiloMeter = 0.00900900900901° So, 1 Meter = 0.00900900900901 / 1000
+            let meterCord = 0.00900900900901 / 1000
+    
+            //Generate random Meters between the maximum and minimum Meters
+            let randomMeters = UInt(arc4random_uniform(max) + min)
+    
+            //then Generating Random numbers for different Methods
+            let randomPM = arc4random_uniform(6)
+    
+            //Then we convert the distance in meters to coordinates by Multiplying the number of meters with 1 Meter Coordinate
+            let metersCordN = meterCord * Double(randomMeters)
+    
+            //here we generate the last Coordinates
+            if randomPM == 0 {
+                return CLLocationCoordinate2D(latitude: currentLat + metersCordN, longitude: currentLong + metersCordN)
+            }else if randomPM == 1 {
+                return CLLocationCoordinate2D(latitude: currentLat - metersCordN, longitude: currentLong - metersCordN)
+            }else if randomPM == 2 {
+                return CLLocationCoordinate2D(latitude: currentLat + metersCordN, longitude: currentLong - metersCordN)
+            }else if randomPM == 3 {
+                return CLLocationCoordinate2D(latitude: currentLat - metersCordN, longitude: currentLong + metersCordN)
+            }else if randomPM == 4 {
+                return CLLocationCoordinate2D(latitude: currentLat, longitude: currentLong - metersCordN)
+            }else {
+                return CLLocationCoordinate2D(latitude: currentLat - metersCordN, longitude: currentLong)
+            }
+    
+        }
+}
+extension Array where Element: BinaryInteger {
+
+    /// The average value of all the items in the array
+    var average: Double {
+        if self.isEmpty {
+            return 0.0
+        } else {
+            let sum = self.reduce(0, +)
+            return Double(sum) / Double(self.count)
+        }
+    }
+
+}
+
+extension Array where Element: BinaryFloatingPoint {
+
+    /// The average value of all the items in the array
+    var average: Double {
+        if self.isEmpty {
+            return 0.0
+        } else {
+            let sum = self.reduce(0, +)
+            return Double(sum) / Double(self.count)
+        }
+    }
+
 }

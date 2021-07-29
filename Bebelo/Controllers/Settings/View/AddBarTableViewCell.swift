@@ -20,6 +20,7 @@ class AddBarTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        LoginBtn.setTitle("Log in here".localized(), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -26,7 +26,7 @@ class DateTimeHelper
     func convertStringIntoDate(dateString:String) -> Date?
     {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = Globals.shared.DateFormate__yyyy_MM_dd //Your date format
+        dateFormatter.dateFormat = Globals.__yyyy_MM_dd //Your date format
         //        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
         let date = dateFormatter.date(from: dateString) //according to date format your date string
         print(date ?? "") //Convert String to Date
@@ -146,7 +146,7 @@ class DateTimeHelper
         dateFormatter?.locale = NSLocale.autoupdatingCurrent
         if ValidationHelper.isStringEmpty(formatString)
         {
-            dateFormatter?.dateFormat = Globals.shared.DateTimeFormate__yyyy_MM_dd_HH_mm_ss
+            dateFormatter?.dateFormat = Globals.__yyyy_MM_dd_HH_mm_ss
         }
         else
         {

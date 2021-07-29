@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum roundingCorner {
+  case top,bottom,left,right
+}
+
 class UIView_Additions: UIView {
 
     override func draw(_ rect: CGRect) {
@@ -232,5 +236,52 @@ extension UIView{
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
+    func drawCorner(roundTo: roundingCorner){
+        switch roundTo {
+        case .top:
+          return self.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        case .bottom:
+          return self.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+        case .left:
+          return self.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner]
+        case .right:
+          return self.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+        }
+      }
+      func drawOneCorner(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor = .clear, borderWidth: CGFloat = 0) {
+          let mask = _round(corners: corners, radius: radius)
+          addBorder(mask: mask, borderColor: borderColor, borderWidth: borderWidth)
+        }
+      @discardableResult func _round(corners: UIRectCorner, radius: CGFloat) -> CAShapeLayer {
+          let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+          let mask = CAShapeLayer()
+          mask.path = path.cgPath
+          self.layer.mask = mask
+          return mask
+        }
+      func addBorder(mask: CAShapeLayer, borderColor: UIColor = .clear, borderWidth: CGFloat = 0) {
+          let borderLayer = CAShapeLayer()
+          borderLayer.path = mask.path
+          borderLayer.fillColor = UIColor.clear.cgColor
+          borderLayer.strokeColor = borderColor.cgColor
+          borderLayer.lineWidth = borderWidth
+          borderLayer.frame = bounds
+          layer.addSublayer(borderLayer)
+        }
+    func toImage() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0)
+        self.drawHierarchy(in: self.bounds, afterScreenUpdates: false)
+        let snapshotImageFromMyView = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return snapshotImageFromMyView!
+    }
+    func toImage1() -> UIImage{
+        let renderer = UIGraphicsImageRenderer(size: self.bounds.size)
+        let image = renderer.image { ctx in
+            self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        }
+        return image
     }
 }

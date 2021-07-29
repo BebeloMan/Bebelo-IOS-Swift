@@ -1,0 +1,2050 @@
+BCSymbolMap Version: 2.0
+-[NSString(MMEVersions) mme_stringByRemovingNonUserAgentTokenCharacters]
+-[NSString(MMEVersions) mme_isSemverString]
+-[NSString(MMEVersions) mme_semverCoreComponent]
+-[NSString(MMEVersions) mme_semverMajorVersion]
+-[NSString(MMEVersions) mme_semverMinorVersion]
+-[NSString(MMEVersions) mme_semverPatchVersion]
++[NSString(MMEVersions) mme_semverExpression]
+___45+[NSString(MMEVersions) mme_semverExpression]_block_invoke
+-[MMENSURLSessionWrapper init]
+-[MMENSURLSessionWrapper invalidate]
+-[MMENSURLSessionWrapper processRequest:completionHandler:]
+-[MMENSURLSessionWrapper URLSession:didReceiveChallenge:completionHandler:]
+-[MMENSURLSessionWrapper URLSession:didBecomeInvalidWithError:]
+-[MMENSURLSessionWrapper serialQueue]
+-[MMENSURLSessionWrapper setSerialQueue:]
+-[MMENSURLSessionWrapper certPin]
+-[MMENSURLSessionWrapper setCertPin:]
+-[MMENSURLSessionWrapper session]
+-[MMENSURLSessionWrapper setSession:]
+-[MMENSURLSessionWrapper .cxx_destruct]
+___75-[MMENSURLSessionWrapper URLSession:didReceiveChallenge:completionHandler:]_block_invoke
+___copy_helper_block_e4_20s24b28w
+___destroy_helper_block_e4_20s24s28w
+___59-[MMENSURLSessionWrapper processRequest:completionHandler:]_block_invoke
+___copy_helper_block_e4_20s24s28b
+___destroy_helper_block_e4_20s24s28s
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___59-[MMENSURLSessionWrapper processRequest:completionHandler:]_block_invoke.20
+___copy_helper_block_e4_20b24r
+___destroy_helper_block_e4_20s24r
+___59-[MMENSURLSessionWrapper processRequest:completionHandler:]_block_invoke_2
+___copy_helper_block_e4_20b24s28s32s
+___destroy_helper_block_e4_20s24s28s32s
+-[MMELocationManager dealloc]
+-[MMELocationManager locationManager]
+-[MMELocationManager init]
+-[MMELocationManager startUpdatingLocation]
+-[MMELocationManager stopUpdatingLocation]
+-[MMELocationManager locationAuthorizationString]
+-[MMELocationManager locationAuthorization]
+-[MMELocationManager isReducedAccuracy]
+-[MMELocationManager accuracyAuthorizationString]
+-[MMELocationManager setLocationManager:]
+-[MMELocationManager stopMonitoringRegions]
+-[MMELocationManager setMetricsEnabledForInUsePermissions:]
+-[MMELocationManager configurePassiveLocationManager]
+-[MMELocationManager startLocationServices]
+-[MMELocationManager timeoutAllowedCheck]
+-[MMELocationManager startBackgroundTimeoutTimer]
+-[MMELocationManager establishRegionMonitoringForLocation:]
+-[MMELocationManager locationManager:didChangeAuthorizationStatus:]
+-[MMELocationManager locationManager:didUpdateLocations:]
+-[MMELocationManager locationManager:didExitRegion:]
+-[MMELocationManager locationManager:didVisit:]
+-[MMELocationManager locationManagerDidPauseLocationUpdates:]
+-[MMELocationManager delegate]
+-[MMELocationManager setDelegate:]
+-[MMELocationManager isUpdatingLocation]
+-[MMELocationManager setUpdatingLocation:]
+-[MMELocationManager isMetricsEnabledForInUsePermissions]
+-[MMELocationManager application]
+-[MMELocationManager setApplication:]
+-[MMELocationManager backgroundLocationServiceTimeoutAllowedDate]
+-[MMELocationManager setBackgroundLocationServiceTimeoutAllowedDate:]
+-[MMELocationManager backgroundLocationServiceTimeoutTimer]
+-[MMELocationManager setBackgroundLocationServiceTimeoutTimer:]
+-[MMELocationManager hostAppHasBackgroundCapability]
+-[MMELocationManager setHostAppHasBackgroundCapability:]
+-[MMELocationManager .cxx_destruct]
+___clang_at_available_requires_core_foundation_framework
+-[NSUserDefaults(MME) mme_registerDefaults]
+-[NSUserDefaults(MME) mme_volatileDomain]
+-[NSUserDefaults(MME) mme_setObject:forVolatileKey:]
+-[NSUserDefaults(MME) mme_objectForVolatileKey:]
+-[NSUserDefaults(MME) mme_deleteObjectForVolatileKey:]
+-[NSUserDefaults(MME) mme_persistentDomain]
+-[NSUserDefaults(MME) mme_setObject:forPersistentKey:]
+-[NSUserDefaults(MME) mme_deleteObjectForPersistentKey:]
+-[NSUserDefaults(MME) mme_startupDelay]
+-[NSUserDefaults(MME) mme_eventFlushCount]
+-[NSUserDefaults(MME) mme_eventFlushInterval]
+-[NSUserDefaults(MME) mme_identifierRotationInterval]
+-[NSUserDefaults(MME) mme_configUpdateInterval]
+-[NSUserDefaults(MME) mme_eventTag]
+-[NSUserDefaults(MME) mme_accessToken]
+-[NSUserDefaults(MME) mme_setAccessToken:]
+-[NSUserDefaults(MME) mme_legacyUserAgentBase]
+-[NSUserDefaults(MME) mme_setLegacyUserAgentBase:]
+-[NSUserDefaults(MME) mme_legacyHostSDKVersion]
+-[NSUserDefaults(MME) mme_setLegacyHostSDKVersion:]
+-[NSUserDefaults(MME) mme_clientId]
+-[NSUserDefaults(MME) mme_configDigestValue]
+-[NSUserDefaults(MME) mme_setConfigDigestValue:]
+-[NSUserDefaults(MME) mme_isCNRegion]
+-[NSUserDefaults(MME) mme_setIsCNRegion:]
+-[NSUserDefaults(MME) mme_APIServiceURL]
+-[NSUserDefaults(MME) mme_eventsServiceURL]
+-[NSUserDefaults(MME) mme_configServiceURL]
+-[NSUserDefaults(MME) mme_userAgentString]
+-[NSUserDefaults(MME) mme_legacyUserAgentString]
+-[NSUserDefaults(MME) mme_configUpdateDate]
+-[NSUserDefaults(MME) mme_setConfigUpdateDate:]
+-[NSUserDefaults(MME) mme_isCollectionEnabled]
+-[NSUserDefaults(MME) mme_setIsCollectionEnabled:]
+-[NSUserDefaults(MME) mme_isCollectionEnabledInSimulator]
+-[NSUserDefaults(MME) mme_isCollectionEnabledInBackground]
+-[NSUserDefaults(MME) mme_backgroundStartupDelay]
+-[NSUserDefaults(MME) mme_backgroundGeofence]
+-[NSUserDefaults(MME) mme_horizontalAccuracy]
+-[NSUserDefaults(MME) mme_certificateRevocationList]
+-[NSUserDefaults(MME) mme_certificatePinningConfig]
+-[NSUserDefaults(MME) mme_updateFromConfigServiceData:]
+-[NSUserDefaults(MME) mme_updateFromAccountType:]
+-[NSUserDefaults(MME) mme_updateFromConfigServiceObject:updateError:]
+___42-[NSUserDefaults(MME) mme_userAgentString]_block_invoke
+-[NSBundle(MME) mme_bundleVersionString]
++[NSUserDefaults(MME) mme_configuration]
++[NSUserDefaults(MME) mme_resetConfiguration]
+___40+[NSUserDefaults(MME) mme_configuration]_block_invoke
++[NSBundle(MME) mme_mainBundle]
++[NSBundle(MME) mme_setMainBundle:]
+___31+[NSBundle(MME) mme_mainBundle]_block_invoke
+___copy_helper_block_e4_
+___destroy_helper_block_e4_
+-[MMEReachability initWithReachabilityRef:]
+-[MMEReachability dealloc]
+-[MMEReachability startNotifier]
+-[MMEReachability stopNotifier]
+-[MMEReachability isReachableWithFlags:]
+-[MMEReachability isReachable]
+-[MMEReachability isReachableViaWWAN]
+-[MMEReachability isReachableViaWiFi]
+-[MMEReachability isConnectionRequired]
+-[MMEReachability connectionRequired]
+-[MMEReachability isConnectionOnDemand]
+-[MMEReachability isInterventionRequired]
+-[MMEReachability currentReachabilityStatus]
+-[MMEReachability reachabilityFlags]
+-[MMEReachability currentReachabilityString]
+-[MMEReachability currentReachabilityFlags]
+-[MMEReachability reachabilityChanged:]
+-[MMEReachability description]
+-[MMEReachability reachableBlock]
+-[MMEReachability setReachableBlock:]
+-[MMEReachability unreachableBlock]
+-[MMEReachability setUnreachableBlock:]
+-[MMEReachability reachableOnWWAN]
+-[MMEReachability setReachableOnWWAN:]
+-[MMEReachability reachabilityRef]
+-[MMEReachability setReachabilityRef:]
+-[MMEReachability reachabilitySerialQueue]
+-[MMEReachability setReachabilitySerialQueue:]
+-[MMEReachability reachabilityObject]
+-[MMEReachability setReachabilityObject:]
+-[MMEReachability .cxx_destruct]
+___39-[MMEReachability reachabilityChanged:]_block_invoke
+___copy_helper_block_e4_20s
+___destroy_helper_block_e4_20s
+_TMReachabilityCallback
++[MMEReachability reachabilityWithHostName:]
++[MMEReachability reachabilityWithHostname:]
++[MMEReachability reachabilityWithAddress:]
++[MMEReachability reachabilityForInternetConnection]
++[MMEReachability reachabilityForLocalWiFi]
+-[MMEAPIClient initWithAccessToken:userAgentBase:hostSDKVersion:]
+-[MMEAPIClient dealloc]
+-[MMEAPIClient batchFromEvents:]
+-[MMEAPIClient postEvents:completionHandler:]
+-[MMEAPIClient postEvent:completionHandler:]
+-[MMEAPIClient postMetadata:filePaths:completionHandler:]
+-[MMEAPIClient startGettingConfigUpdates]
+-[MMEAPIClient processRequest:]
+-[MMEAPIClient stopGettingConfigUpdates]
+-[MMEAPIClient isGettingConfigUpdates]
+-[MMEAPIClient statusErrorFromRequest:andHTTPResponse:]
+-[MMEAPIClient unexpectedResponseError:fromRequest:andResponse:]
+-[MMEAPIClient requestForConfiguration]
+-[MMEAPIClient requestForBinary:boundary:]
+-[MMEAPIClient requestForEvents:]
+-[MMEAPIClient mimeTypeForPath:]
+-[MMEAPIClient createBodyWithBoundary:metadata:filePaths:]
+-[MMEAPIClient configurationUpdateTimer]
+-[MMEAPIClient setConfigurationUpdateTimer:]
+-[MMEAPIClient sessionWrapper]
+-[MMEAPIClient setSessionWrapper:]
+-[MMEAPIClient applicationBundle]
+-[MMEAPIClient setApplicationBundle:]
+-[MMEAPIClient .cxx_destruct]
+___33-[MMEAPIClient requestForEvents:]_block_invoke
+___31-[MMEAPIClient processRequest:]_block_invoke
+___copy_helper_block_e4_20s24s
+___destroy_helper_block_e4_20s24s
+___41-[MMEAPIClient startGettingConfigUpdates]_block_invoke
+___41-[MMEAPIClient startGettingConfigUpdates]_block_invoke_2
+___41-[MMEAPIClient startGettingConfigUpdates]_block_invoke_3
+___57-[MMEAPIClient postMetadata:filePaths:completionHandler:]_block_invoke
+___copy_helper_block_e4_20s24s28b32s
+___45-[MMEAPIClient postEvents:completionHandler:]_block_invoke
+___copy_helper_block_e4_20s24s28s32b
++[MMEAPIClient parseDigestHeader:]
+-[MMEEventLogger setHandler:]
+-[MMEEventLogger logEvent:]
+-[MMEEventLogger logPriority:withType:andMessage:]
+-[MMEEventLogger pushDebugEventWithAttributes:]
+-[MMEEventLogger defaultBlockHandler]
+-[MMEEventLogger isEnabled]
+-[MMEEventLogger setEnabled:]
+-[MMEEventLogger handler]
+-[MMEEventLogger .cxx_destruct]
+___37-[MMEEventLogger defaultBlockHandler]_block_invoke
++[MMEEventLogger sharedLogger]
+___30+[MMEEventLogger sharedLogger]_block_invoke
+-[MMEMetrics init]
+-[MMEMetrics totalBytesSent]
+-[MMEMetrics totalBytesReceived]
+-[MMEMetrics requests]
+-[MMEMetrics setRequests:]
+-[MMEMetrics cellBytesSent]
+-[MMEMetrics setCellBytesSent:]
+-[MMEMetrics wifiBytesSent]
+-[MMEMetrics setWifiBytesSent:]
+-[MMEMetrics cellBytesReceived]
+-[MMEMetrics setCellBytesReceived:]
+-[MMEMetrics wifiBytesReceived]
+-[MMEMetrics setWifiBytesReceived:]
+-[MMEMetrics appWakeups]
+-[MMEMetrics setAppWakeups:]
+-[MMEMetrics eventCountFailed]
+-[MMEMetrics setEventCountFailed:]
+-[MMEMetrics eventCountTotal]
+-[MMEMetrics setEventCountTotal:]
+-[MMEMetrics eventCountMax]
+-[MMEMetrics setEventCountMax:]
+-[MMEMetrics deviceLat]
+-[MMEMetrics setDeviceLat:]
+-[MMEMetrics deviceLon]
+-[MMEMetrics setDeviceLon:]
+-[MMEMetrics recordingStarted]
+-[MMEMetrics setRecordingStarted:]
+-[MMEMetrics dateUTCString]
+-[MMEMetrics setDateUTCString:]
+-[MMEMetrics configResponseDict]
+-[MMEMetrics setConfigResponseDict:]
+-[MMEMetrics eventCountPerType]
+-[MMEMetrics setEventCountPerType:]
+-[MMEMetrics failedRequestsDict]
+-[MMEMetrics setFailedRequestsDict:]
+-[MMEMetrics locationsInForeground]
+-[MMEMetrics setLocationsInForeground:]
+-[MMEMetrics locationsInBackground]
+-[MMEMetrics setLocationsInBackground:]
+-[MMEMetrics locationsWithApproximateValues]
+-[MMEMetrics setLocationsWithApproximateValues:]
+-[MMEMetrics locationsDroppedBecauseOfHAF]
+-[MMEMetrics setLocationsDroppedBecauseOfHAF:]
+-[MMEMetrics locationsDroppedDueTimeout]
+-[MMEMetrics setLocationsDroppedDueTimeout:]
+-[MMEMetrics locationsConvertedIntoEvents]
+-[MMEMetrics setLocationsConvertedIntoEvents:]
+-[MMEMetrics .cxx_destruct]
+-[MMEDate initWithTimeIntervalSinceReferenceDate:offset:]
+-[MMEDate initWithOffset:]
+-[MMEDate init]
+-[MMEDate initWithTimeIntervalSinceReferenceDate:]
+-[MMEDate timeIntervalSinceReferenceDate]
+-[MMEDate description]
+-[MMEDate isEqual:]
+-[MMEDate copyWithZone:]
+-[MMEDate classForCoder]
+-[MMEDate initWithCoder:]
+-[MMEDate encodeWithCoder:]
+-[MMEDate offsetToServer]
+-[MMEDate offsetFromServer]
+-[MMEDate sinceReferenceDate]
+-[MMEDate setSinceReferenceDate:]
++[MMEDate recordTimeOffsetFromServer:]
++[MMEDate recordedTimeOffsetFromServer]
++[MMEDate iso8601DateFormatter]
++[MMEDate iso8601DateOnlyFormatter]
++[MMEDate HTTPDateFormatter]
++[MMEDate dateWithRecordedOffset]
++[MMEDate dateWithOffset:]
++[MMEDate dateWithDate:]
++[MMEDate date]
++[MMEDate supportsSecureCoding]
+-[NSDate(MMEDate) mme_startOfTomorrow]
++[NSProcessInfo(SystemInfo) mme_operatingSystemVersion]
++[NSProcessInfo(SystemInfo) mme_stringForProcessorType:subtype:]
++[NSProcessInfo(SystemInfo) mme_processorTypeDescription]
+-[MMEEventsManager init]
+-[MMEEventsManager initShared]
+-[MMEEventsManager dealloc]
+-[MMEEventsManager initializeWithAccessToken:userAgentBase:hostSDKVersion:]
+-[MMEEventsManager disableLocationMetrics]
+-[MMEEventsManager powerStateDidChange:]
+-[MMEEventsManager pauseOrResumeMetricsCollectionIfRequired]
+-[MMEEventsManager processAuthorizationStatus:andApplicationState:]
+-[MMEEventsManager flush]
+-[MMEEventsManager resetEventQueuing]
+-[MMEEventsManager postEvents:]
+-[MMEEventsManager sendTurnstileEvent]
+-[MMEEventsManager sendPendingTelemetryMetricsEvent]
+-[MMEEventsManager sendTelemetryMetricsEvent]
+-[MMEEventsManager enqueueEventWithName:]
+-[MMEEventsManager enqueueEventWithName:attributes:]
+-[MMEEventsManager createAndPushEventBasedOnName:attributes:]
+-[MMEEventsManager postMetadata:filePaths:completionHandler:]
+-[MMEEventsManager setDebugLoggingEnabled:]
+-[MMEEventsManager isDebugLoggingEnabled]
+-[MMEEventsManager setDebugHandler:]
+-[MMEEventsManager reportError:]
+-[MMEEventsManager reportException:]
+-[MMEEventsManager pauseMetricsCollection]
+-[MMEEventsManager resumeMetricsCollection]
+-[MMEEventsManager updateNextTurnstileSendDate]
+-[MMEEventsManager pushEvent:]
+-[MMEEventsManager locationManager]
+-[MMEEventsManager locationManager:didUpdateLocations:]
+-[MMEEventsManager locationManagerDidStartLocationUpdates:]
+-[MMEEventsManager locationManagerBackgroundLocationUpdatesDidTimeout:]
+-[MMEEventsManager locationManagerBackgroundLocationUpdatesDidAutomaticallyPause:]
+-[MMEEventsManager locationManagerDidStopLocationUpdates:]
+-[MMEEventsManager locationManager:didVisit:]
+-[MMEEventsManager delegate]
+-[MMEEventsManager setDelegate:]
+-[MMEEventsManager skuId]
+-[MMEEventsManager setSkuId:]
+-[MMEEventsManager apiClient]
+-[MMEEventsManager setApiClient:]
+-[MMEEventsManager setLocationManager:]
+-[MMEEventsManager eventQueue]
+-[MMEEventsManager setEventQueue:]
+-[MMEEventsManager uniqueIdentifer]
+-[MMEEventsManager setUniqueIdentifer:]
+-[MMEEventsManager commonEventData]
+-[MMEEventsManager setCommonEventData:]
+-[MMEEventsManager nextTurnstileSendDate]
+-[MMEEventsManager setNextTurnstileSendDate:]
+-[MMEEventsManager timerManager]
+-[MMEEventsManager setTimerManager:]
+-[MMEEventsManager dispatchManager]
+-[MMEEventsManager setDispatchManager:]
+-[MMEEventsManager isPaused]
+-[MMEEventsManager setPaused:]
+-[MMEEventsManager application]
+-[MMEEventsManager setApplication:]
+-[MMEEventsManager backgroundTaskIdentifier]
+-[MMEEventsManager setBackgroundTaskIdentifier:]
+-[MMEEventsManager .cxx_destruct]
+___35-[MMEEventsManager locationManager]_block_invoke
+___61-[MMEEventsManager postMetadata:filePaths:completionHandler:]_block_invoke
+___copy_helper_block_e4_20b
+___45-[MMEEventsManager sendTelemetryMetricsEvent]_block_invoke
+___52-[MMEEventsManager sendPendingTelemetryMetricsEvent]_block_invoke
+___38-[MMEEventsManager sendTurnstileEvent]_block_invoke
+___copy_helper_block_e4_20s24w
+___destroy_helper_block_e4_20s24w
+___31-[MMEEventsManager postEvents:]_block_invoke
+___60-[MMEEventsManager pauseOrResumeMetricsCollectionIfRequired]_block_invoke
+___40-[MMEEventsManager powerStateDidChange:]_block_invoke
+___copy_helper_block_e4_20w
+___destroy_helper_block_e4_20w
+___75-[MMEEventsManager initializeWithAccessToken:userAgentBase:hostSDKVersion:]_block_invoke
++[MMEEventsManager sharedManager]
+___33+[MMEEventsManager sharedManager]_block_invoke
+-[MMEEvent init]
+-[MMEEvent initWithAttributes:error:]
+-[MMEEvent date]
+-[MMEEvent name]
+-[MMEEvent attributes]
+-[MMEEvent isEqualToEvent:]
+-[MMEEvent isEqual:]
+-[MMEEvent hash]
+-[MMEEvent description]
+-[MMEEvent copyWithZone:]
+-[MMEEvent initWithCoder:]
+-[MMEEvent encodeWithCoder:]
+-[MMEEvent dateStorage]
+-[MMEEvent setDateStorage:]
+-[MMEEvent attributesStorage]
+-[MMEEvent setAttributesStorage:]
+-[MMEEvent .cxx_destruct]
++[MMEEvent nilAttributes]
++[MMEEvent redactedStackFrame:]
++[MMEEvent eventWithAttributes:]
++[MMEEvent eventWithAttributes:error:]
++[MMEEvent turnstileEventWithAttributes:]
++[MMEEvent visitEventWithAttributes:]
++[MMEEvent crashEventReporting:error:]
++[MMEEvent debugEventWithAttributes:]
++[MMEEvent debugEventWithError:]
++[MMEEvent debugEventWithException:]
++[MMEEvent eventWithDate:name:attributes:]
++[MMEEvent eventWithName:attributes:]
++[MMEEvent telemetryMetricsEventWithDateString:attributes:]
++[MMEEvent locationEventWithAttributes:instanceIdentifer:commonEventData:]
++[MMEEvent mapLoadEventWithDateString:commonEventData:]
++[MMEEvent mapTapEventWithDateString:attributes:]
++[MMEEvent mapDragEndEventWithDateString:attributes:]
++[MMEEvent mapOfflineDownloadStartEventWithDateString:attributes:]
++[MMEEvent mapOfflineDownloadEndEventWithDateString:attributes:]
++[MMEEvent navigationEventWithName:attributes:]
++[MMEEvent visionEventWithName:attributes:]
++[MMEEvent searchEventWithName:attributes:]
++[MMEEvent carplayEventWithName:attributes:]
++[MMEEvent eventWithDateString:name:attributes:]
++[MMEEvent supportsSecureCoding]
+-[MMETimerManager initWithTimeInterval:target:selector:]
+-[MMETimerManager start]
+-[MMETimerManager cancel]
+-[MMETimerManager timeInterval]
+-[MMETimerManager target]
+-[MMETimerManager selector]
+-[MMETimerManager timer]
+-[MMETimerManager setTimer:]
+-[MMETimerManager .cxx_destruct]
+-[MMECommonEventData init]
+-[MMECommonEventData vendorId]
+-[MMECommonEventData setVendorId:]
+-[MMECommonEventData model]
+-[MMECommonEventData setModel:]
+-[MMECommonEventData osVersion]
+-[MMECommonEventData setOsVersion:]
+-[MMECommonEventData platform]
+-[MMECommonEventData setPlatform:]
+-[MMECommonEventData device]
+-[MMECommonEventData setDevice:]
+-[MMECommonEventData scale]
+-[MMECommonEventData setScale:]
+-[MMECommonEventData .cxx_destruct]
++[MMECommonEventData sysInfoByName:]
++[MMECommonEventData commonCrashEventData]
++[MMECommonEventData applicationState]
++[MMECommonEventData platformInfo]
+-[NSData(GZIP) mme_gzippedDataWithCompressionLevel:]
+-[NSData(GZIP) mme_gzippedData]
+-[NSData(GZIP) mme_gunzippedData]
+-[NSData(GZIP) mme_isGzippedData]
+-[CLLocation(MMEMobileEvents) mme_roundedSpeed]
+-[CLLocation(MMEMobileEvents) mme_roundedCourse]
+-[CLLocation(MMEMobileEvents) mme_roundedAltitude]
+-[CLLocation(MMEMobileEvents) mme_roundedHorizontalAccuracy]
+-[CLLocation(MMEMobileEvents) mme_roundedVerticalAccuracy]
+-[CLLocation(MMEMobileEvents) mme_latitudeRoundedWithPrecision:]
+-[CLLocation(MMEMobileEvents) mme_longitudeRoundedWithPrecision:]
+-[CLLocation(MMEMobileEvents) mme_value:withPrecision:]
+-[MMEDependencyManager locationManagerInstance]
++[MMEDependencyManager sharedManager]
+___37+[MMEDependencyManager sharedManager]_block_invoke
+-[MMEUniqueIdentifier initWithTimeInterval:]
+-[MMEUniqueIdentifier rollingInstanceIdentifer]
+-[MMEUniqueIdentifier timeInterval]
+-[MMEUniqueIdentifier setTimeInterval:]
+-[MMEUniqueIdentifier instanceIDRotationDate]
+-[MMEUniqueIdentifier setInstanceIDRotationDate:]
+-[MMEUniqueIdentifier instanceID]
+-[MMEUniqueIdentifier setInstanceID:]
+-[MMEUniqueIdentifier .cxx_destruct]
+-[CLLocationManager(MMEMobileEvents) mme_authorizationStatus]
+-[CLLocationManager(MMEMobileEvents) mme_authorizationStatusString]
+-[CLLocationManager(MMEMobileEvents) mme_accuracyStatus]
+-[CLLocationManager(MMEMobileEvents) mme_accuracyAutorizationString]
+-[MMECertPin init]
+-[MMECertPin handleChallenge:completionHandler:]
+-[MMECertPin hashSubjectPublicKeyInfoFromCertificate:]
+-[MMECertPin getPublicKeyDataFromCertificate:]
+-[MMECertPin getPublicKeyDataFromCertificate_legacy_ios:]
+-[MMECertPin getPublicKeyDataFromCertificate_unified:]
+-[MMECertPin publicKeyInfoHashesCache]
+-[MMECertPin setPublicKeyInfoHashesCache:]
+-[MMECertPin lastAuthChallengeDisposition]
+-[MMECertPin setLastAuthChallengeDisposition:]
+-[MMECertPin lockQueue]
+-[MMECertPin setLockQueue:]
+-[MMECertPin .cxx_destruct]
+___Block_byref_object_copy_.1630
+___Block_byref_object_dispose_.1631
+___57-[MMECertPin getPublicKeyDataFromCertificate_legacy_ios:]_block_invoke
+___copy_helper_block_e4_20s24s28r32r36r
+___destroy_helper_block_e4_20s24s28r32r36r
+___54-[MMECertPin hashSubjectPublicKeyInfoFromCertificate:]_block_invoke
+___54-[MMECertPin hashSubjectPublicKeyInfoFromCertificate:]_block_invoke.47
+___copy_helper_block_e4_20s24s28w
+___copy_helper_block_e4_20s24r28w
+___destroy_helper_block_e4_20s24r28w
+___48-[MMECertPin handleChallenge:completionHandler:]_block_invoke
+___48-[MMECertPin handleChallenge:completionHandler:]_block_invoke.31
+___48-[MMECertPin handleChallenge:completionHandler:]_block_invoke.35
+___48-[MMECertPin handleChallenge:completionHandler:]_block_invoke_2
+___48-[MMECertPin handleChallenge:completionHandler:]_block_invoke_3
+___48-[MMECertPin handleChallenge:completionHandler:]_block_invoke_4
+___copy_helper_block_e4_20s24b28s
+___copy_helper_block_e4_20s24b
+-[MMEUIApplicationExtensionWrapper mme_contentSizeScale]
+-[MMEUIApplicationExtensionWrapper applicationState]
+-[MMEUIApplicationExtensionWrapper beginBackgroundTaskWithExpirationHandler:]
+-[MMEUIApplicationExtensionWrapper endBackgroundTask:]
+-[MMEUIApplicationWrapper init]
+-[MMEUIApplicationWrapper initWithApplication:]
+-[MMEUIApplicationWrapper mme_contentSizeScale]
+-[MMEUIApplicationWrapper applicationState]
+-[MMEUIApplicationWrapper beginBackgroundTaskWithExpirationHandler:]
+-[MMEUIApplicationWrapper endBackgroundTask:]
+-[MMEUIApplicationWrapper application]
+-[MMEUIApplicationWrapper setApplication:]
+-[MMEUIApplicationWrapper .cxx_destruct]
++[MMECategoryLoader loadCategories]
++[NSBundle(MMEMobileEvents) mme_isExtension]
+-[UIDevice(MMEMobileEvents) mme_deviceOrientation]
+-[UIApplication(MMEMobileEvents) mme_contentSizeScale]
++[NSExtensionContext(MMEMobileEvents) mme_contentSizeScale]
+-[MMEDispatchManager scheduleBlock:afterDelay:]
+-[MMEMetricsManager init]
+-[MMEMetricsManager updateMetricsFromEventQueue:]
+-[MMEMetricsManager updateMetricsFromEventCount:request:error:]
+-[MMEMetricsManager updateEventsFailedCount:]
+-[MMEMetricsManager updateSentBytes:]
+-[MMEMetricsManager updateReceivedBytes:]
+-[MMEMetricsManager incrementAppWakeUpCount]
+-[MMEMetricsManager updateConfigurationJSON:]
+-[MMEMetricsManager updateCoordinate:]
+-[MMEMetricsManager resetMetrics]
+-[MMEMetricsManager incrementLocationsInForeground]
+-[MMEMetricsManager incrementLocationsInBackground]
+-[MMEMetricsManager incrementLocationsWithApproximateValues]
+-[MMEMetricsManager incrementLocationsDroppedBecauseOfHAF]
+-[MMEMetricsManager incrementLocationsDroppedDueTimeout]
+-[MMEMetricsManager incrementLocationsConvertedIntoEvents]
+-[MMEMetricsManager attributes]
+-[MMEMetricsManager loadPendingTelemetryMetricsEvent]
+-[MMEMetricsManager generateTelemetryMetricsEvent]
+-[MMEMetricsManager jsonStringfromDict:]
+-[MMEMetricsManager metrics]
+-[MMEMetricsManager setMetrics:]
+-[MMEMetricsManager .cxx_destruct]
++[MMEMetricsManager sharedManager]
++[MMEMetricsManager pendingMetricsEventPath]
++[MMEMetricsManager deletePendingMetricsEventFile]
++[MMEMetricsManager createFrameworkMetricsEventDir]
+___44+[MMEMetricsManager pendingMetricsEventPath]_block_invoke
+___34+[MMEMetricsManager sharedManager]_block_invoke
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_CLASSLIST_REFERENCES_$_.10
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_CLASSLIST_REFERENCES_$_.30
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_SELECTOR_REFERENCES_.19
+_OBJC_SELECTOR_REFERENCES_.21
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_SELECTOR_REFERENCES_.25
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.8
+__OBJC_$_CATEGORY_CLASS_METHODS_NSString_$_MMEVersions
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_MMEVersions
+__OBJC_$_CATEGORY_NSString_$_MMEVersions
+_mme_semverExpression.onceToken
+___block_literal_global
+_mme_semverExpression.semverExpression
+___block_descriptor_20_e5_v4?0l
+__OBJC_CLASS_RO_$_MMENSURLSessionWrapper
+__OBJC_$_INSTANCE_METHODS_MMENSURLSessionWrapper
+__OBJC_CLASS_PROTOCOLS_$_MMENSURLSessionWrapper
+__OBJC_$_INSTANCE_VARIABLES_MMENSURLSessionWrapper
+__OBJC_$_PROP_LIST_MMENSURLSessionWrapper
+_OBJC_IVAR_$_MMENSURLSessionWrapper._serialQueue
+_OBJC_IVAR_$_MMENSURLSessionWrapper._certPin
+_OBJC_IVAR_$_MMENSURLSessionWrapper._session
+__OBJC_PROTOCOL_$_MMENSURLSessionWrapper
+__OBJC_PROTOCOL_$_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_REFS_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSURLSessionDelegate
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_$_PROTOCOL_REFS_MMENSURLSessionWrapper
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_MMENSURLSessionWrapper
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_MMENSURLSessionWrapper
+__OBJC_$_PROTOCOL_METHOD_TYPES_MMENSURLSessionWrapper
+_OBJC_CLASSLIST_REFERENCES_$_.8
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_SELECTOR_REFERENCES_.5
+_OBJC_SELECTOR_REFERENCES_.32.9
+_OBJC_CLASSLIST_REFERENCES_$_.33
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_CLASSLIST_REFERENCES_$_.36
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+___block_descriptor_32_e4_20s24bs28w_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.19.11
+___block_descriptor_32_e4_20s24s28bs_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.15
+___block_descriptor_28_e4_20bs24r_e45_v16?0"NSData"4"NSURLResponse"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.26
+___block_descriptor_36_e4_20bs24s28s32s_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.17.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_CLASSLIST_REFERENCES_$_.6
+_OBJC_SELECTOR_REFERENCES_.8.15
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.12.17
+_OBJC_CLASSLIST_REFERENCES_$_.13
+__OBJC_METACLASS_RO_$_MMENSURLSessionWrapper
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_MMENSURLSessionWrapper
+__OBJC_LABEL_PROTOCOL_$_NSURLSessionDelegate
+__OBJC_CLASS_RO_$_MMELocationManager
+__OBJC_$_INSTANCE_METHODS_MMELocationManager
+__OBJC_CLASS_PROTOCOLS_$_MMELocationManager
+__OBJC_$_INSTANCE_VARIABLES_MMELocationManager
+__OBJC_$_PROP_LIST_MMELocationManager.287
+_OBJC_IVAR_$_MMELocationManager._updatingLocation
+_OBJC_IVAR_$_MMELocationManager._metricsEnabledForInUsePermissions
+_OBJC_IVAR_$_MMELocationManager._hostAppHasBackgroundCapability
+_OBJC_IVAR_$_MMELocationManager._locationManager
+_OBJC_IVAR_$_MMELocationManager._delegate
+_OBJC_IVAR_$_MMELocationManager._application
+_OBJC_IVAR_$_MMELocationManager._backgroundLocationServiceTimeoutAllowedDate
+_OBJC_IVAR_$_MMELocationManager._backgroundLocationServiceTimeoutTimer
+__OBJC_PROTOCOL_$_CLLocationManagerDelegate
+__OBJC_PROTOCOL_$_MMELocationManager
+__OBJC_$_PROTOCOL_REFS_MMELocationManager
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_MMELocationManager
+__OBJC_$_PROP_LIST_MMELocationManager
+__OBJC_$_PROTOCOL_METHOD_TYPES_MMELocationManager
+__OBJC_$_PROTOCOL_REFS_CLLocationManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_CLLocationManagerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_CLLocationManagerDelegate
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.31
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_CLASSLIST_REFERENCES_$_.142
+_OBJC_SELECTOR_REFERENCES_.4.46
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.133
+_OBJC_SELECTOR_REFERENCES_.135
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_SELECTOR_REFERENCES_.141
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_CLASSLIST_REFERENCES_$_.147
+_OBJC_SELECTOR_REFERENCES_.149
+_OBJC_SELECTOR_REFERENCES_.151
+_OBJC_SELECTOR_REFERENCES_.153
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_CLASSLIST_REFERENCES_$_.116
+_OBJC_CLASSLIST_REFERENCES_$_.119
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.123
+_OBJC_SELECTOR_REFERENCES_.125
+_OBJC_SELECTOR_REFERENCES_.127
+_OBJC_SELECTOR_REFERENCES_.129
+_OBJC_SELECTOR_REFERENCES_.131
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_CLASSLIST_REFERENCES_$_.92
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_CLASSLIST_REFERENCES_$_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.25.51
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_SELECTOR_REFERENCES_.96
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_SELECTOR_REFERENCES_.102
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.83
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_SELECTOR_REFERENCES_.75
+_OBJC_SELECTOR_REFERENCES_.77
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.55
+_OBJC_SELECTOR_REFERENCES_.53
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.35.63
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_CLASSLIST_REFERENCES_$_.21
+_OBJC_SELECTOR_REFERENCES_.23.66
+_OBJC_SELECTOR_REFERENCES_.27.67
+_OBJC_SELECTOR_REFERENCES_.29.68
+_OBJC_SELECTOR_REFERENCES_.8.71
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_CLASSLIST_REFERENCES_$_.10.72
+_OBJC_SELECTOR_REFERENCES_.12.73
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_CLASSLIST_REFERENCES_$_.77
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.2
+__OBJC_METACLASS_RO_$_MMELocationManager
+__OBJC_LABEL_PROTOCOL_$_CLLocationManagerDelegate
+__OBJC_LABEL_PROTOCOL_$_MMELocationManager
+__OBJC_$_PROP_LIST_NSObject.82
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject.83
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject.84
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject.85
+_OBJC_CLASSLIST_REFERENCES_$_.87
+_OBJC_CLASSLIST_REFERENCES_$_.112
+_OBJC_CLASSLIST_REFERENCES_$_.119.88
+_OBJC_CLASSLIST_REFERENCES_$_.138
+_OBJC_CLASSLIST_REFERENCES_$_.153
+_OBJC_CLASSLIST_REFERENCES_$_.162
+_OBJC_CLASSLIST_REFERENCES_$_.203
+_OBJC_CLASSLIST_REFERENCES_$_.210
+_OBJC_CLASSLIST_REFERENCES_$_.230
+_OBJC_CLASSLIST_REFERENCES_$_.237
+_OBJC_CLASSLIST_REFERENCES_$_.252
+_OBJC_CLASSLIST_REFERENCES_$_.255
+_OBJC_CLASSLIST_REFERENCES_$_.274
+_OBJC_CLASSLIST_REFERENCES_$_.279
+_OBJC_CLASSLIST_REFERENCES_$_.284
+_OBJC_CLASSLIST_REFERENCES_$_.323
+_OBJC_CLASSLIST_REFERENCES_$_.332
+_OBJC_CLASSLIST_REFERENCES_$_.337
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_SELECTOR_REFERENCES_.103
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.109.131
+_OBJC_SELECTOR_REFERENCES_.111.132
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.118.133
+_OBJC_SELECTOR_REFERENCES_.121.134
+_OBJC_SELECTOR_REFERENCES_.123.135
+_OBJC_SELECTOR_REFERENCES_.125.136
+_OBJC_SELECTOR_REFERENCES_.133.137
+_OBJC_SELECTOR_REFERENCES_.135.138
+_OBJC_SELECTOR_REFERENCES_.140
+_OBJC_SELECTOR_REFERENCES_.144.139
+_OBJC_SELECTOR_REFERENCES_.146.140
+_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_SELECTOR_REFERENCES_.150
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_SELECTOR_REFERENCES_.155.141
+_OBJC_SELECTOR_REFERENCES_.157.142
+_OBJC_SELECTOR_REFERENCES_.159.143
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_SELECTOR_REFERENCES_.164
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_SELECTOR_REFERENCES_.172
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.184
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.188
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_SELECTOR_REFERENCES_.192
+_OBJC_SELECTOR_REFERENCES_.194
+_OBJC_SELECTOR_REFERENCES_.196
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.205
+_OBJC_SELECTOR_REFERENCES_.207
+_OBJC_SELECTOR_REFERENCES_.209
+_OBJC_SELECTOR_REFERENCES_.212
+_OBJC_SELECTOR_REFERENCES_.214
+_OBJC_SELECTOR_REFERENCES_.219
+_OBJC_SELECTOR_REFERENCES_.221
+_OBJC_SELECTOR_REFERENCES_.223
+_OBJC_SELECTOR_REFERENCES_.225
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.229
+_OBJC_SELECTOR_REFERENCES_.232
+_OBJC_SELECTOR_REFERENCES_.234
+_OBJC_SELECTOR_REFERENCES_.236
+_OBJC_SELECTOR_REFERENCES_.239
+_OBJC_SELECTOR_REFERENCES_.241
+_OBJC_SELECTOR_REFERENCES_.243
+_OBJC_SELECTOR_REFERENCES_.245
+_OBJC_SELECTOR_REFERENCES_.249
+_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_SELECTOR_REFERENCES_.254
+_OBJC_SELECTOR_REFERENCES_.257
+_OBJC_SELECTOR_REFERENCES_.259
+_OBJC_SELECTOR_REFERENCES_.261
+_OBJC_SELECTOR_REFERENCES_.265
+_OBJC_SELECTOR_REFERENCES_.269
+_OBJC_SELECTOR_REFERENCES_.271
+_OBJC_SELECTOR_REFERENCES_.273
+_OBJC_SELECTOR_REFERENCES_.276
+_OBJC_SELECTOR_REFERENCES_.278
+_OBJC_SELECTOR_REFERENCES_.281
+_OBJC_SELECTOR_REFERENCES_.283
+_OBJC_SELECTOR_REFERENCES_.286
+_OBJC_SELECTOR_REFERENCES_.288
+_OBJC_SELECTOR_REFERENCES_.292
+_OBJC_SELECTOR_REFERENCES_.294
+_OBJC_SELECTOR_REFERENCES_.296
+_OBJC_SELECTOR_REFERENCES_.298
+_OBJC_SELECTOR_REFERENCES_.300
+_OBJC_SELECTOR_REFERENCES_.302
+_OBJC_SELECTOR_REFERENCES_.320
+_OBJC_SELECTOR_REFERENCES_.322
+_OBJC_SELECTOR_REFERENCES_.325
+_OBJC_SELECTOR_REFERENCES_.327
+_OBJC_SELECTOR_REFERENCES_.329
+_OBJC_SELECTOR_REFERENCES_.331
+_OBJC_SELECTOR_REFERENCES_.336
+_OBJC_SELECTOR_REFERENCES_.339
+_OBJC_SELECTOR_REFERENCES_.341
+_OBJC_SELECTOR_REFERENCES_.384
+_OBJC_SELECTOR_REFERENCES_.387
+_OBJC_SELECTOR_REFERENCES_.391
+__OBJC_$_CATEGORY_CLASS_METHODS_NSBundle_$_MME
+__OBJC_$_CATEGORY_CLASS_METHODS_NSUserDefaults_$_MME
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSBundle_$_MME
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSUserDefaults_$_MME
+__OBJC_$_CATEGORY_NSBundle_$_MME
+__OBJC_$_CATEGORY_NSUserDefaults_$_MME
+_mme_userAgentString.onceToken
+___block_literal_global.215
+_mme_userAgentString.userAgent
+_mme_configuration.onceToken
+___block_literal_global.162
+_mme_configuration.eventsConfiguration
+_MMEMainBundle
+___block_descriptor_24_e4__e5_v4?0l
+_mme_mainBundle.onceToken
+__OBJC_CLASS_RO_$_MMEReachability
+__OBJC_$_INSTANCE_METHODS_MMEReachability
+__OBJC_$_INSTANCE_VARIABLES_MMEReachability
+__OBJC_$_PROP_LIST_MMEReachability
+_OBJC_IVAR_$_MMEReachability._reachableOnWWAN
+_OBJC_IVAR_$_MMEReachability._reachableBlock
+_OBJC_IVAR_$_MMEReachability._unreachableBlock
+_OBJC_IVAR_$_MMEReachability._reachabilityRef
+_OBJC_IVAR_$_MMEReachability._reachabilitySerialQueue
+_OBJC_IVAR_$_MMEReachability._reachabilityObject
+_OBJC_CLASSLIST_REFERENCES_$_.59
+_OBJC_SELECTOR_REFERENCES_.63.204
+_OBJC_SELECTOR_REFERENCES_.65.205
+_OBJC_SELECTOR_REFERENCES_.67.206
+_OBJC_SELECTOR_REFERENCES_.25.209
+_OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+___block_descriptor_24_e4_20s_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.53
+_OBJC_SELECTOR_REFERENCES_.55.210
+_OBJC_SELECTOR_REFERENCES_.57
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_SELECTOR_REFERENCES_.33.213
+_OBJC_CLASSLIST_REFERENCES_$_.34
+_OBJC_SELECTOR_REFERENCES_.36.214
+_OBJC_SELECTOR_REFERENCES_.42
+_OBJC_SELECTOR_REFERENCES_.17.225
+_OBJC_SELECTOR_REFERENCES_.29.226
+_OBJC_SELECTOR_REFERENCES_.31.227
+_OBJC_SELECTOR_REFERENCES_.27.228
+_OBJC_SELECTOR_REFERENCES_.23.229
+_OBJC_SELECTOR_REFERENCES_.21.230
+_OBJC_SELECTOR_REFERENCES_.15.231
+_OBJC_SELECTOR_REFERENCES_.19.232
+_OBJC_SELECTOR_REFERENCES_.123.233
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_SELECTOR_REFERENCES_.8.235
+__OBJC_METACLASS_RO_$_MMEReachability
+__OBJC_$_CLASS_METHODS_MMEReachability
+_OBJC_SELECTOR_REFERENCES_.6.245
+_OBJC_SELECTOR_REFERENCES_.4.246
+_OBJC_SELECTOR_REFERENCES_.2.247
+_OBJC_CLASSLIST_REFERENCES_$_.249
+_OBJC_SELECTOR_REFERENCES_.250
+__OBJC_CLASS_RO_$_MMEAPIClient
+__OBJC_$_INSTANCE_METHODS_MMEAPIClient
+__OBJC_$_INSTANCE_VARIABLES_MMEAPIClient
+__OBJC_$_PROP_LIST_MMEAPIClient
+_OBJC_IVAR_$_MMEAPIClient._configurationUpdateTimer
+_OBJC_IVAR_$_MMEAPIClient._sessionWrapper
+_OBJC_IVAR_$_MMEAPIClient._applicationBundle
+_OBJC_CLASSLIST_REFERENCES_$_.321
+_OBJC_SELECTOR_REFERENCES_.323
+_OBJC_CLASSLIST_REFERENCES_$_.287
+_OBJC_SELECTOR_REFERENCES_.289
+_OBJC_CLASSLIST_REFERENCES_$_.246
+_OBJC_SELECTOR_REFERENCES_.251.276
+_OBJC_SELECTOR_REFERENCES_.327.277
+_OBJC_SELECTOR_REFERENCES_.329.278
+_OBJC_CLASSLIST_REFERENCES_$_.309
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_CLASSLIST_REFERENCES_$_.312
+_OBJC_SELECTOR_REFERENCES_.314
+_OBJC_SELECTOR_REFERENCES_.316
+_OBJC_SELECTOR_REFERENCES_.135.279
+_OBJC_SELECTOR_REFERENCES_.337
+_OBJC_SELECTOR_REFERENCES_.340
+_OBJC_SELECTOR_REFERENCES_.342
+_OBJC_CLASSLIST_REFERENCES_$_.338
+_OBJC_SELECTOR_REFERENCES_.320.284
+_OBJC_CLASSLIST_REFERENCES_$_.286
+_OBJC_SELECTOR_REFERENCES_.102.287
+_OBJC_SELECTOR_REFERENCES_.267
+_OBJC_CLASSLIST_REFERENCES_$_.268
+_OBJC_SELECTOR_REFERENCES_.293
+_OBJC_SELECTOR_REFERENCES_.272
+_OBJC_CLASSLIST_REFERENCES_$_.273
+_OBJC_SELECTOR_REFERENCES_.275
+_OBJC_SELECTOR_REFERENCES_.277
+_OBJC_SELECTOR_REFERENCES_.279
+_OBJC_SELECTOR_REFERENCES_.297
+_OBJC_SELECTOR_REFERENCES_.281.288
+_OBJC_CLASSLIST_REFERENCES_$_.120
+_OBJC_SELECTOR_REFERENCES_.122
+_OBJC_SELECTOR_REFERENCES_.299
+___block_descriptor_24_e4_20s_e24_v16?0"MMEEvent"4I8^c12l
+_OBJC_SELECTOR_REFERENCES_.304
+_OBJC_SELECTOR_REFERENCES_.306
+_OBJC_SELECTOR_REFERENCES_.291
+_OBJC_SELECTOR_REFERENCES_.318
+_OBJC_SELECTOR_REFERENCES_.301
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.270
+_OBJC_SELECTOR_REFERENCES_.283.296
+_OBJC_CLASSLIST_REFERENCES_$_.284.297
+_OBJC_SELECTOR_REFERENCES_.286.298
+_OBJC_CLASSLIST_REFERENCES_$_.210.299
+_OBJC_SELECTOR_REFERENCES_.129.300
+_OBJC_SELECTOR_REFERENCES_.212.301
+_OBJC_CLASSLIST_REFERENCES_$_.252.308
+_OBJC_SELECTOR_REFERENCES_.263
+_OBJC_SELECTOR_REFERENCES_.254.309
+_OBJC_CLASSLIST_REFERENCES_$_.255.310
+_OBJC_SELECTOR_REFERENCES_.257.311
+_OBJC_SELECTOR_REFERENCES_.241.315
+_OBJC_CLASSLIST_REFERENCES_$_.247
+_OBJC_SELECTOR_REFERENCES_.249.316
+_OBJC_SELECTOR_REFERENCES_.317
+_OBJC_SELECTOR_REFERENCES_.191
+_OBJC_SELECTOR_REFERENCES_.239.321
+_OBJC_SELECTOR_REFERENCES_.117
+_OBJC_SELECTOR_REFERENCES_.189
+_OBJC_SELECTOR_REFERENCES_.115.323
+___block_descriptor_28_e4_20s24s_e45_v16?0"NSData"4"NSURLResponse"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.155.324
+_OBJC_CLASSLIST_REFERENCES_$_.127
+_OBJC_SELECTOR_REFERENCES_.139.326
+_OBJC_SELECTOR_REFERENCES_.141.327
+_OBJC_CLASSLIST_REFERENCES_$_.142.328
+_OBJC_SELECTOR_REFERENCES_.144.329
+_OBJC_SELECTOR_REFERENCES_.146.330
+_OBJC_SELECTOR_REFERENCES_.148.331
+_OBJC_SELECTOR_REFERENCES_.150.332
+_OBJC_SELECTOR_REFERENCES_.214.333
+_OBJC_SELECTOR_REFERENCES_.216
+_OBJC_SELECTOR_REFERENCES_.220
+_OBJC_CLASSLIST_REFERENCES_$_.221
+_OBJC_SELECTOR_REFERENCES_.223.334
+_OBJC_SELECTOR_REFERENCES_.225.335
+_OBJC_SELECTOR_REFERENCES_.227.336
+_OBJC_SELECTOR_REFERENCES_.229.337
+_OBJC_SELECTOR_REFERENCES_.231
+_OBJC_SELECTOR_REFERENCES_.235
+_OBJC_SELECTOR_REFERENCES_.237
+_OBJC_SELECTOR_REFERENCES_.152.338
+_OBJC_SELECTOR_REFERENCES_.157.339
+_OBJC_SELECTOR_REFERENCES_.176.353
+_OBJC_SELECTOR_REFERENCES_.113.354
+_OBJC_CLASSLIST_REFERENCES_$_.177
+_OBJC_SELECTOR_REFERENCES_.179
+___block_descriptor_24_e4_20s_e16_v8?0"NSTimer"4l
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_SELECTOR_REFERENCES_.193
+_OBJC_SELECTOR_REFERENCES_.195
+_OBJC_SELECTOR_REFERENCES_.197
+_OBJC_SELECTOR_REFERENCES_.199
+_OBJC_SELECTOR_REFERENCES_.181
+___block_descriptor_28_e4_20s24s_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.172
+_OBJC_SELECTOR_REFERENCES_.174.356
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_CLASSLIST_REFERENCES_$_.163
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_SELECTOR_REFERENCES_.169
+_OBJC_SELECTOR_REFERENCES_.171
+___block_descriptor_36_e4_20s24s28bs32s_e45_v16?0"NSData"4"NSURLResponse"8"NSError"12l
+_OBJC_CLASSLIST_REFERENCES_$_.158
+_OBJC_SELECTOR_REFERENCES_.160
+_OBJC_SELECTOR_REFERENCES_.162
+_OBJC_SELECTOR_REFERENCES_.131.359
+_OBJC_SELECTOR_REFERENCES_.133.360
+_OBJC_SELECTOR_REFERENCES_.137.361
+___block_descriptor_36_e4_20s24s28s32bs_e45_v16?0"NSData"4"NSURLResponse"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.104.364
+_OBJC_SELECTOR_REFERENCES_.106.365
+_OBJC_SELECTOR_REFERENCES_.108
+_OBJC_CLASSLIST_REFERENCES_$_.109
+_OBJC_SELECTOR_REFERENCES_.111.366
+__OBJC_METACLASS_RO_$_MMEAPIClient
+__OBJC_$_CLASS_METHODS_MMEAPIClient
+_OBJC_SELECTOR_REFERENCES_.203
+_OBJC_SELECTOR_REFERENCES_.207.369
+_OBJC_SELECTOR_REFERENCES_.209.370
+__OBJC_CLASS_RO_$_MMEEventLogger
+__OBJC_$_INSTANCE_METHODS_MMEEventLogger
+__OBJC_$_INSTANCE_VARIABLES_MMEEventLogger
+__OBJC_$_PROP_LIST_MMEEventLogger
+_OBJC_IVAR_$_MMEEventLogger._enabled
+_OBJC_IVAR_$_MMEEventLogger._handler
+___block_literal_global.40
+___block_descriptor_20_e33_v16?0I4"NSString"8"NSString"12l
+_OBJC_CLASSLIST_REFERENCES_$_.11
+_OBJC_SELECTOR_REFERENCES_.16.392
+_OBJC_CLASSLIST_REFERENCES_$_.17
+_OBJC_SELECTOR_REFERENCES_.19.397
+_OBJC_CLASSLIST_REFERENCES_$_.20
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_CLASSLIST_REFERENCES_$_.23
+_OBJC_SELECTOR_REFERENCES_.25.398
+_OBJC_SELECTOR_REFERENCES_.27.399
+_OBJC_SELECTOR_REFERENCES_.31.400
+_OBJC_CLASSLIST_REFERENCES_$_.32
+_OBJC_SELECTOR_REFERENCES_.34
+_OBJC_CLASSLIST_REFERENCES_$_.401
+_OBJC_SELECTOR_REFERENCES_.36.402
+_OBJC_SELECTOR_REFERENCES_.38.403
+_OBJC_SELECTOR_REFERENCES_.6.409
+_OBJC_SELECTOR_REFERENCES_.8.410
+_OBJC_SELECTOR_REFERENCES_.10.411
+_OBJC_SELECTOR_REFERENCES_.14.412
+_OBJC_SELECTOR_REFERENCES_.4.414
+__OBJC_METACLASS_RO_$_MMEEventLogger
+__OBJC_$_CLASS_METHODS_MMEEventLogger
+_sharedLogger.onceToken
+___block_literal_global.416
+_sharedLogger._sharedLogger
+_OBJC_SELECTOR_REFERENCES_.417
+_OBJC_SELECTOR_REFERENCES_.2.418
+__OBJC_CLASS_RO_$_MMEMetrics
+__OBJC_$_INSTANCE_METHODS_MMEMetrics
+__OBJC_$_INSTANCE_VARIABLES_MMEMetrics
+__OBJC_$_PROP_LIST_MMEMetrics
+_OBJC_IVAR_$_MMEMetrics._requests
+_OBJC_IVAR_$_MMEMetrics._cellBytesSent
+_OBJC_IVAR_$_MMEMetrics._wifiBytesSent
+_OBJC_IVAR_$_MMEMetrics._cellBytesReceived
+_OBJC_IVAR_$_MMEMetrics._wifiBytesReceived
+_OBJC_IVAR_$_MMEMetrics._appWakeups
+_OBJC_IVAR_$_MMEMetrics._eventCountFailed
+_OBJC_IVAR_$_MMEMetrics._eventCountTotal
+_OBJC_IVAR_$_MMEMetrics._eventCountMax
+_OBJC_IVAR_$_MMEMetrics._recordingStarted
+_OBJC_IVAR_$_MMEMetrics._dateUTCString
+_OBJC_IVAR_$_MMEMetrics._configResponseDict
+_OBJC_IVAR_$_MMEMetrics._eventCountPerType
+_OBJC_IVAR_$_MMEMetrics._failedRequestsDict
+_OBJC_IVAR_$_MMEMetrics._locationsInForeground
+_OBJC_IVAR_$_MMEMetrics._locationsInBackground
+_OBJC_IVAR_$_MMEMetrics._locationsWithApproximateValues
+_OBJC_IVAR_$_MMEMetrics._locationsDroppedBecauseOfHAF
+_OBJC_IVAR_$_MMEMetrics._locationsDroppedDueTimeout
+_OBJC_IVAR_$_MMEMetrics._locationsConvertedIntoEvents
+_OBJC_IVAR_$_MMEMetrics._deviceLat
+_OBJC_IVAR_$_MMEMetrics._deviceLon
+_OBJC_SELECTOR_REFERENCES_.511
+_OBJC_CLASSLIST_REFERENCES_$_.512
+_OBJC_CLASSLIST_REFERENCES_$_.1.513
+_OBJC_SELECTOR_REFERENCES_.3.514
+__OBJC_METACLASS_RO_$_MMEMetrics
+__OBJC_CLASS_RO_$_MMEDate
+__OBJC_$_INSTANCE_METHODS_MMEDate
+__OBJC_$_INSTANCE_VARIABLES_MMEDate
+__OBJC_$_PROP_LIST_MMEDate
+_OBJC_IVAR_$_MMEDate._offsetFromServer
+_OBJC_IVAR_$_MMEDate._sinceReferenceDate
+_OBJC_SELECTOR_REFERENCES_.69.547
+_OBJC_SELECTOR_REFERENCES_.65.549
+_OBJC_SELECTOR_REFERENCES_.67.550
+_OBJC_SELECTOR_REFERENCES_.22.556
+_OBJC_SELECTOR_REFERENCES_.59.557
+_OBJC_SELECTOR_REFERENCES_.61.558
+_OBJC_SELECTOR_REFERENCES_.37.559
+_OBJC_CLASSLIST_REFERENCES_$_.25
+_OBJC_SELECTOR_REFERENCES_.35.563
+_OBJC_SELECTOR_REFERENCES_.45.564
+_OBJC_SELECTOR_REFERENCES_.47.565
+_OBJC_SELECTOR_REFERENCES_.49.566
+_OBJC_CLASSLIST_REFERENCES_$_.38
+_OBJC_SELECTOR_REFERENCES_.51.567
+_OBJC_CLASSLIST_REFERENCES_$_.39
+_OBJC_SELECTOR_REFERENCES_.43.570
+_OBJC_SELECTOR_REFERENCES_.27.572
+_OBJC_SELECTOR_REFERENCES_.33.574
+__OBJC_METACLASS_RO_$_MMEDate
+__OBJC_$_CLASS_METHODS_MMEDate
+_OBJC_SELECTOR_REFERENCES_.2.584
+_OBJC_SELECTOR_REFERENCES_.31.586
+_OBJC_SELECTOR_REFERENCES_.29.587
+_HTTPDateFormatter._httpDateFormatter
+_OBJC_CLASSLIST_REFERENCES_$_.588
+_OBJC_SELECTOR_REFERENCES_.11.589
+_OBJC_CLASSLIST_REFERENCES_$_.12
+_OBJC_SELECTOR_REFERENCES_.16.591
+_OBJC_SELECTOR_REFERENCES_.18
+_iso8601DateOnlyFormatter._iso8601ShortDateFormatter
+_OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_SELECTOR_REFERENCES_.5.598
+_OBJC_SELECTOR_REFERENCES_.7
+_iso8601DateFormatter._iso8601DateFormatter
+__timeOffsetFromServer
+_OBJC_SELECTOR_REFERENCES_.604
+_OBJC_CLASSLIST_REFERENCES_$_.104
+_OBJC_CLASSLIST_REFERENCES_$_.107.607
+_OBJC_SELECTOR_REFERENCES_.106.615
+_OBJC_SELECTOR_REFERENCES_.109.616
+_OBJC_SELECTOR_REFERENCES_.111.617
+_OBJC_SELECTOR_REFERENCES_.113.618
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSDate_$_MMEDate
+__OBJC_$_CATEGORY_NSDate_$_MMEDate
+_OBJC_CLASSLIST_REFERENCES_$_.620
+_OBJC_CLASSLIST_REFERENCES_$_.1.621
+_OBJC_CLASSLIST_REFERENCES_$_.8.622
+_OBJC_SELECTOR_REFERENCES_.636
+_OBJC_SELECTOR_REFERENCES_.10.637
+_OBJC_SELECTOR_REFERENCES_.14.638
+_OBJC_SELECTOR_REFERENCES_.3.639
+_OBJC_SELECTOR_REFERENCES_.40.640
+_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_SELECTOR_REFERENCES_.5.641
+_OBJC_SELECTOR_REFERENCES_.7.642
+__OBJC_$_CATEGORY_CLASS_METHODS_NSProcessInfo_$_SystemInfo
+__OBJC_$_CATEGORY_NSProcessInfo_$_SystemInfo
+__OBJC_CLASS_RO_$_MMEEventsManager
+__OBJC_$_INSTANCE_METHODS_MMEEventsManager
+__OBJC_CLASS_PROTOCOLS_$_MMEEventsManager
+__OBJC_$_INSTANCE_VARIABLES_MMEEventsManager
+__OBJC_$_PROP_LIST_MMEEventsManager
+_OBJC_IVAR_$_MMEEventsManager._paused
+_OBJC_IVAR_$_MMEEventsManager._delegate
+_OBJC_IVAR_$_MMEEventsManager._skuId
+_OBJC_IVAR_$_MMEEventsManager._apiClient
+_OBJC_IVAR_$_MMEEventsManager._locationManager
+_OBJC_IVAR_$_MMEEventsManager._eventQueue
+_OBJC_IVAR_$_MMEEventsManager._uniqueIdentifer
+_OBJC_IVAR_$_MMEEventsManager._commonEventData
+_OBJC_IVAR_$_MMEEventsManager._nextTurnstileSendDate
+_OBJC_IVAR_$_MMEEventsManager._timerManager
+_OBJC_IVAR_$_MMEEventsManager._dispatchManager
+_OBJC_IVAR_$_MMEEventsManager._application
+_OBJC_IVAR_$_MMEEventsManager._backgroundTaskIdentifier
+__OBJC_PROTOCOL_$_MMELocationManagerDelegate
+__OBJC_$_PROTOCOL_REFS_MMELocationManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_MMELocationManagerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_MMELocationManagerDelegate
+_OBJC_CLASSLIST_REFERENCES_$_.417
+_OBJC_SELECTOR_REFERENCES_.419
+_OBJC_SELECTOR_REFERENCES_.421
+_OBJC_CLASSLIST_REFERENCES_$_.256
+_OBJC_SELECTOR_REFERENCES_.108.704
+_OBJC_CLASSLIST_REFERENCES_$_.259
+_OBJC_SELECTOR_REFERENCES_.261.705
+_OBJC_SELECTOR_REFERENCES_.370
+_OBJC_SELECTOR_REFERENCES_.263.706
+_OBJC_CLASSLIST_REFERENCES_$_.264
+_OBJC_SELECTOR_REFERENCES_.372
+_OBJC_SELECTOR_REFERENCES_.374
+_OBJC_SELECTOR_REFERENCES_.376
+_OBJC_SELECTOR_REFERENCES_.362
+_OBJC_SELECTOR_REFERENCES_.382
+_OBJC_SELECTOR_REFERENCES_.423
+_OBJC_SELECTOR_REFERENCES_.425
+_OBJC_CLASSLIST_REFERENCES_$_.335
+_OBJC_SELECTOR_REFERENCES_.337.707
+_OBJC_SELECTOR_REFERENCES_.388
+_OBJC_SELECTOR_REFERENCES_.400
+_OBJC_SELECTOR_REFERENCES_.402
+_OBJC_SELECTOR_REFERENCES_.404
+_OBJC_SELECTOR_REFERENCES_.406
+_OBJC_CLASSLIST_REFERENCES_$_.229
+_OBJC_SELECTOR_REFERENCES_.427
+_OBJC_SELECTOR_REFERENCES_.317.708
+_OBJC_SELECTOR_REFERENCES_.215
+_OBJC_SELECTOR_REFERENCES_.429
+_OBJC_SELECTOR_REFERENCES_.219.709
+_OBJC_SELECTOR_REFERENCES_.179.719
+_OBJC_SELECTOR_REFERENCES_.181.720
+_OBJC_SELECTOR_REFERENCES_.358
+_OBJC_SELECTOR_REFERENCES_.116.721
+_OBJC_SELECTOR_REFERENCES_.360
+_OBJC_SELECTOR_REFERENCES_.106.722
+_OBJC_SELECTOR_REFERENCES_.364
+_OBJC_SELECTOR_REFERENCES_.368
+_OBJC_SELECTOR_REFERENCES_.366
+_OBJC_SELECTOR_REFERENCES_.378
+_OBJC_SELECTOR_REFERENCES_.380
+_OBJC_SELECTOR_REFERENCES_.384.723
+_OBJC_SELECTOR_REFERENCES_.386
+_OBJC_SELECTOR_REFERENCES_.390
+_OBJC_SELECTOR_REFERENCES_.392
+_OBJC_SELECTOR_REFERENCES_.394
+_OBJC_SELECTOR_REFERENCES_.152.724
+_OBJC_SELECTOR_REFERENCES_.396
+_OBJC_SELECTOR_REFERENCES_.266
+_OBJC_SELECTOR_REFERENCES_.398
+_OBJC_SELECTOR_REFERENCES_.408
+_OBJC_SELECTOR_REFERENCES_.410
+_OBJC_SELECTOR_REFERENCES_.412
+_OBJC_SELECTOR_REFERENCES_.249.725
+_OBJC_SELECTOR_REFERENCES_.414
+_OBJC_CLASSLIST_REFERENCES_$_.114
+_OBJC_CLASSLIST_REFERENCES_$_.285
+_OBJC_SELECTOR_REFERENCES_.416
+_locationManager.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.356
+_OBJC_SELECTOR_REFERENCES_.203.738
+_OBJC_SELECTOR_REFERENCES_.349
+_OBJC_SELECTOR_REFERENCES_.205.739
+_OBJC_SELECTOR_REFERENCES_.351
+_OBJC_SELECTOR_REFERENCES_.161.740
+_OBJC_SELECTOR_REFERENCES_.223.741
+_OBJC_SELECTOR_REFERENCES_.353
+_OBJC_SELECTOR_REFERENCES_.355
+_OBJC_CLASSLIST_REFERENCES_$_.239
+_OBJC_SELECTOR_REFERENCES_.241.746
+_OBJC_SELECTOR_REFERENCES_.345
+_OBJC_SELECTOR_REFERENCES_.347
+_OBJC_SELECTOR_REFERENCES_.199.748
+_OBJC_SELECTOR_REFERENCES_.195.749
+_OBJC_SELECTOR_REFERENCES_.150.750
+_OBJC_SELECTOR_REFERENCES_.343
+_OBJC_SELECTOR_REFERENCES_.213
+_OBJC_SELECTOR_REFERENCES_.177
+_OBJC_CLASSLIST_REFERENCES_$_.332.752
+_OBJC_SELECTOR_REFERENCES_.339.754
+_OBJC_SELECTOR_REFERENCES_.341.755
+_OBJC_SELECTOR_REFERENCES_.329.758
+_OBJC_SELECTOR_REFERENCES_.331.759
+_OBJC_CLASSLIST_REFERENCES_$_.226
+_OBJC_SELECTOR_REFERENCES_.228
+_OBJC_SELECTOR_REFERENCES_.231.760
+_OBJC_SELECTOR_REFERENCES_.233
+_OBJC_SELECTOR_REFERENCES_.173
+_OBJC_SELECTOR_REFERENCES_.327.764
+_OBJC_SELECTOR_REFERENCES_.325.766
+_OBJC_SELECTOR_REFERENCES_.323.768
+_OBJC_SELECTOR_REFERENCES_.133.770
+___block_descriptor_24_e4_20bs_e16_v8?0"NSError"4l
+_OBJC_SELECTOR_REFERENCES_.321
+_OBJC_SELECTOR_REFERENCES_.297.771
+_OBJC_SELECTOR_REFERENCES_.299.772
+_OBJC_SELECTOR_REFERENCES_.301.773
+_OBJC_SELECTOR_REFERENCES_.303
+_OBJC_SELECTOR_REFERENCES_.305
+_OBJC_SELECTOR_REFERENCES_.307
+_OBJC_SELECTOR_REFERENCES_.309
+_OBJC_SELECTOR_REFERENCES_.311.774
+_OBJC_SELECTOR_REFERENCES_.313
+_OBJC_SELECTOR_REFERENCES_.315
+_OBJC_SELECTOR_REFERENCES_.319
+_OBJC_SELECTOR_REFERENCES_.295
+_OBJC_SELECTOR_REFERENCES_.290
+_OBJC_SELECTOR_REFERENCES_.284
+___block_literal_global.291
+___block_descriptor_20_e16_v8?0"NSError"4l
+_OBJC_SELECTOR_REFERENCES_.293.780
+_OBJC_SELECTOR_REFERENCES_.287
+___block_literal_global.288
+_OBJC_SELECTOR_REFERENCES_.238
+_OBJC_SELECTOR_REFERENCES_.243.782
+_OBJC_SELECTOR_REFERENCES_.201
+_OBJC_SELECTOR_REFERENCES_.245.783
+_OBJC_SELECTOR_REFERENCES_.247
+_OBJC_SELECTOR_REFERENCES_.251.784
+_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.255
+_OBJC_SELECTOR_REFERENCES_.258
+_OBJC_CLASSLIST_REFERENCES_$_.267
+_OBJC_SELECTOR_REFERENCES_.269.785
+_OBJC_SELECTOR_REFERENCES_.271.786
+_OBJC_SELECTOR_REFERENCES_.273.787
+_OBJC_CLASSLIST_REFERENCES_$_.274.788
+_OBJC_SELECTOR_REFERENCES_.276.789
+_OBJC_SELECTOR_REFERENCES_.278.790
+_OBJC_SELECTOR_REFERENCES_.280
+___block_descriptor_28_e4_20s24w_e16_v8?0"NSError"4l
+_OBJC_SELECTOR_REFERENCES_.282
+_OBJC_SELECTOR_REFERENCES_.236.800
+_OBJC_SELECTOR_REFERENCES_.183.802
+_OBJC_SELECTOR_REFERENCES_.187.803
+_OBJC_SELECTOR_REFERENCES_.185
+_OBJC_SELECTOR_REFERENCES_.221.805
+_OBJC_SELECTOR_REFERENCES_.225.806
+_OBJC_SELECTOR_REFERENCES_.207.809
+_OBJC_SELECTOR_REFERENCES_.209.810
+_OBJC_SELECTOR_REFERENCES_.211
+_OBJC_SELECTOR_REFERENCES_.217
+_OBJC_SELECTOR_REFERENCES_.197.812
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_SELECTOR_REFERENCES_.129.813
+_OBJC_SELECTOR_REFERENCES_.189.815
+_OBJC_SELECTOR_REFERENCES_.191.816
+_OBJC_SELECTOR_REFERENCES_.193.817
+___block_descriptor_24_e4_20w_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.144.821
+_OBJC_SELECTOR_REFERENCES_.175
+_OBJC_SELECTOR_REFERENCES_.135.822
+_OBJC_CLASSLIST_REFERENCES_$_.136
+_OBJC_SELECTOR_REFERENCES_.138
+_OBJC_SELECTOR_REFERENCES_.140.823
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.167.824
+_OBJC_SELECTOR_REFERENCES_.169.825
+_OBJC_SELECTOR_REFERENCES_.171.826
+_OBJC_CLASSLIST_REFERENCES_$_.123
+_OBJC_SELECTOR_REFERENCES_.125.829
+_OBJC_SELECTOR_REFERENCES_.146.830
+_OBJC_SELECTOR_REFERENCES_.148.831
+_OBJC_SELECTOR_REFERENCES_.154
+_OBJC_CLASSLIST_REFERENCES_$_.157
+_OBJC_SELECTOR_REFERENCES_.159.832
+_OBJC_SELECTOR_REFERENCES_.163
+_OBJC_SELECTOR_REFERENCES_.165.833
+_OBJC_SELECTOR_REFERENCES_.127.839
+_OBJC_SELECTOR_REFERENCES_.131.841
+_OBJC_CLASSLIST_REFERENCES_$_.109.843
+_OBJC_SELECTOR_REFERENCES_.111.844
+_OBJC_CLASSLIST_REFERENCES_$_.112.845
+_OBJC_CLASSLIST_REFERENCES_$_.113
+_OBJC_SELECTOR_REFERENCES_.118.846
+_OBJC_SELECTOR_REFERENCES_.120
+_OBJC_CLASSLIST_REFERENCES_$_.121
+_OBJC_CLASSLIST_REFERENCES_$_.122
+_OBJC_SELECTOR_REFERENCES_.104.849
+__OBJC_METACLASS_RO_$_MMEEventsManager
+__OBJC_$_CLASS_METHODS_MMEEventsManager
+_sharedManager.onceToken
+___block_literal_global.851
+_sharedManager._sharedManager
+_OBJC_CLASSLIST_REFERENCES_$_.852
+_OBJC_SELECTOR_REFERENCES_.853
+_OBJC_CLASSLIST_REFERENCES_$_.100
+_OBJC_SELECTOR_REFERENCES_.102.854
+__OBJC_LABEL_PROTOCOL_$_MMELocationManagerDelegate
+__OBJC_$_PROP_LIST_NSObject.859
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject.860
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject.861
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject.862
+__OBJC_CLASS_RO_$_MMEEvent
+__OBJC_$_INSTANCE_METHODS_MMEEvent
+__OBJC_CLASS_PROTOCOLS_$_MMEEvent
+__OBJC_$_INSTANCE_VARIABLES_MMEEvent
+__OBJC_$_PROP_LIST_MMEEvent
+_OBJC_IVAR_$_MMEEvent._dateStorage
+_OBJC_IVAR_$_MMEEvent._attributesStorage
+__OBJC_PROTOCOL_$_NSCopying
+__OBJC_PROTOCOL_$_NSSecureCoding
+__OBJC_$_PROTOCOL_REFS_NSSecureCoding
+__OBJC_$_PROTOCOL_CLASS_METHODS_NSSecureCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSSecureCoding
+__OBJC_$_CLASS_PROP_LIST_NSSecureCoding
+__OBJC_PROTOCOL_$_NSCoding
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCoding
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCopying
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCopying
+_OBJC_SELECTOR_REFERENCES_.247.1107
+_OBJC_SELECTOR_REFERENCES_.249.1109
+_OBJC_SELECTOR_REFERENCES_.181.1114
+_OBJC_SELECTOR_REFERENCES_.237.1115
+_OBJC_CLASSLIST_REFERENCES_$_.58
+_OBJC_SELECTOR_REFERENCES_.133.1116
+_OBJC_SELECTOR_REFERENCES_.215.1117
+_OBJC_SELECTOR_REFERENCES_.243.1118
+_OBJC_CLASSLIST_REFERENCES_$_.185
+_OBJC_CLASSLIST_REFERENCES_$_.191
+_OBJC_SELECTOR_REFERENCES_.193.1119
+_OBJC_SELECTOR_REFERENCES_.195.1120
+_OBJC_CLASSLIST_REFERENCES_$_.26
+_OBJC_SELECTOR_REFERENCES_.28.1121
+_OBJC_SELECTOR_REFERENCES_.30.1122
+_OBJC_SELECTOR_REFERENCES_.245.1123
+_OBJC_CLASSLIST_REFERENCES_$_.136.1124
+_OBJC_CLASSLIST_REFERENCES_$_.89
+_OBJC_SELECTOR_REFERENCES_.82
+_OBJC_SELECTOR_REFERENCES_.207.1133
+_OBJC_SELECTOR_REFERENCES_.203.1134
+_OBJC_SELECTOR_REFERENCES_.227.1135
+_OBJC_SELECTOR_REFERENCES_.211.1136
+_OBJC_SELECTOR_REFERENCES_.197.1137
+_OBJC_SELECTOR_REFERENCES_.142.1140
+_OBJC_SELECTOR_REFERENCES_.223.1141
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_SELECTOR_REFERENCES_.221.1143
+_OBJC_SELECTOR_REFERENCES_.217.1144
+_OBJC_SELECTOR_REFERENCES_.219.1145
+_OBJC_SELECTOR_REFERENCES_.209.1147
+_OBJC_SELECTOR_REFERENCES_.213.1148
+_OBJC_SELECTOR_REFERENCES_.205.1150
+_OBJC_SELECTOR_REFERENCES_.77.1152
+_OBJC_SELECTOR_REFERENCES_.79.1153
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.179.1157
+_OBJC_CLASSLIST_REFERENCES_$_.182
+_OBJC_SELECTOR_REFERENCES_.184.1159
+_OBJC_CLASSLIST_REFERENCES_$_.188
+_OBJC_SELECTOR_REFERENCES_.190.1160
+_OBJC_SELECTOR_REFERENCES_.34.1161
+_OBJC_SELECTOR_REFERENCES_.138.1162
+_OBJC_SELECTOR_REFERENCES_.140.1163
+_OBJC_SELECTOR_REFERENCES_.36.1164
+_OBJC_SELECTOR_REFERENCES_.32.1174
+__OBJC_METACLASS_RO_$_MMEEvent
+__OBJC_$_CLASS_METHODS_MMEEvent
+__OBJC_$_CLASS_PROP_LIST_MMEEvent
+_OBJC_SELECTOR_REFERENCES_.38.1198
+_OBJC_SELECTOR_REFERENCES_.177.1199
+_OBJC_CLASSLIST_REFERENCES_$_.164
+_OBJC_SELECTOR_REFERENCES_.166.1200
+_OBJC_SELECTOR_REFERENCES_.168.1201
+_OBJC_CLASSLIST_REFERENCES_$_.125
+_OBJC_CLASSLIST_REFERENCES_$_.169
+_OBJC_SELECTOR_REFERENCES_.171.1202
+_OBJC_SELECTOR_REFERENCES_.173.1203
+_OBJC_SELECTOR_REFERENCES_.175.1204
+_OBJC_CLASSLIST_REFERENCES_$_.122.1210
+_OBJC_SELECTOR_REFERENCES_.152.1211
+_OBJC_SELECTOR_REFERENCES_.154.1212
+_OBJC_SELECTOR_REFERENCES_.156.1213
+_OBJC_SELECTOR_REFERENCES_.146.1214
+_OBJC_SELECTOR_REFERENCES_.158
+_OBJC_SELECTOR_REFERENCES_.160.1215
+_OBJC_CLASSLIST_REFERENCES_$_.161
+_OBJC_SELECTOR_REFERENCES_.163.1216
+_OBJC_SELECTOR_REFERENCES_.127.1217
+_OBJC_CLASSLIST_REFERENCES_$_.39.1225
+_OBJC_SELECTOR_REFERENCES_.148.1226
+_OBJC_SELECTOR_REFERENCES_.150.1227
+_OBJC_SELECTOR_REFERENCES_.144.1230
+_OBJC_SELECTOR_REFERENCES_.124.1231
+_OBJC_SELECTOR_REFERENCES_.135.1232
+_OBJC_SELECTOR_REFERENCES_.131.1233
+_OBJC_SELECTOR_REFERENCES_.115.1236
+_OBJC_SELECTOR_REFERENCES_.113.1237
+_OBJC_SELECTOR_REFERENCES_.117.1238
+_OBJC_SELECTOR_REFERENCES_.129.1239
+_OBJC_SELECTOR_REFERENCES_.121.1240
+_OBJC_SELECTOR_REFERENCES_.41.1245
+_OBJC_CLASSLIST_REFERENCES_$_.46
+_OBJC_SELECTOR_REFERENCES_.48.1246
+_OBJC_SELECTOR_REFERENCES_.50.1247
+_OBJC_CLASSLIST_REFERENCES_$_.51
+_OBJC_SELECTOR_REFERENCES_.53.1248
+_OBJC_SELECTOR_REFERENCES_.55.1249
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_CLASSLIST_REFERENCES_$_.69
+_OBJC_SELECTOR_REFERENCES_.71.1253
+_OBJC_SELECTOR_REFERENCES_.73.1254
+_OBJC_SELECTOR_REFERENCES_.75.1255
+_OBJC_CLASSLIST_REFERENCES_$_.80
+_OBJC_SELECTOR_REFERENCES_.84
+_OBJC_SELECTOR_REFERENCES_.86
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_SELECTOR_REFERENCES_.91.1256
+_OBJC_SELECTOR_REFERENCES_.93
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_SELECTOR_REFERENCES_.101.1257
+_OBJC_SELECTOR_REFERENCES_.103.1258
+_OBJC_SELECTOR_REFERENCES_.17.1259
+_OBJC_SELECTOR_REFERENCES_.105.1260
+_OBJC_SELECTOR_REFERENCES_.109.1261
+_OBJC_SELECTOR_REFERENCES_.25.1262
+_redactedStackFrame:.allowedSymbols
+_OBJC_CLASSLIST_REFERENCES_$_.1286
+_OBJC_SELECTOR_REFERENCES_.1287
+_OBJC_CLASSLIST_REFERENCES_$_.13.1295
+_OBJC_SELECTOR_REFERENCES_.15.1296
+_OBJC_SELECTOR_REFERENCES_.19.1297
+_OBJC_SELECTOR_REFERENCES_.21.1298
+_nilAttributes.nilAttributes
+__OBJC_LABEL_PROTOCOL_$_NSCopying
+__OBJC_LABEL_PROTOCOL_$_NSCoding
+__OBJC_LABEL_PROTOCOL_$_NSSecureCoding
+__OBJC_CLASS_RO_$_MMETimerManager
+__OBJC_$_INSTANCE_METHODS_MMETimerManager
+__OBJC_$_INSTANCE_VARIABLES_MMETimerManager
+__OBJC_$_PROP_LIST_MMETimerManager
+_OBJC_IVAR_$_MMETimerManager._target
+_OBJC_IVAR_$_MMETimerManager._selector
+_OBJC_IVAR_$_MMETimerManager._timer
+_OBJC_IVAR_$_MMETimerManager._timeInterval
+_OBJC_SELECTOR_REFERENCES_.14.1333
+_OBJC_SELECTOR_REFERENCES_.16.1334
+_OBJC_SELECTOR_REFERENCES_.12.1335
+_OBJC_SELECTOR_REFERENCES_.2.1337
+_OBJC_CLASSLIST_REFERENCES_$_.1338
+_OBJC_SELECTOR_REFERENCES_.4.1339
+_OBJC_SELECTOR_REFERENCES_.6.1340
+_OBJC_SELECTOR_REFERENCES_.8.1341
+_OBJC_SELECTOR_REFERENCES_.10.1342
+_OBJC_SELECTOR_REFERENCES_.1345
+__OBJC_METACLASS_RO_$_MMETimerManager
+__OBJC_CLASS_RO_$_MMECommonEventData
+__OBJC_$_INSTANCE_METHODS_MMECommonEventData
+__OBJC_$_INSTANCE_VARIABLES_MMECommonEventData
+__OBJC_$_PROP_LIST_MMECommonEventData
+_OBJC_IVAR_$_MMECommonEventData._vendorId
+_OBJC_IVAR_$_MMECommonEventData._model
+_OBJC_IVAR_$_MMECommonEventData._osVersion
+_OBJC_IVAR_$_MMECommonEventData._platform
+_OBJC_IVAR_$_MMECommonEventData._device
+_OBJC_IVAR_$_MMECommonEventData._scale
+_OBJC_SELECTOR_REFERENCES_.22.1399
+_OBJC_CLASSLIST_REFERENCES_$_.12.1400
+_OBJC_SELECTOR_REFERENCES_.25.1401
+_OBJC_SELECTOR_REFERENCES_.27.1403
+_OBJC_CLASSLIST_REFERENCES_$_.28
+_OBJC_SELECTOR_REFERENCES_.30.1404
+_OBJC_SELECTOR_REFERENCES_.32.1405
+_OBJC_SELECTOR_REFERENCES_.34.1406
+_OBJC_CLASSLIST_REFERENCES_$_.1407
+_OBJC_SELECTOR_REFERENCES_.38.1408
+_OBJC_SELECTOR_REFERENCES_.40.1409
+_OBJC_SELECTOR_REFERENCES_.42.1410
+_OBJC_SELECTOR_REFERENCES_.14.1412
+_OBJC_CLASSLIST_REFERENCES_$_.43
+_OBJC_SELECTOR_REFERENCES_.45.1413
+_OBJC_SELECTOR_REFERENCES_.47.1414
+_OBJC_SELECTOR_REFERENCES_.49.1415
+_OBJC_SELECTOR_REFERENCES_.51.1416
+__OBJC_METACLASS_RO_$_MMECommonEventData
+__OBJC_$_CLASS_METHODS_MMECommonEventData
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_SELECTOR_REFERENCES_.54
+_OBJC_CLASSLIST_REFERENCES_$_.55
+_OBJC_SELECTOR_REFERENCES_.11.1432
+_OBJC_SELECTOR_REFERENCES_.57.1433
+_OBJC_CLASSLIST_REFERENCES_$_.9.1436
+_OBJC_SELECTOR_REFERENCES_.16.1437
+_OBJC_SELECTOR_REFERENCES_.18.1438
+_OBJC_SELECTOR_REFERENCES_.20.1439
+_OBJC_SELECTOR_REFERENCES_.1441
+_OBJC_CLASSLIST_REFERENCES_$_.1446
+_OBJC_SELECTOR_REFERENCES_.1460
+_OBJC_SELECTOR_REFERENCES_.10.1461
+_OBJC_SELECTOR_REFERENCES_.12.1462
+_OBJC_SELECTOR_REFERENCES_.14.1463
+_OBJC_SELECTOR_REFERENCES_.2.1464
+_OBJC_SELECTOR_REFERENCES_.4.1465
+_OBJC_SELECTOR_REFERENCES_.6.1466
+_OBJC_SELECTOR_REFERENCES_.8.1467
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSData_$_GZIP
+__OBJC_$_CATEGORY_NSData_$_GZIP
+_OBJC_SELECTOR_REFERENCES_.1488
+_OBJC_SELECTOR_REFERENCES_.10.1489
+_OBJC_SELECTOR_REFERENCES_.12.1490
+_OBJC_SELECTOR_REFERENCES_.2.1491
+_OBJC_SELECTOR_REFERENCES_.4.1492
+_OBJC_SELECTOR_REFERENCES_.6.1493
+_OBJC_SELECTOR_REFERENCES_.8.1494
+__OBJC_$_CATEGORY_CLLocation_$_MMEMobileEvents
+__OBJC_$_CATEGORY_INSTANCE_METHODS_CLLocation_$_MMEMobileEvents
+__OBJC_CLASS_RO_$_MMEDependencyManager
+__OBJC_$_INSTANCE_METHODS_MMEDependencyManager
+_OBJC_CLASSLIST_REFERENCES_$_.1.1500
+_OBJC_SELECTOR_REFERENCES_.1501
+__OBJC_METACLASS_RO_$_MMEDependencyManager
+__OBJC_$_CLASS_METHODS_MMEDependencyManager
+_sharedManager.onceToken.1504
+___block_literal_global.1505
+__sharedInstance
+_OBJC_CLASSLIST_REFERENCES_$_.1506
+__OBJC_CLASS_RO_$_MMEUniqueIdentifier
+__OBJC_$_INSTANCE_METHODS_MMEUniqueIdentifier
+__OBJC_CLASS_PROTOCOLS_$_MMEUniqueIdentifier
+__OBJC_$_INSTANCE_VARIABLES_MMEUniqueIdentifier
+__OBJC_$_PROP_LIST_MMEUniqueIdentifier
+_OBJC_IVAR_$_MMEUniqueIdentifier._instanceIDRotationDate
+_OBJC_IVAR_$_MMEUniqueIdentifier._instanceID
+_OBJC_IVAR_$_MMEUniqueIdentifier._timeInterval
+__OBJC_PROTOCOL_$_MMEUniqueIdentifer
+__OBJC_$_PROTOCOL_REFS_MMEUniqueIdentifer
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_MMEUniqueIdentifer
+__OBJC_$_PROP_LIST_MMEUniqueIdentifer
+__OBJC_$_PROTOCOL_METHOD_TYPES_MMEUniqueIdentifer
+_OBJC_SELECTOR_REFERENCES_.2.1531
+_OBJC_CLASSLIST_REFERENCES_$_.1532
+_OBJC_SELECTOR_REFERENCES_.4.1533
+_OBJC_SELECTOR_REFERENCES_.6.1534
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11.1535
+_OBJC_SELECTOR_REFERENCES_.13.1536
+_OBJC_SELECTOR_REFERENCES_.15.1537
+_OBJC_SELECTOR_REFERENCES_.17.1538
+_OBJC_SELECTOR_REFERENCES_.1545
+__OBJC_METACLASS_RO_$_MMEUniqueIdentifier
+__OBJC_LABEL_PROTOCOL_$_MMEUniqueIdentifer
+__OBJC_$_PROP_LIST_NSObject.1577
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject.1578
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject.1579
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject.1580
+_OBJC_CLASSLIST_REFERENCES_$_.1582
+_OBJC_SELECTOR_REFERENCES_.1593
+_OBJC_SELECTOR_REFERENCES_.2.1594
+_OBJC_SELECTOR_REFERENCES_.4.1595
+__OBJC_$_CATEGORY_CLLocationManager_$_MMEMobileEvents
+__OBJC_$_CATEGORY_INSTANCE_METHODS_CLLocationManager_$_MMEMobileEvents
+__OBJC_CLASS_RO_$_MMECertPin
+__OBJC_$_INSTANCE_METHODS_MMECertPin
+__OBJC_$_INSTANCE_VARIABLES_MMECertPin
+__OBJC_$_PROP_LIST_MMECertPin
+_OBJC_IVAR_$_MMECertPin._publicKeyInfoHashesCache
+_OBJC_IVAR_$_MMECertPin._lastAuthChallengeDisposition
+_OBJC_IVAR_$_MMECertPin._lockQueue
+_OBJC_CLASSLIST_REFERENCES_$_.1632
+_OBJC_SELECTOR_REFERENCES_.1633
+_OBJC_SELECTOR_REFERENCES_.49.1634
+_OBJC_CLASSLIST_REFERENCES_$_.62
+_OBJC_SELECTOR_REFERENCES_.64
+___block_descriptor_40_e4_20s24s28r32r36r_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.51.1640
+_OBJC_SELECTOR_REFERENCES_.53.1641
+_OBJC_SELECTOR_REFERENCES_.55.1642
+_OBJC_SELECTOR_REFERENCES_.57.1643
+_OBJC_SELECTOR_REFERENCES_.61.1644
+_OBJC_SELECTOR_REFERENCES_.59.1645
+___block_descriptor_32_e4_20s24r28w_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.39.1649
+_OBJC_CLASSLIST_REFERENCES_$_.40
+_OBJC_SELECTOR_REFERENCES_.42.1650
+_rsa2048Asn1Header
+_OBJC_SELECTOR_REFERENCES_.44.1651
+_OBJC_SELECTOR_REFERENCES_.46
+___block_descriptor_32_e4_20s24s28w_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.37.1652
+_OBJC_SELECTOR_REFERENCES_.30.1656
+_OBJC_SELECTOR_REFERENCES_.4.1658
+_OBJC_SELECTOR_REFERENCES_.6.1659
+_OBJC_SELECTOR_REFERENCES_.8.1660
+_OBJC_SELECTOR_REFERENCES_.10.1661
+_OBJC_CLASSLIST_REFERENCES_$_.11.1662
+_OBJC_SELECTOR_REFERENCES_.13.1663
+_OBJC_SELECTOR_REFERENCES_.15.1664
+_OBJC_SELECTOR_REFERENCES_.17.1665
+_OBJC_SELECTOR_REFERENCES_.19.1666
+___block_descriptor_28_e4_20s24bs_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.24.1667
+_OBJC_SELECTOR_REFERENCES_.26.1668
+_OBJC_SELECTOR_REFERENCES_.28.1669
+___block_descriptor_32_e4_20s24bs28s_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.21.1670
+_OBJC_CLASSLIST_REFERENCES_$_.32.1671
+_OBJC_SELECTOR_REFERENCES_.34.1672
+_OBJC_SELECTOR_REFERENCES_.2.1685
+__OBJC_METACLASS_RO_$_MMECertPin
+__OBJC_PROTOCOL_$_MMEUIApplicationWrapper
+__OBJC_$_PROTOCOL_REFS_MMEUIApplicationWrapper
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_MMEUIApplicationWrapper
+__OBJC_$_PROP_LIST_MMEUIApplicationWrapper
+__OBJC_$_PROTOCOL_METHOD_TYPES_MMEUIApplicationWrapper
+__OBJC_LABEL_PROTOCOL_$_MMEUIApplicationWrapper
+__OBJC_METACLASS_RO_$_MMEUIApplicationExtensionWrapper
+__OBJC_CLASS_PROTOCOLS_$_MMEUIApplicationExtensionWrapper
+__OBJC_CLASS_RO_$_MMEUIApplicationExtensionWrapper
+__OBJC_$_INSTANCE_METHODS_MMEUIApplicationExtensionWrapper
+__OBJC_$_PROP_LIST_MMEUIApplicationExtensionWrapper
+_OBJC_CLASSLIST_REFERENCES_$_.1707
+_OBJC_SELECTOR_REFERENCES_.1708
+__OBJC_CLASS_RO_$_MMEUIApplicationWrapper
+__OBJC_$_INSTANCE_METHODS_MMEUIApplicationWrapper
+__OBJC_CLASS_PROTOCOLS_$_MMEUIApplicationWrapper
+__OBJC_$_INSTANCE_VARIABLES_MMEUIApplicationWrapper
+__OBJC_$_PROP_LIST_MMEUIApplicationWrapper.84
+_OBJC_IVAR_$_MMEUIApplicationWrapper._application
+_OBJC_SELECTOR_REFERENCES_.71.1723
+_OBJC_SELECTOR_REFERENCES_.74
+_OBJC_SELECTOR_REFERENCES_.73.1724
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_SELECTOR_REFERENCES_.67.1726
+_OBJC_SELECTOR_REFERENCES_.69.1727
+_OBJC_CLASSLIST_REFERENCES_$_.52.1728
+_OBJC_SELECTOR_REFERENCES_.54.1729
+_OBJC_CLASSLIST_REFERENCES_$_.55.1730
+_OBJC_SELECTOR_REFERENCES_.57.1731
+_OBJC_SELECTOR_REFERENCES_.59.1732
+_OBJC_CLASSLIST_REFERENCES_$_.60
+_OBJC_SELECTOR_REFERENCES_.61.1733
+_OBJC_SELECTOR_REFERENCES_.63.1734
+_OBJC_SELECTOR_REFERENCES_.64.1735
+_OBJC_SELECTOR_REFERENCES_.65.1736
+__OBJC_METACLASS_RO_$_MMEUIApplicationWrapper
+__OBJC_$_PROP_LIST_NSObject.1769
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject.1770
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject.1771
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject.1772
+__OBJC_METACLASS_RO_$_MMECategoryLoader
+__OBJC_$_CLASS_METHODS_MMECategoryLoader
+__OBJC_CLASS_RO_$_MMECategoryLoader
+_OBJC_CLASSLIST_REFERENCES_$_.1781
+_OBJC_SELECTOR_REFERENCES_.1790
+_OBJC_SELECTOR_REFERENCES_.2.1791
+_OBJC_SELECTOR_REFERENCES_.4.1792
+_OBJC_SELECTOR_REFERENCES_.6.1793
+__OBJC_$_CATEGORY_CLASS_METHODS_NSBundle_$_MMEMobileEvents
+__OBJC_$_CATEGORY_NSBundle_$_MMEMobileEvents
+_OBJC_CLASSLIST_REFERENCES_$_.1797
+_OBJC_SELECTOR_REFERENCES_.1809
+_OBJC_SELECTOR_REFERENCES_.17.1810
+_OBJC_SELECTOR_REFERENCES_.19.1811
+_OBJC_SELECTOR_REFERENCES_.23.1812
+_OBJC_SELECTOR_REFERENCES_.25.1813
+__OBJC_$_CATEGORY_CLASS_METHODS_NSExtensionContext_$_MMEMobileEvents
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIApplication_$_MMEMobileEvents
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIDevice_$_MMEMobileEvents
+__OBJC_$_CATEGORY_NSExtensionContext_$_MMEMobileEvents
+__OBJC_$_CATEGORY_NSObject_$_MMEMobileEvents
+__OBJC_$_CATEGORY_UIApplication_$_MMEMobileEvents
+__OBJC_$_CATEGORY_UIDevice_$_MMEMobileEvents
+__OBJC_METACLASS_RO_$_MMEDispatchManager
+__OBJC_CLASS_RO_$_MMEDispatchManager
+__OBJC_$_INSTANCE_METHODS_MMEDispatchManager
+__OBJC_CLASS_RO_$_MMEMetricsManager
+__OBJC_$_INSTANCE_METHODS_MMEMetricsManager
+__OBJC_$_INSTANCE_VARIABLES_MMEMetricsManager
+__OBJC_$_PROP_LIST_MMEMetricsManager
+_OBJC_IVAR_$_MMEMetricsManager._metrics
+_OBJC_SELECTOR_REFERENCES_.45.1868
+_OBJC_CLASSLIST_REFERENCES_$_.246.1869
+_OBJC_SELECTOR_REFERENCES_.248
+_OBJC_CLASSLIST_REFERENCES_$_.249.1870
+_OBJC_SELECTOR_REFERENCES_.251.1871
+_OBJC_CLASSLIST_REFERENCES_$_.23.1872
+_OBJC_SELECTOR_REFERENCES_.25.1873
+_OBJC_CLASSLIST_REFERENCES_$_.20.1874
+_OBJC_SELECTOR_REFERENCES_.22.1875
+_OBJC_SELECTOR_REFERENCES_.27.1876
+_OBJC_SELECTOR_REFERENCES_.47.1882
+_OBJC_SELECTOR_REFERENCES_.162.1883
+_OBJC_SELECTOR_REFERENCES_.225.1884
+_OBJC_CLASSLIST_REFERENCES_$_.163.1885
+_OBJC_SELECTOR_REFERENCES_.227.1886
+_OBJC_CLASSLIST_REFERENCES_$_.228
+_OBJC_SELECTOR_REFERENCES_.230
+_OBJC_SELECTOR_REFERENCES_.167.1887
+_OBJC_SELECTOR_REFERENCES_.232.1888
+_OBJC_SELECTOR_REFERENCES_.234.1889
+_OBJC_SELECTOR_REFERENCES_.236.1890
+_OBJC_CLASSLIST_REFERENCES_$_.1891
+_OBJC_SELECTOR_REFERENCES_.223.1892
+_OBJC_SELECTOR_REFERENCES_.238.1893
+_OBJC_CLASSLIST_REFERENCES_$_.239.1894
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_SELECTOR_REFERENCES_.215.1895
+_OBJC_SELECTOR_REFERENCES_.241.1896
+_OBJC_SELECTOR_REFERENCES_.243.1897
+_OBJC_SELECTOR_REFERENCES_.15.1898
+_OBJC_SELECTOR_REFERENCES_.245.1899
+_OBJC_SELECTOR_REFERENCES_.221.1900
+_OBJC_CLASSLIST_REFERENCES_$_.11.1916
+_OBJC_SELECTOR_REFERENCES_.13.1917
+_OBJC_SELECTOR_REFERENCES_.17.1918
+_OBJC_CLASSLIST_REFERENCES_$_.208
+_OBJC_SELECTOR_REFERENCES_.210
+_OBJC_CLASSLIST_REFERENCES_$_.211
+_OBJC_SELECTOR_REFERENCES_.213.1919
+_OBJC_SELECTOR_REFERENCES_.217.1920
+_OBJC_SELECTOR_REFERENCES_.219.1921
+_OBJC_CLASSLIST_REFERENCES_$_.90
+_OBJC_SELECTOR_REFERENCES_.160.1928
+_OBJC_SELECTOR_REFERENCES_.169.1929
+_OBJC_SELECTOR_REFERENCES_.165.1930
+_OBJC_SELECTOR_REFERENCES_.89.1931
+_OBJC_SELECTOR_REFERENCES_.171.1932
+_OBJC_SELECTOR_REFERENCES_.55.1933
+_OBJC_SELECTOR_REFERENCES_.173.1934
+_OBJC_CLASSLIST_REFERENCES_$_.37
+_OBJC_SELECTOR_REFERENCES_.175.1935
+_OBJC_SELECTOR_REFERENCES_.177.1936
+_OBJC_SELECTOR_REFERENCES_.107.1937
+_OBJC_SELECTOR_REFERENCES_.103.1938
+_OBJC_SELECTOR_REFERENCES_.179.1939
+_OBJC_SELECTOR_REFERENCES_.115.1940
+_OBJC_SELECTOR_REFERENCES_.111.1941
+_OBJC_SELECTOR_REFERENCES_.94.1942
+_OBJC_SELECTOR_REFERENCES_.49.1943
+_OBJC_SELECTOR_REFERENCES_.181.1944
+_OBJC_SELECTOR_REFERENCES_.119.1945
+_OBJC_SELECTOR_REFERENCES_.75.1946
+_OBJC_SELECTOR_REFERENCES_.183.1947
+_OBJC_SELECTOR_REFERENCES_.185.1948
+_OBJC_SELECTOR_REFERENCES_.125.1949
+_OBJC_SELECTOR_REFERENCES_.127.1950
+_OBJC_SELECTOR_REFERENCES_.136
+_OBJC_SELECTOR_REFERENCES_.140.1951
+_OBJC_SELECTOR_REFERENCES_.144.1952
+_OBJC_SELECTOR_REFERENCES_.148.1953
+_OBJC_SELECTOR_REFERENCES_.152.1954
+_OBJC_SELECTOR_REFERENCES_.156.1955
+_OBJC_CLASSLIST_REFERENCES_$_.186
+_OBJC_SELECTOR_REFERENCES_.188.1956
+_OBJC_SELECTOR_REFERENCES_.190.1957
+_OBJC_SELECTOR_REFERENCES_.192.1958
+_OBJC_SELECTOR_REFERENCES_.194.1959
+_OBJC_SELECTOR_REFERENCES_.196.1960
+_OBJC_SELECTOR_REFERENCES_.198.1961
+_OBJC_CLASSLIST_REFERENCES_$_.199
+_OBJC_SELECTOR_REFERENCES_.201.1962
+_OBJC_SELECTOR_REFERENCES_.203.1963
+_OBJC_SELECTOR_REFERENCES_.205.1964
+_OBJC_SELECTOR_REFERENCES_.207.1965
+_OBJC_SELECTOR_REFERENCES_.158.2003
+_OBJC_SELECTOR_REFERENCES_.154.2005
+_OBJC_SELECTOR_REFERENCES_.150.2007
+_OBJC_SELECTOR_REFERENCES_.146.2009
+_OBJC_SELECTOR_REFERENCES_.142.2011
+_OBJC_SELECTOR_REFERENCES_.138.2013
+_OBJC_CLASSLIST_REFERENCES_$_.132
+_OBJC_SELECTOR_REFERENCES_.134
+_OBJC_SELECTOR_REFERENCES_.129.2015
+_OBJC_SELECTOR_REFERENCES_.131.2016
+_OBJC_SELECTOR_REFERENCES_.123.2019
+_OBJC_SELECTOR_REFERENCES_.121.2021
+_OBJC_CLASSLIST_REFERENCES_$_.97
+_OBJC_SELECTOR_REFERENCES_.99.2023
+_OBJC_SELECTOR_REFERENCES_.101.2024
+_OBJC_SELECTOR_REFERENCES_.117.2025
+_OBJC_SELECTOR_REFERENCES_.113.2026
+_OBJC_SELECTOR_REFERENCES_.109.2031
+_OBJC_SELECTOR_REFERENCES_.105.2032
+_OBJC_SELECTOR_REFERENCES_.96.2035
+_OBJC_SELECTOR_REFERENCES_.67.2037
+_OBJC_SELECTOR_REFERENCES_.69.2038
+_OBJC_SELECTOR_REFERENCES_.71.2039
+_OBJC_SELECTOR_REFERENCES_.73.2040
+_OBJC_SELECTOR_REFERENCES_.77.2041
+_OBJC_SELECTOR_REFERENCES_.79.2042
+_OBJC_SELECTOR_REFERENCES_.59.2043
+_OBJC_SELECTOR_REFERENCES_.81.2044
+_OBJC_SELECTOR_REFERENCES_.83.2045
+_OBJC_SELECTOR_REFERENCES_.85.2046
+_OBJC_SELECTOR_REFERENCES_.63.2047
+_OBJC_SELECTOR_REFERENCES_.87.2048
+_OBJC_SELECTOR_REFERENCES_.65.2049
+_OBJC_SELECTOR_REFERENCES_.61.2050
+_OBJC_SELECTOR_REFERENCES_.51.2063
+_OBJC_SELECTOR_REFERENCES_.53.2064
+_OBJC_SELECTOR_REFERENCES_.57.2065
+_OBJC_SELECTOR_REFERENCES_.2070
+_OBJC_SELECTOR_REFERENCES_.43.2071
+__OBJC_METACLASS_RO_$_MMEMetricsManager
+__OBJC_$_CLASS_METHODS_MMEMetricsManager
+_OBJC_SELECTOR_REFERENCES_.29.2073
+_OBJC_SELECTOR_REFERENCES_.31.2074
+_OBJC_SELECTOR_REFERENCES_.19.2075
+_OBJC_SELECTOR_REFERENCES_.33.2076
+_OBJC_CLASSLIST_REFERENCES_$_.34.2077
+_OBJC_SELECTOR_REFERENCES_.36.2078
+_OBJC_SELECTOR_REFERENCES_.39.2079
+_OBJC_SELECTOR_REFERENCES_.41.2080
+_pendingMetricsEventPath.onceToken
+_pendingMetricsEventPath.pendingMetricFile
+_OBJC_SELECTOR_REFERENCES_.2.2088
+_OBJC_CLASSLIST_REFERENCES_$_.3.2089
+_OBJC_SELECTOR_REFERENCES_.5.2090
+_OBJC_SELECTOR_REFERENCES_.7.2091
+_OBJC_SELECTOR_REFERENCES_.9.2092
+_sharedManager.onceToken.2098
+___block_literal_global.2099
+_sharedManager._sharedManager.2100
+Apple clang version 12.0.0 (clang-1200.0.32.2)
+/Applications/Xcode-12.GM.seed.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk
+iPhoneOS14.0.sdk
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEMetricsManager.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEDispatchManager.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/UIKit+MMEMobileEvents.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/NSBundle+MMEMobileEvents.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMECategoryLoader.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEUIApplicationWrapper.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMECertPin.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/CLLocationManager+MMEMobileEvents.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEUniqueIdentifier.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEDependencyManager.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/CLLocation+MMEMobileEvents.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/NSData+MMEGZIP.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMECommonEventData.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMETimerManager.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEEvent.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEConstants.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEEventsManager.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/NSProcessInfo+SystemInfo.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEDate.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEMetrics.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEEventLogger.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEAPIClient.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMEReachability.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/NSUserDefaults+MMEConfiguration.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMELocationManager.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/MMENSURLSessionWrapper.m
+/Users/distiller/project/Carthage/Checkouts/mapbox-events-ios/Sources/MapboxMobileEvents/NSString+MMEVersions.m
+/Users/distiller/Library/Caches/org.carthage.CarthageKit/DerivedData/12.0_12A7209/mapbox-events-ios/v0.10.5/Build/Intermediates.noindex/ArchiveIntermediates/MapboxMobileEvents/IntermediateBuildFilesPath/MapboxMobileEvents.build/Release-iphoneos/MapboxMobileEvents.build/DerivedSources/MapboxMobileEvents_vers.c
+__34+[MMEMetricsManager sharedManager]_block_invoke
+Sources/MapboxMobileEvents/MMEMetricsManager.m
+__44+[MMEMetricsManager pendingMetricsEventPath]_block_invoke
+/Applications/Xcode-12.GM.seed.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/dispatch/once.h
+Sources/MapboxMobileEvents/MMEMetricsManager.h
+Sources/MapboxMobileEvents/MMEDispatchManager.m
+mme_linkUIKitCategories
+Sources/MapboxMobileEvents/UIKit+MMEMobileEvents.m
+Sources/MapboxMobileEvents/NSBundle+MMEMobileEvents.m
+Sources/MapboxMobileEvents/MMECategoryLoader.m
+Sources/MapboxMobileEvents/MMEUIApplicationWrapper.m
+__copy_helper_block_e4_20s24b
+__copy_helper_block_e4_20s24b28s
+__48-[MMECertPin handleChallenge:completionHandler:]_block_invoke_4
+Sources/MapboxMobileEvents/MMECertPin.m
+__48-[MMECertPin handleChallenge:completionHandler:]_block_invoke_3
+__48-[MMECertPin handleChallenge:completionHandler:]_block_invoke_2
+__48-[MMECertPin handleChallenge:completionHandler:]_block_invoke.35
+__48-[MMECertPin handleChallenge:completionHandler:]_block_invoke.31
+__48-[MMECertPin handleChallenge:completionHandler:]_block_invoke
+__destroy_helper_block_e4_20s24r28w
+__copy_helper_block_e4_20s24r28w
+__copy_helper_block_e4_20s24s28w
+__54-[MMECertPin hashSubjectPublicKeyInfoFromCertificate:]_block_invoke.47
+__54-[MMECertPin hashSubjectPublicKeyInfoFromCertificate:]_block_invoke
+__destroy_helper_block_e4_20s24s28r32r36r
+__copy_helper_block_e4_20s24s28r32r36r
+__57-[MMECertPin getPublicKeyDataFromCertificate_legacy_ios:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+mme_linkCLLocationManagerCategory
+Sources/MapboxMobileEvents/CLLocationManager+MMEMobileEvents.m
+Sources/MapboxMobileEvents/MMEUniqueIdentifier.m
+Sources/MapboxMobileEvents/MMEUniqueIdentifier.h
+__37+[MMEDependencyManager sharedManager]_block_invoke
+Sources/MapboxMobileEvents/MMEDependencyManager.m
+mme_linkCLLocationCategory
+Sources/MapboxMobileEvents/CLLocation+MMEMobileEvents.m
+mme_linkNSDataCategory
+Sources/MapboxMobileEvents/NSData+MMEGZIP.m
+Sources/MapboxMobileEvents/MMECommonEventData.m
+Sources/MapboxMobileEvents/MMECommonEventData.h
+Sources/MapboxMobileEvents/MMETimerManager.m
+Sources/MapboxMobileEvents/MMETimerManager.h
+Sources/MapboxMobileEvents/MMEEvent.m
+__33+[MMEEventsManager sharedManager]_block_invoke
+Sources/MapboxMobileEvents/MMEEventsManager.m
+__75-[MMEEventsManager initializeWithAccessToken:userAgentBase:hostSDKVersion:]_block_invoke
+__destroy_helper_block_e4_20w
+__copy_helper_block_e4_20w
+__40-[MMEEventsManager powerStateDidChange:]_block_invoke
+__60-[MMEEventsManager pauseOrResumeMetricsCollectionIfRequired]_block_invoke
+__31-[MMEEventsManager postEvents:]_block_invoke
+__destroy_helper_block_e4_20s24w
+__copy_helper_block_e4_20s24w
+__38-[MMEEventsManager sendTurnstileEvent]_block_invoke
+__52-[MMEEventsManager sendPendingTelemetryMetricsEvent]_block_invoke
+__45-[MMEEventsManager sendTelemetryMetricsEvent]_block_invoke
+__copy_helper_block_e4_20b
+__61-[MMEEventsManager postMetadata:filePaths:completionHandler:]_block_invoke
+__35-[MMEEventsManager locationManager]_block_invoke
+Sources/MapboxMobileEvents/MMEEventsManager.h
+Sources/MapboxMobileEvents/NSProcessInfo+SystemInfo.m
+Sources/MapboxMobileEvents/MMEDate.m
+Sources/MapboxMobileEvents/MMEDate.h
+Sources/MapboxMobileEvents/MMEMetrics.m
+Sources/MapboxMobileEvents/MMEMetrics.h
+__30+[MMEEventLogger sharedLogger]_block_invoke
+Sources/MapboxMobileEvents/MMEEventLogger.m
+__37-[MMEEventLogger defaultBlockHandler]_block_invoke
+Sources/MapboxMobileEvents/MMEEventLogger.h
+Sources/MapboxMobileEvents/MMEAPIClient.m
+__copy_helper_block_e4_20s24s28s32b
+__45-[MMEAPIClient postEvents:completionHandler:]_block_invoke
+__copy_helper_block_e4_20s24s28b32s
+__57-[MMEAPIClient postMetadata:filePaths:completionHandler:]_block_invoke
+MMEDispatchMainIfNeeded
+__41-[MMEAPIClient startGettingConfigUpdates]_block_invoke_3
+__41-[MMEAPIClient startGettingConfigUpdates]_block_invoke_2
+__41-[MMEAPIClient startGettingConfigUpdates]_block_invoke
+__destroy_helper_block_e4_20s24s
+__copy_helper_block_e4_20s24s
+__31-[MMEAPIClient processRequest:]_block_invoke
+__33-[MMEAPIClient requestForEvents:]_block_invoke
+Sources/MapboxMobileEvents/MMEReachability.m
+TMReachabilityCallback
+__destroy_helper_block_e4_20s
+__copy_helper_block_e4_20s
+__39-[MMEReachability reachabilityChanged:]_block_invoke
+Sources/MapboxMobileEvents/MMEReachability.h
+reachabilityFlags
+__destroy_helper_block_e4_
+__copy_helper_block_e4_
+__31+[NSBundle(MME) mme_mainBundle]_block_invoke
+Sources/MapboxMobileEvents/NSUserDefaults+MMEConfiguration.m
+__40+[NSUserDefaults(MME) mme_configuration]_block_invoke
+__42-[NSUserDefaults(MME) mme_userAgentString]_block_invoke
+Sources/MapboxMobileEvents/MMELocationManager.m
+Sources/MapboxMobileEvents/MMELocationManager.h
+__destroy_helper_block_e4_20s24s28s32s
+__copy_helper_block_e4_20b24s28s32s
+__59-[MMENSURLSessionWrapper processRequest:completionHandler:]_block_invoke_2
+Sources/MapboxMobileEvents/MMENSURLSessionWrapper.m
+__destroy_helper_block_e4_20s24r
+__copy_helper_block_e4_20b24r
+__59-[MMENSURLSessionWrapper processRequest:completionHandler:]_block_invoke.20
+__destroy_helper_block_e4_20s24s28s
+__copy_helper_block_e4_20s24s28b
+__59-[MMENSURLSessionWrapper processRequest:completionHandler:]_block_invoke
+__destroy_helper_block_e4_20s24s28w
+__copy_helper_block_e4_20s24b28w
+__75-[MMENSURLSessionWrapper URLSession:didReceiveChallenge:completionHandler:]_block_invoke
+__45+[NSString(MMEVersions) mme_semverExpression]_block_invoke
+Sources/MapboxMobileEvents/NSString+MMEVersions.m

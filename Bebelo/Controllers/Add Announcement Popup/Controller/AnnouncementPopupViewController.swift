@@ -24,8 +24,10 @@ class AnnouncementPopupViewController: UIViewController {
     
     //IBACTION'S
     @IBAction func AddButtonAction(_ sender: Any) {
-        self.delegate?.AnnouncementDeletegate(announce: self.AnnouncementTextView.text)
-        self.dismiss(animated: true, completion: nil)
+        
+        self.dismiss(animated: true){
+            self.delegate?.AnnouncementDeletegate(announce: self.AnnouncementTextView.text)
+        }
     }
     
     @IBAction func CancelBtnAction(_ sender: Any) {

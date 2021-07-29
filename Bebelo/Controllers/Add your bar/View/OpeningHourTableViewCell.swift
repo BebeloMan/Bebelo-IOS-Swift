@@ -11,6 +11,27 @@ class OpeningHourTableViewCell: UITableViewCell {
 
     @IBOutlet weak var WeekNameLabel: UILabel!
     @IBOutlet weak var AddBtn: UIButton!
+    @IBOutlet weak var tfStartDate: UITextField!
+    @IBOutlet weak var tfEndDate: UITextField!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}
+class ClosedHourTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var WeekNameLabel: UILabel!
+    @IBOutlet weak var AddBtn: UIButton!
+    @IBOutlet weak var tfStartDate: UITextField!
+    @IBOutlet weak var tfEndDate: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()

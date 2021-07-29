@@ -9,8 +9,9 @@ import UIKit
 
 class TermsAndConditionTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var TermsOfUseLabel: UILabel!
-    @IBOutlet weak var DataPolicyLabel: UILabel!
+//    @IBOutlet weak var TermsOfUseLabel: UILabel!
+//    @IBOutlet weak var DataPolicyLabel: UILabel!
+    @IBOutlet weak var btnCheckMark: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

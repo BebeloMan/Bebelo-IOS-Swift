@@ -10,10 +10,9 @@ import UIKit
 class AnnouncementTableViewCell: UITableViewCell {
 
     @IBOutlet weak var SideImage: UIImageView!
-    @IBOutlet weak var Title: UITextView!
+    @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var DeailLabel: UILabel!
     @IBOutlet weak var AnunciaBtn: UIButton!
-    @IBOutlet weak var TarraceAsegment: UISwitch!
     @IBOutlet weak var BackView: UIView!
     
     override func awakeFromNib() {

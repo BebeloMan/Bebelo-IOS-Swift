@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "970F4222-5CA9-4CD0-A4F4-E9D98518B0AB"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36DAA74F-037B-4F2E-BB2E-DB76D9353279"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3356"
+            endingLineNumber = "3356"
+            landmarkName = "annotationManager(_:didDetectTappedAnnotations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC828976-C2D6-4D30-A73C-793EC6B2F043"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2454"
+            endingLineNumber = "2454"
+            landmarkName = "reloadLive(_:countrs:reCheck:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A8BEDB1-208D-42CE-A63C-6E1AED426834"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0C5F3D0-A1FC-49B1-8F01-C9AF94350843"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2720"
+            endingLineNumber = "2720"
+            landmarkName = "reloadLive(_:countrs:reCheck:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A0C5F3D0-A1FC-49B1-8F01-C9AF94350843 - f1fb36354ee5f995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in Bebelo.MapViewController.reloadLive(_: Swift.Array&lt;Bebelo.AnnotationModel&gt;, countrs: Swift.Int, reCheck: Swift.Bool) -&gt; ()"
+                  moduleName = "Bebelo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buzzwaretech/Desktop/bebloo/Bebelo/Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2329"
+                  endingLineNumber = "2329"
+                  offsetFromSymbolStart = "10104">
+               </Location>
+               <Location
+                  uuid = "A0C5F3D0-A1FC-49B1-8F01-C9AF94350843 - f1fb36354ee5f995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in Bebelo.MapViewController.reloadLive(_: Swift.Array&lt;Bebelo.AnnotationModel&gt;, countrs: Swift.Int, reCheck: Swift.Bool) -&gt; ()"
+                  moduleName = "Bebelo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buzzwaretech/Desktop/bebloo/Bebelo/Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2329"
+                  endingLineNumber = "2329"
+                  offsetFromSymbolStart = "10204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A7AE2C5-E974-4399-8AF8-EDF7C8265E6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21B0BD07-D64E-411A-A6E3-7606B7D63CB9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2211"
+            endingLineNumber = "2211"
+            landmarkName = "reloadLive(_:countrs:reCheck:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "558EE468-5115-42C1-9EB6-F92D1FA0250C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3322"
+            endingLineNumber = "3322"
+            landmarkName = "visibilityDidChange(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "558EE468-5115-42C1-9EB6-F92D1FA0250C - 15dd289735033907"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bebelo.MapViewController.visibilityDidChange(for: Swift.Array&lt;__C.UIView&gt;) -&gt; ()"
+                  moduleName = "Bebelo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buzzwaretech/Desktop/bebloo/Bebelo/Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3323"
+                  endingLineNumber = "3323"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "558EE468-5115-42C1-9EB6-F92D1FA0250C - d92d6e22acab4234"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Bebelo.MapViewController.visibilityDidChange(for: Swift.Array&lt;__C.UIView&gt;) -&gt; ()"
+                  moduleName = "Bebelo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buzzwaretech/Desktop/bebloo/Bebelo/Bebelo/Controllers/MapView/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3322"
+                  endingLineNumber = "3322"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

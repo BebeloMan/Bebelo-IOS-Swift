@@ -10,10 +10,12 @@ import UIKit
 class LocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var OpenAppBtn: UIButton!
-    
+    @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //self.OpenAppBtn.setTitle("Allow location".localized(), for: .normal)
+        //self.title.text = self.title.text?.localized()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
